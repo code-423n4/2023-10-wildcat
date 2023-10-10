@@ -43,6 +43,14 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 # Wildcat audit details
 - Total Prize Pool: $60,500 USDC
+  - HM awards: $41,250 USDC
+  - Analysis awards: $2,500 USDC
+  - QA awards: $1,250 USDC
+  - Bot Race awards: $3,750 USDC
+  - Gas awards: $1,250 USDC
+  - Judge awards: $6,000 USDC
+  - Lookout awards: $4,000 USDC
+  - Scout awards: $500 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-wildcat/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
@@ -113,21 +121,21 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 ```
 - If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:
-- Is this an upgrade of an existing system?:
-- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): 
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
+- How many contracts are in scope?: 17   
+- Total SLoC for these contracts?: 1879  
+- How many external imports are there?: 2  
+- How many separate interfaces and struct definitions are there for the contracts within scope?: 7 interfaces, 7 structs 
+- Does most of your code generally use composition or inheritance?: Inheritance   
+- How many external calls?: 1   
+- What is the overall line coverage percentage provided by your tests?: 90
+- Is this an upgrade of an existing system?: False
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): Timelock function, ERC-20 Token 
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False   
 - Please describe required context:   
-- Does it use an oracle?:  
-- Describe any novel or unique curve logic or mathematical models your code uses: 
-- Is this either a fork of or an alternate implementation of another project?:   
-- Does it use a side-chain?:
+- Does it use an oracle?: No  
+- Describe any novel or unique curve logic or mathematical models your code uses: N/A 
+- Is this either a fork of or an alternate implementation of another project?: N/A   
+- Does it use a side-chain?: N/A
 - Describe any specific areas you would like addressed:
 ```
 
