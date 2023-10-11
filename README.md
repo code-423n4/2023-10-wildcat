@@ -72,11 +72,10 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 ## Links
 
-- **Previous audits:** 
-- **Documentation:**
-- **Website:**
-- **Twitter:** 
-- **Discord:** 
+- **Previous audits:** Review of vault logic by [alpeh_v](https://x.com/alpeh_v)
+- **Documentation:**: [Gitbook](https://wildcat-protocol.gitbook.io) 
+- **Website:**: N/A
+- **Twitter:**: [@WildcatFi](https://x.com/WildcatFi)  
 
 
 # Scope
@@ -98,6 +97,10 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 *List any files/contracts that are out of scope for this audit.*
 
+| Contract | Purpose |
+| ----------- | ----------- | ----------- | ----------- |
+| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | Blah |
+
 # Additional Context
 
 - [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
@@ -111,6 +114,21 @@ Automated findings output for the audit can be found [here](https://github.com/c
   - `Contract2`: Should comply with `ERC/EIPY`
 
 ## Attack ideas (Where to look for bugs)
+
+### Access Controls and Permissions
+
+- Consider ways in which borrower addresses, controller factories or vaults can be added to the archcontroller either without the specific approval of its owner or as a result of contract deployment.
+- Consider ways in which lenders can be authorised on a controller without the specific permission of the borrower that deployed it.
+- Examine areas where the access roles for market interactions can be maliciously altered to either block or elevant parties outside of the defined flow.
+
+### Interest Rates
+
+- To complete
+
+### Sentinel and Escrow Contracts
+
+- To complete
+- 
 *List specific areas to address - see [this blog post](https://medium.com/code4rena/the-security-council-elections-within-the-arbitrum-dao-a-comprehensive-guide-aa6d001aae60#9adb) for an example*
 
 ## Main invariants
@@ -120,7 +138,6 @@ Automated findings output for the audit can be found [here](https://github.com/c
 [ ⭐️ SPONSORS: please confirm/edit the information below. ]
 
 ```
-- If you have a public code repo, please share it here:  
 - How many contracts are in scope?: 17   
 - Total SLoC for these contracts?: 1879  
 - How many external imports are there?: 2  
@@ -136,7 +153,7 @@ Automated findings output for the audit can be found [here](https://github.com/c
 - Describe any novel or unique curve logic or mathematical models your code uses: N/A 
 - Is this either a fork of or an alternate implementation of another project?: N/A   
 - Does it use a side-chain?: N/A
-- Describe any specific areas you would like addressed:
+- Describe any specific areas you would like addressed: see above.
 ```
 
 # Tests
