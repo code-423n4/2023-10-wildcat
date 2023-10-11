@@ -40,12 +40,12 @@ TODO: Point out that the lending model is inverted here: it's borrower driven (s
 
 ## Links
 
-- **Previous audits:** [Security review of market logic](https://hackmd.io/@geistermeister/r15gj_y1p) by [alpeh_v](https://x.com/alpeh_v)
+- **Previous Audits:** [Security review of market logic](https://hackmd.io/@geistermeister/r15gj_y1p) by [alpeh_v](https://x.com/alpeh_v)
 - **Documentation:**: [Gitbook](https://wildcat-protocol.gitbook.io) 
 - **Website:**: N/A [Still building things out!]
 - **Twitter:**: [@WildcatFi](https://x.com/WildcatFi)  
 
-# Scope
+# In Scope
 
 [ ⭐️ SPONSORS: add scoping and technical details here ]
 
@@ -56,11 +56,27 @@ TODO: Point out that the lending model is inverted here: it's borrower driven (s
 
 *Files and contracts in scope for this audit in the table below:*
 
-| Contract | SLOC | Purpose | Libraries used |  
+| Contract | SLOC | Purpose | Libraries Used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatVaultController.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarketBase.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/FeeMath.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarketConfig.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/VaultState.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatSanctionsSentinel.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/LibStoredInitCode.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/FIFOQueue.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarketToken.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/Withdrawal.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatSanctionsEscrow.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/BoolUtils.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/Chainalysis.sol ](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
 
-## Out of scope
+## Out Of Scope
 
 *Files and contracts that are out of scope for this audit:*
 
@@ -101,6 +117,7 @@ TODO: Point out that the lending model is inverted here: it's borrower driven (s
 - Consider ways in which deposits might cause trouble with internal market accounting.
 - Consider ways in which lenders making withdrawal requests might have them (be they either pending or expired) altered.
 - Consider ways in which market tokens can be burned but incorrect amounts of assets are claimable (this is _very_ nuanced and circumstance specific).
+- Consider ways in which the order of expired batches can be manipulated to impact the FIFO nature.
 
 ### Sentinel and Escrow Contracts
 
