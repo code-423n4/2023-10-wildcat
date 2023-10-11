@@ -3,6 +3,8 @@
 
 Greetings, everyone! It's time to take our money!
 
+[![The Wildcat Protocol](https://github.com/code-423n4/2023-10-wildcat/blob/main/images/wildcat_logo_strapline.png?raw=true)](https://github.com/code-423n4/2023-10-wildcat)
+
 ---
 
 # Audit Prize Pool Details
