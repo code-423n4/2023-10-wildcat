@@ -1,10 +1,11 @@
 
 # The Wildcat Protocol
+
 ---
 
 # Audit Prize Pool Details
 
-- | Category | Amount |
+| Category | Amount |
 | ----------- | ----------- |
 | **Total Pool** | **$60,500 USDC** |
 | HM Awards | $41,250 USDC |
@@ -43,7 +44,6 @@ TODO: Point out that the lending model is inverted here: it's borrower driven (s
 - **Documentation:**: [Gitbook](https://wildcat-protocol.gitbook.io) 
 - **Website:**: N/A [Still building things out!]
 - **Twitter:**: [@WildcatFi](https://x.com/WildcatFi)  
-
 
 # Scope
 
@@ -106,9 +106,7 @@ TODO: Point out that the lending model is inverted here: it's borrower driven (s
 
 - Consider ways (beyond a hostile Chainalysis oracle) in which lender addresses could be excised from a market via `nukeFromOrbit`.
 - Consider ways in which parties to an escrow contract might be locked out of it.
-
-### General Usage
-
+  
 ---
 
 ## Main Invariants
