@@ -74,7 +74,7 @@ with jurisdiction for any conflict that arises being placed within the UK courts
 between the two parties already. We provide this document/mechanism as an offering to any lenders who want clarity on what process to follow in the event of a failure on behalf of
 the borrower to repay what is owed.
 
-[TODO: Complete]
+This is getting long and rambling, so instead we'll direct you to the [Gitbook](https://wildcat-protocol.gitbook.io) which is even more so.
 
 ### A More Technical Briefing
 
@@ -85,17 +85,28 @@ Borrowers deploy markets through _controllers_ - contracts that dictate logic, d
 (the freedom we offer is not completely unbounded - you can't have a market with a years-long withdrawal cycle, for example). Multiple markets can be deployed through a single controller,
 with the implication that a single list of lenders can be used to grant access to multiple markets simultaneously.
 
-Lenders that are authorised on a given controller can deposit assets to any markets that have been launched through it. In exchange for their deposits, they receive a _market token_ which
-has been parameterised by the borrower: you might receive Code4rena Dai Stablecoin - ticker C4DAI - for depositing DAI into a market run by Code4rena. Or C4 Wrapped Ether (CODE423N4WETH).
+Lenders that are authorised on a given controller (i.e. granted a role) can deposit assets to any markets that have been launched through it. In exchange for their deposits, they receive a _market token_ which has been parameterised by the borrower: you might receive Code4rena Dai Stablecoin - ticker C4DAI - for depositing DAI into a market run by Code4rena. Or C4 Wrapped Ether (CODE423N4WETH).
 
 These market tokens are _rebasing_ so as to always be redeemable at parity for an asset that is in the reserves of a market - as time goes on, interest inflates the supply of market tokens
 to be consistent with the overall debt that is owed by the borrower. The interest rate compounds every time a non-static call is made to the market contract and the scale factor is updated.
+
+The interest rate paid by the borrower can comprise of up to three distinct figures:
+
+  - The base APR (accruing to the lender, expressed in bips when a market is deployed),
+  - The protocol APR (accruing to the Wildcat protocol itself, expressed as a percentage of the base APR), and
+  - The penalty APR (accruing to the lender, expressed in bips when a market is deployed).
+
+A borrower deploying a market with a base APR of 10%, a protocol APR of 30% and a penalty APR of 20% will pay a true APR of 13% (10% + (10% * 30%)) under normal circumstances, and 33% when the market has been delinquent for long enough for the penalty APR to activate.
+
+The penalty APR activates when the market has been delinquent (below its reserve ratio) for a rolling period of time in excess of the _grace period_ - a value (in seconds) defined by the borrower on market deployment. Each market has an internal value called the _grace tracker_, which counts up from zero while a market is delinquent, and counts down to zero when it is not. When the grace tracker value exceeds the grace period, the penalty APR applies for as long as it takes for the former to drop back below the latter. This means that a borrower does _not_ have `grace_period` amount of time to deposit assets back into the market every time it goes delinquent.
+
+Borrowers can withdraw underlying assets from the market only so far as the reserve ratio is maintained.
 
 Withdrawals are initiated by any address that holds the `WithdrawOnly` or `DepositAndWithdraw` roles (and a non-zero amount of the appropriate market token) placing a withdrawal request. If there are any assets in reserve, market tokens will be burned 1:1 to move them into a 'claimable withdrawals pool', at which point the assets transferred will cease accruing interest. At the conclusion of a withdrawal cycle (a market parameter set at deployment), assets in the claimable withdrawals pool can be claimed by the lender, subject to pro-rata dispersal if the amount requested for withdrawal by all lenders exceeds the amount in the pool.
 
 Withdrawal request amounts that could not be honoured in a given cycle because of insufficient reserves are batched together, marked as 'expired' and enter a FIFO withdrawal queue. Non-zero withdrawal queues impact the reserve ratio of a market: any assets subsequently deposited by the borrower will be immediately routed into the pending withdrawal pool until there are sufficient assets to fully honour all expired withdrawals.
 
-[TODO: Complete]
+Lenders that have their addresses flagged by Chainalysis as being sanctioned are blocked from interacting with any markets that they are a part of by giving them a role of `Blocked`. A `nukeFromOrbit` function exists that directs their market balances into a purpose-deployed escrow contract. Lenders can retrieve their assets from these escrow contracts in the event that they are ever removed from the oracle (i.e. their address returns `false` when `isSanctioned(address)` is queried).
 
 ## Links
 
