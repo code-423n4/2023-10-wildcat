@@ -235,7 +235,7 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 ## Known Issues
 
-The invariant stated above that batch 1 is executed before batch 2 can be violated if:
+The invariant above stating that earlier batches in the withdrawal queue must be honoured/executed before later ones can be violated if:
 - Batch 1 is marked as unpaid and processed.
 - Batch 2 is created.
 - The market now has sufficient assets for both.
