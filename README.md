@@ -255,6 +255,8 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 # Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
+`git clone https://github.com/code-423n4/2023-10-wildcat && cd 2023-10-wildcat && forge install` from a standing start.
 
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+`forge test --gas-report` for tests.
+
+`yarn coverage` for coverage.
