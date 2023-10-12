@@ -108,7 +108,7 @@ Withdrawals are initiated by any address that holds the `WithdrawOnly` or `Depos
 
 Withdrawal request amounts that could not be honoured in a given cycle because of insufficient reserves are batched together, marked as 'expired' and enter a FIFO withdrawal queue. Non-zero withdrawal queues impact the reserve ratio of a market: any assets subsequently deposited by the borrower will be immediately routed into the claimable withdrawals pool until there are sufficient assets to fully honour all expired withdrawals. Any amounts in the claimable withdrawals pool that lender/s did not burn market tokens for will need to have them burned before claiming from here. We track any discrepancies between how much was burned and how much should be claimable internally.
 
-Lenders that have their addresses flagged by Chainalysis as being sanctioned are blocked from interacting with any markets that they are a part of by giving them a role of `Blocked`. A `nukeFromOrbit` function exists that directs their market balances into a purpose-deployed escrow contract. Lenders can retrieve their assets from these escrow contracts in the event that they are ever removed from the oracle, or if the borrower for the relevant vault manually overrides their sanctioned status  (i.e. their address returns `false` when `isSanctioned(borrower, account)` is queried).
+Lenders that have their addresses flagged by Chainalysis as being sanctioned are blocked from interacting with any markets that they are a part of by giving them a role of `Blocked`. A `nukeFromOrbit` function exists that directs their market balances into a purpose-deployed escrow contract. Lenders can retrieve their assets from these escrow contracts in the event that they are ever removed from the oracle, or if the borrower for the relevant market manually overrides their sanctioned status  (i.e. their address returns `false` when `isSanctioned(borrower, account)` is queried).
 
 This is getting long and rambling, so instead we'll direct you to the [Gitbook](https://wildcat-protocol.gitbook.io) which is even more so, but at least lays out the expected behaviour in prose.
 
@@ -193,12 +193,12 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 ### Access Controls and Permissions
 
-- Consider ways in which borrower addresses, controller factories or vaults can be added to the archcontroller either without the specific approval of its owner or as a result of contract deployment.
+- Consider ways in which borrower addresses, controller factories or markets can be added to the archcontroller either without the specific approval of its owner or as a result of contract deployment.
 - Consider ways in which lenders can be authorised on a controller without the specific permission of the borrower that deployed it.
 - Consider ways in which where the access roles for market interactions can be maliciously altered to either block or elevant parties outside of the defined flow.
 - Consider ways in which removing access (borrowers from the archcontroller, lenders from controllers) can lead to the inability to interact correctly with markets.
 
-### Vault Parameters
+### Market Parameters
 
 - Consider ways in which market interest rates can be manipulated to produce results that are outside of controller-specific limits
 - Consider ways in which the reserve ratio of a market can be manipulated so as to lead to the borrower borrowing more than they should be permitted.
@@ -240,7 +240,7 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 - Once claimable withdrawals have been set aside for a withdrawal batch (counted toward `normalizedUnclaimedWithdrawals` and `batch.normalizedAmountPaid`), they can only be used for that purpose (i.e. the market will always maintain at least that amount in underlying assets until lenders with a request from that batch have withdrawn the assets).
 - In any non-static function which touches a market's state:
   - Prior to executing the function's logic, if time has elapsed since the last update, interest, protocol fees and delinquency fees should be accrued to the market state and pending/expired withdrawal batches should be processed.
-  - At the end of the function, the updated state is written to storage and the vault's delinquency status is updated.
+  - At the end of the function, the updated state is written to storage and the market's delinquency status is updated.
 - Assets are only paid to newer withdrawal batches if the market has sufficient assets to close older batches.
   - Exception: If protocol fees are collected between a previous batch's expiry and it being closed (fully paid), it is possible for a newer batch to reserve assets and make the older batch unpayable (see Known Issues below).
   
