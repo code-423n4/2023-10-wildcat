@@ -28,11 +28,15 @@ Greetings, everyone! It's time to take our money!
 - Starts October 16, 2023 20:00 UTC 
 - Ends October 26, 2023 20:00 UTC 
 
+---
+
 ## Automated Findings / Publicly Known Issues
 
 Automated findings output for the audit can be found [here](https://github.com/code-423n4/2023-10-wildcat/blob/main/bot-report.md) within 24 hours of audit opening.
 
 *Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
+
+---
 
 # Overview
 
@@ -110,12 +114,16 @@ This is getting long and rambling, so instead we'll direct you to the [Gitbook](
 
 Sorry for subjecting you to all of this. You can go look at the code now.
 
+---
+
 ## Links
 
 - **Previous Audits:** [Security review of market logic](https://hackmd.io/@geistermeister/r15gj_y1p) by [alpeh_v](https://x.com/alpeh_v)
 - **Documentation:** [Gitbook](https://wildcat-protocol.gitbook.io) 
 - **Website:**: N/A [Still building things out!]
 - **Twitter:**: [@WildcatFi](https://x.com/WildcatFi)  
+
+---
 
 # In Scope
 
@@ -250,7 +258,7 @@ The invariant above stating that earlier batches in the withdrawal queue must be
 
 We are aware of this issue, and will not consider it a finding.
 
---
+---
 
 ## Scoping Details
 
@@ -272,6 +280,8 @@ We are aware of this issue, and will not consider it a finding.
 - Does it use a side-chain?: N/A
 - Describe any specific areas you would like addressed: see above.
 ```
+
+---
 
 # Tests
 
