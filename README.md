@@ -85,7 +85,7 @@ with the implication that a single list of lenders can be used to grant access t
 
 Lenders that are authorised on a given controller (i.e. granted a role) can deposit assets to any markets that have been launched through it. In exchange for their deposits, they receive a _market token_ which has been parameterised by the borrower: you might receive Code4rena Dai Stablecoin - ticker C4DAI - for depositing DAI into a market run by Code4rena. Or C4 Wrapped Ether (CODE423N4WETH).
 
-These market tokens are _rebasing_ so as to always be redeemable at parity for an asset that is in the reserves of a market - as time goes on, interest inflates the supply of market tokens
+These market tokens are _rebasing_ so as to always be redeemable at parity for the underlying asset of a market (provided it has sufficient reserves) - as time goes on, interest inflates the supply of market tokens
 to be consistent with the overall debt that is owed by the borrower. The interest rate compounds every time a non-static call is made to the market contract and the scale factor is updated.
 
 The interest rate paid by the borrower can comprise of up to three distinct figures:
@@ -104,7 +104,7 @@ Withdrawals are initiated by any address that holds the `WithdrawOnly` or `Depos
 
 Withdrawal request amounts that could not be honoured in a given cycle because of insufficient reserves are batched together, marked as 'expired' and enter a FIFO withdrawal queue. Non-zero withdrawal queues impact the reserve ratio of a market: any assets subsequently deposited by the borrower will be immediately routed into the pending withdrawal pool until there are sufficient assets to fully honour all expired withdrawals. Any amounts in the claimable withdrawals pool that lender/s did not burn market tokens for will need to have them burned before claiming from here. We track any discrepancies between how much was burned and how much should be claimable internally.
 
-Lenders that have their addresses flagged by Chainalysis as being sanctioned are blocked from interacting with any markets that they are a part of by giving them a role of `Blocked`. A `nukeFromOrbit` function exists that directs their market balances into a purpose-deployed escrow contract. Lenders can retrieve their assets from these escrow contracts in the event that they are ever removed from the oracle (i.e. their address returns `false` when `isSanctioned(address)` is queried).
+Lenders that have their addresses flagged by Chainalysis as being sanctioned are blocked from interacting with any markets that they are a part of by giving them a role of `Blocked`. A `nukeFromOrbit` function exists that directs their market balances into a purpose-deployed escrow contract. Lenders can retrieve their assets from these escrow contracts in the event that they are ever removed from the oracle, or if the borrower for the relevant vault manually overrides their sanctioned status  (i.e. their address returns `false` when `isSanctioned(borrower, account)` is queried).
 
 This is getting long and rambling, so instead we'll direct you to the [Gitbook](https://wildcat-protocol.gitbook.io) which is even more so, but at least lays out the expected behaviour in prose.
 
@@ -130,28 +130,28 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 | Contract | SLOC | Purpose | Libraries Used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [src/WildcatVaultController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultController.sol) | 363 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol), [[`@solady/Ownable`]()](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/market/WildcatMarketBase.sol](https://link-when-code-is-ported) | 311 | This contract does XYZ |  |
-| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 247 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
-| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 176 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
-| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 136 | This contract does XYZ | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/libraries/MathUtils.sol](https://link-when-code-is-ported) | 110 | This contract does XYZ |  |
-| [src/libraries/SafeCastLib.sol](https://link-when-code-is-ported) | 106 | This contract does XYZ |  |
-| [src/libraries/FeeMath.sol](https://link-when-code-is-ported) | 97 | This contract does XYZ |  |
-| [src/market/WildcatMarketConfig.sol](https://link-when-code-is-ported) | 95 | This contract does XYZ | |
-| [src/libraries/StringQuery.sol](https://link-when-code-is-ported) | 93 | This contract does XYZ | [`@solady/LibBit`](https://github.com/Vectorized/solady/blob/main/src/utils/LibBit.sol) |
-| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 91 | This contract does XYZ | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/libraries/VaultState.sol](https://link-when-code-is-ported) | 83 | This contract does XYZ |  |
-| [src/WildcatSanctionsSentinel.sol](https://link-when-code-is-ported) | 75 | This contract does XYZ |  |
-| [src/libraries/LibStoredInitCode.sol](https://link-when-code-is-ported) | 68 | This contract does XYZ |  |
-| [src/libraries/FIFOQueue.sol](https://link-when-code-is-ported) | 62 | This contract does XYZ |  |
-| [src/market/WildcatMarketToken.sol](https://link-when-code-is-ported) | 54 | This contract does XYZ |  |
-| [src/libraries/Errors.sol](https://link-when-code-is-ported) | 41 | This contract does XYZ |  |
-| [src/libraries/Withdrawal.sol](https://link-when-code-is-ported) | 37 | This contract does XYZ |  |
-| [src/ReentrancyGuard.sol](https://link-when-code-is-ported) | 33 | This contract does XYZ |  |
-| [src/WildcatSanctionsEscrow.sol](https://link-when-code-is-ported) | 31 | This contract does XYZ | |
-| [src/libraries/BoolUtils.sol](https://link-when-code-is-ported) | 18 | This contract does XYZ |  |
-| [src/libraries/Chainalysis.sol ](https://link-when-code-is-ported) | 5 | This contract does XYZ |  |
+| [src/WildcatVaultController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultController.sol) | 363 | Deploys vaults and manages their configurable parameters (apr, reserve ratio) and maintains set of approved lenders. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol), [[`@solady/Ownable`]()](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/market/WildcatMarketBase.sol](https://link-when-code-is-ported) | 311 | Base contract for wildcat markets.  |  |
+| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 247 | Deploys controllers and manages protocol fee information. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
+| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 176 | Registry for borrowers, controller factories, controllers and vaults. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
+| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 136 | Withdrawal functionality for wildcat market. | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/libraries/MathUtils.sol](https://link-when-code-is-ported) | 110 | Generic math functions used in the codebase. |  |
+| [src/libraries/SafeCastLib.sol](https://link-when-code-is-ported) | 106 | uint cast functions |  |
+| [src/libraries/FeeMath.sol](https://link-when-code-is-ported) | 97 | Contains functions for calculating interest, protocol fees and delinquency fees. |  |
+| [src/market/WildcatMarketConfig.sol](https://link-when-code-is-ported) | 95 | Methods for role management and configuration by controller. | |
+| [src/libraries/StringQuery.sol](https://link-when-code-is-ported) | 93 | Helper functions for querying strings from methods that can return either `string` or `bytes32` | [`@solady/LibBit`](https://github.com/Vectorized/solady/blob/main/src/utils/LibBit.sol) |
+| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 91 | Main contract for wildcat market that inherits all base contracts. | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/libraries/VaultState.sol](https://link-when-code-is-ported) | 83 | Defines the vault's state struct and helper functions for reading from it and calculating basic values like required reserves and scaling/normalizing balances. |  |
+| [src/WildcatSanctionsSentinel.sol](https://link-when-code-is-ported) | 75 | Contract that interfaces with Chainalysis, allows borrowers to override lenders' sanction statuses and deploys escrows. |  |
+| [src/libraries/LibStoredInitCode.sol](https://link-when-code-is-ported) | 68 | Library for deploying contracts using code storage for init code to prevent oversized contracts. |  |
+| [src/libraries/FIFOQueue.sol](https://link-when-code-is-ported) | 62 | First-in-first-out queue used for unpaid withdrawal batches. |  |
+| [src/market/WildcatMarketToken.sol](https://link-when-code-is-ported) | 54 | ERC20 functionality for wildcat market |  |
+| [src/libraries/Errors.sol](https://link-when-code-is-ported) | 41 | Helper functions and constants for errors and Solidity panic codes. |  |
+| [src/libraries/Withdrawal.sol](https://link-when-code-is-ported) | 37 | Defines withdrawal state struct. |  |
+| [src/ReentrancyGuard.sol](https://link-when-code-is-ported) | 33 | Reentrancy guard from Seaport. |  |
+| [src/WildcatSanctionsEscrow.sol](https://link-when-code-is-ported) | 31 | Escrow contract that holds assets for a particular account until it is removed from the Chainalysis sanctions list or until the borrower overrides the account's sanction status. | |
+| [src/libraries/BoolUtils.sol](https://link-when-code-is-ported) | 18 | Helpers for booleans |  |
+| [src/libraries/Chainalysis.sol ](https://link-when-code-is-ported) | 5 | Constant for Chainalysis SanctionsList. |  |
 
 ## Out Of Scope
 
@@ -165,20 +165,23 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 # Additional Context
 
-- We anticipate that any ERC-20 can be used as an underlying asset for a market. However We make the following assumptions:
+- We anticipate that any ERC-20 can be used as an underlying asset for a market. However we make the following assumptions:
 
   - There are no fees on transfer.
   - The `totalSupply` is nowhere near 2^128.
   - Arbitrary mints and burns are not possible.
   - `name`, `symbol` and `decimals` all return valid results.
  
-- This code will be deployed to Ethereum mainnet at launch, and is the only blockchain considered to be in scope for this audit.
+- This code will be deployed to Ethereum mainnet at launch, and it is the only blockchain considered to be in scope for this audit.
 
 - We do not anticipate interacting with any ERC-721s.
 
 - We do not consider a DOS of the Ethereum network to be sufficient to warrant a finding valid, even in such scenarios as a DOS preventing a borrower from depositing assets for long enough to exceed the grace period and activate the penalty APR of a market.
 
 - No implementations are intended to conform with any EIPs.
+
+- Rounding errors:
+  - Conversion between scaled and normalized balances inherently incurs some rounding error; we consider rounding errors limited to "dust" (miniscule amounts left unaccounted for) out of scope unless they lead to additional unexpected behavior (e.g. if a rounding error can prevent withdrawal batches from being closed).
 
 - Trusted roles:
 
