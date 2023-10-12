@@ -243,15 +243,15 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 ```
 - How many contracts are in scope?: 22
 - Total SLoC for these contracts?: 2,332  
-- How many external imports are there?: 2  
-- How many separate interfaces and struct definitions are there for the contracts within scope?: 7 interfaces, 7 structs 
+- How many external imports are there?: 4 [Solady {Ownable, LibBit, SafeTransferLib}, OpenZeppelin {EnumerableSet}]
+- How many separate interfaces and struct definitions are there for the contracts within scope?: 9 interfaces, 8 structs 
 - Does most of your code generally use composition or inheritance?: Inheritance   
-- How many external calls?: 1   
-- What is the overall line coverage percentage provided by your tests?: 90
+- How many external calls?: 1 [Chainalysis]
+- What is the overall line coverage percentage provided by your tests?: >90%
 - Is this an upgrade of an existing system?: False
 - Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): Timelock function, ERC-20 Token 
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False   
-- Please describe required context:   
+- Please describe required context: N/A
 - Does it use an oracle?: No  
 - Describe any novel or unique curve logic or mathematical models your code uses: N/A 
 - Is this either a fork of or an alternate implementation of another project?: N/A   
