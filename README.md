@@ -130,23 +130,22 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 | Contract | SLOC | Purpose | Libraries Used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [src/WildcatVaultController.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/market/WildcatMarketBase.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/libraries/FeeMath.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/market/WildcatMarketConfig.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/libraries/VaultState.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/WildcatSanctionsSentinel.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/libraries/LibStoredInitCode.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/libraries/FIFOQueue.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/market/WildcatMarketToken.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/libraries/Withdrawal.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/WildcatSanctionsEscrow.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/libraries/BoolUtils.sol](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [src/libraries/Chainalysis.sol ](https://link-when-code-is-ported) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatVaultController.sol](https://link-when-code-is-ported) | 363 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarketBase.sol](https://link-when-code-is-ported) | 311 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 247 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 176 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 136 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/FeeMath.sol](https://link-when-code-is-ported) | 97 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarketConfig.sol](https://link-when-code-is-ported) | 95 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 91 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatSanctionsSentinel.sol](https://link-when-code-is-ported) | 75 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/LibStoredInitCode.sol](https://link-when-code-is-ported) | 68 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/FIFOQueue.sol](https://link-when-code-is-ported) | 62 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/market/WildcatMarketToken.sol](https://link-when-code-is-ported) | 54 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/Withdrawal.sol](https://link-when-code-is-ported) | 37 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/WildcatSanctionsEscrow.sol](https://link-when-code-is-ported) | 31 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/BoolUtils.sol](https://link-when-code-is-ported) | 18 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [src/libraries/Chainalysis.sol ](https://link-when-code-is-ported) | 5 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
 
 ## Out Of Scope
 
