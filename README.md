@@ -150,7 +150,7 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 | [src/libraries/Withdrawal.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/Withdrawal.sol) | 37 | This contract does XYZ |  |
 | [src/ReentrancyGuard.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/ReentrancyGuard.sol) | 33 | This contract does XYZ |  |
 | [src/WildcatSanctionsEscrow.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatSanctionsEscrow.sol) | 31 | This contract does XYZ | |
-| [src/libraries/BoolUtils.sol]([https://link-when-code-is-ported](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/BoolUtils.sol)) | 18 | This contract does XYZ |  |
+| [src/libraries/BoolUtils.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/BoolUtils.sol) | 18 | This contract does XYZ |  |
 | [src/libraries/Chainalysis.sol ](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/Chainalysis.sol) | 5 | This contract does XYZ |  |
 
 ## Out Of Scope
