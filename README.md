@@ -36,11 +36,28 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 # Overview
 
-Laurence will cover this section.
+### The Ideological Pitch
 
-TODO: Point out that the lending model is inverted here: it's borrower driven (sourcing their own lenders).
+The Wildcat Protocol is an as-yet-unreleased protocol launching on Ethereum mainnet that addresses what we see as blockers in the sphere of on-chain fixed-rate private credit.
 
-[ ⭐️ SPONSORS: add info here ]
+If you're interested in the _how_ and _why_ at a high-level, the following may be of interest to you:
+- [Whitepaper](https://github.com/wildcat-finance/wildcat-whitepaper/blob/main/whitepaper_v0.2.pdf)
+- [Manifesto](https://medium.com/@wildcatprotocol/the-wildcat-manifesto-db23d4b9484d)
+
+Wildcat inverts the typical on-chain credit model whereby borrowers appeal to an existing pool of lenders willing to loan their assets. Instead, a Wildcat borrower is required
+to create a market for a particular asset, offer a particular rate, and specify the desired lender addresses explicitly - in this iteration of the protocol at least - before
+credit in that asset can be obtained. This means that we are expecting there to be an existing relationship between counterparties,
+
+There are _no underwriters_ and _no insurance funds_ for Wildcat markets. The protocol itself is entirely hands-off when it comes to any given market.
+
+[TODO: Complete]
+
+### A More Technical Briefing
+
+Borrowers deploy markets through _controllers_ - quasi-factories that dictate logic, define the set of permissible lenders and constrain minimum and maximum values of market parameters.
+Multiple markets can be deployed through a single controller, with the implication that a single list of lenders can be used to gate access to multiple markets simultaneously. 
+
+[TODO: Complete]
 
 ## Links
 
@@ -116,23 +133,40 @@ TODO: Point out that the lending model is inverted here: it's borrower driven (s
 - Consider ways in which market interest rates can be manipulated to produce results that are outside of controller-specific limits
 - Consider ways in which the reserve ratio of a market can be manipulated so as to lead to the borrower borrowing more than they should be permitted.
 
+### Penalty APR
+
+- Consider ways in which the borrower can manipulate reserves or base APRs in a way to avoid the penalty rate activating if delinquent for longer then the grace period.
+
 ### Deposits and Withdrawals
 
 - Consider ways in which deposits might cause trouble with internal market accounting.
 - Consider ways in which lenders making withdrawal requests might have them (be they either pending or expired) altered.
 - Consider ways in which market tokens can be burned but incorrect amounts of assets are claimable (this is _very_ nuanced and circumstance specific).
-- Consider ways in which the order of expired batches can be manipulated to impact the FIFO nature.
+- Consider ways in which the order of expired batches can be manipulated to impact the withdrawal queue's FIFO nature.
+- Consider ways in which a party other than the borrower of a market can borrow assets.
+- Consider ways in which an address without the `WithdrawOnly` or `DepositAndWithdraw` role can burn market tokens or otherwise make withdrawal requests.
 
 ### Sentinel and Escrow Contracts
 
 - Consider ways (beyond a hostile Chainalysis oracle) in which lender addresses could be excised from a market via `nukeFromOrbit`.
-- Consider ways in which parties to an escrow contract might be locked out of it.
-  
+- Consider ways in which parties to an escrow contract might be locked out of it, or the escrow contract might otherwise be bricked.
+
 ---
 
 ## Main Invariants
 
 *Describe the project's main invariants (properties that should NEVER EVER be broken).*
+
+- Market parameters should never be able to exit the bounds defined by the controller which deployed it.
+- The supply of the market token and assets owed by the borrower should always match 1:1.
+- The assets of a market should never be able to be withdrawn by anyone that is not a lender or borrower.
+- Asset deposits not made via `deposit` or `depositUpTo` should not impact internal accounting (the tokens are lost).
+  
+- Borrowers can only be registered with the archcontroller by the archcontroller owner.
+- Controller factories can only be registered with the archcontroller by the archcontroller owner.
+- Controllers and markets can only be deployed by borrowers currently registered with the archcontroller.
+
+---
 
 ## Scoping Details
 
