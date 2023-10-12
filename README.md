@@ -231,13 +231,14 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 - Market parameters should never be able to exit the bounds defined by the controller which deployed it.
 - The supply of the market token and assets owed by the borrower should always match.
 - The assets of a market should never be able to be withdrawn by anyone that is not the borrower or a lender with either the `WithdrawOnly` or `DepositAndWithdraw` role.
-  - Exception: balances being transferred to a blocked account's escrow contract.
+  - Exceptions: balances being transferred to a blocked account's escrow contract and collection of protocol fees.
 - Asset deposits not made via `deposit` should not impact internal accounting (they only increase `totalAssets` and are effectively treated as a payment by the borrower).
 - Addresses without the role `WithdrawOnly` or `DepositAndWithdraw` should never be able to adjust market token supply.
 - Borrowers can only be registered with the archcontroller by the archcontroller owner.
 - Controller factories can only be registered with the archcontroller by the archcontroller owner.
 - Controllers and markets can only be deployed by borrowers currently registered with the archcontroller.
-
+- Withdrawal execution can only transfer assets that have been counted as paid assets in the corresponding batch, i.e. lenders with withdrawal requests can not withdraw more than their pro-rata share of the batch's paid assets.
+- Once pending withdrawals have been set aside for a withdrawal batch (counted toward `normalizedUnclaimedWithdrawals` and `batch.normalizedAmountPaid`), they can only be used for that purpose (i.e. the market will always maintain at least that amount in underlying assets until lenders with a request from that batch have withdrawn the assets)
 ---
 
 ## Scoping Details
