@@ -74,8 +74,6 @@ with jurisdiction for any conflict that arises being placed within the UK courts
 between the two parties already. We provide this document/mechanism as an offering to any lenders who want clarity on what process to follow in the event of a failure on behalf of
 the borrower to repay what is owed.
 
-This is getting long and rambling, so instead we'll direct you to the [Gitbook](https://wildcat-protocol.gitbook.io) which is even more so.
-
 ### A More Technical Briefing
 
 The Wildcat protocol itself coalesces around a single contract - the archcontroller. This contract determines which factories can be used, which markets have already been deployed
@@ -98,7 +96,7 @@ The interest rate paid by the borrower can comprise of up to three distinct figu
 
 A borrower deploying a market with a base APR of 10%, a protocol APR of 30% and a penalty APR of 20% will pay a true APR of 13% (10% + (10% * 30%)) under normal circumstances, and 33% when the market has been delinquent for long enough for the penalty APR to activate.
 
-The penalty APR activates when the market has been delinquent (below its reserve ratio) for a rolling period of time in excess of the _grace period_ - a value (in seconds) defined by the borrower on market deployment. Each market has an internal value called the _grace tracker_, which counts up from zero while a market is delinquent, and counts down to zero when it is not. When the grace tracker value exceeds the grace period, the penalty APR applies for as long as it takes for the former to drop back below the latter. This means that a borrower does _not_ have `grace_period` amount of time to deposit assets back into the market every time it goes delinquent.
+The penalty APR activates when the market has been delinquent (below its reserve ratio) for a rolling period of time in excess of the _grace period_ - a value (in seconds) defined by the borrower on market deployment. Each market has an internal value called the _grace tracker_, which counts up from zero while a market is delinquent, and counts down to zero when it is not. When the grace tracker value exceeds the grace period, the penalty APR applies for as long as it takes for the former to drop back below the latter. This means that a borrower does _not_ have  the amount of time indicated by the grace period to deposit assets back into the market each time it goes delinquent.
 
 Borrowers can withdraw underlying assets from the market only so far as the reserve ratio is maintained.
 
@@ -107,6 +105,10 @@ Withdrawals are initiated by any address that holds the `WithdrawOnly` or `Depos
 Withdrawal request amounts that could not be honoured in a given cycle because of insufficient reserves are batched together, marked as 'expired' and enter a FIFO withdrawal queue. Non-zero withdrawal queues impact the reserve ratio of a market: any assets subsequently deposited by the borrower will be immediately routed into the pending withdrawal pool until there are sufficient assets to fully honour all expired withdrawals.
 
 Lenders that have their addresses flagged by Chainalysis as being sanctioned are blocked from interacting with any markets that they are a part of by giving them a role of `Blocked`. A `nukeFromOrbit` function exists that directs their market balances into a purpose-deployed escrow contract. Lenders can retrieve their assets from these escrow contracts in the event that they are ever removed from the oracle (i.e. their address returns `false` when `isSanctioned(address)` is queried).
+
+This is getting long and rambling, so instead we'll direct you to the [Gitbook](https://wildcat-protocol.gitbook.io) which is even more so, but at least lays out the expected behaviour in prose.
+
+Sorry for subjecting you to all of this. You can go look at the code now.
 
 ## Links
 
