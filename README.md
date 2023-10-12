@@ -91,6 +91,10 @@ has been parameterised by the borrower: you might receive Code4rena Dai Stableco
 These market tokens are _rebasing_ so as to always be redeemable at parity for an asset that is in the reserves of a market - as time goes on, interest inflates the supply of market tokens
 to be consistent with the overall debt that is owed by the borrower. The interest rate compounds every time a non-static call is made to the market contract and the scale factor is updated.
 
+Withdrawals are initiated by any address that holds the `WithdrawOnly` or `DepositAndWithdraw` roles (and a non-zero amount of the appropriate market token) placing a withdrawal request. If there are any assets in reserve, market tokens will be burned 1:1 to move them into a 'claimable withdrawals pool', at which point the assets transferred will cease accruing interest. At the conclusion of a withdrawal cycle (a market parameter set at deployment), assets in the claimable withdrawals pool can be claimed by the lender, subject to pro-rata dispersal if the amount requested for withdrawal by all lenders exceeds the amount in the pool.
+
+Withdrawal request amounts that could not be honoured in a given cycle because of insufficient reserves are batched together, marked as 'expired' and enter a FIFO withdrawal queue. Non-zero withdrawal queues impact the reserve ratio of a market: any assets subsequently deposited by the borrower will be immediately routed into the pending withdrawal pool until there are sufficient assets to fully honour all expired withdrawals.
+
 [TODO: Complete]
 
 ## Links
@@ -206,8 +210,10 @@ to be consistent with the overall debt that is owed by the borrower. The interes
 
 - Market parameters should never be able to exit the bounds defined by the controller which deployed it.
 - The supply of the market token and assets owed by the borrower should always match 1:1.
-- The assets of a market should never be able to be withdrawn by anyone that is not a lender or borrower (with the exception of balances being transferred in a `nukeFromOrbit` call).
+- The assets of a market should never be able to be withdrawn by anyone that is not the borrower or a lender with either the `WithdrawOnly` or `DepositAndWithdraw` role.
+  - Exception: balances being transferred in a `nukeFromOrbit` call.
 - Asset deposits not made via `deposit` should not impact internal accounting (the tokens are lost).
+- Addresses without the role `WithdrawOnly` or `DepositAndWithdraw` should never be able to adjust market token supply.
 
 - Borrowers can only be registered with the archcontroller by the archcontroller owner.
 - Controller factories can only be registered with the archcontroller by the archcontroller owner.
