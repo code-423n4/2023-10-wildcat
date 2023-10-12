@@ -155,12 +155,12 @@ Multiple markets can be deployed through a single controller, with the implicati
 
 ## Main Invariants
 
-*Describe the project's main invariants (properties that should NEVER EVER be broken).*
+*Properties that should NEVER be broken under any circumstance:*
 
 - Market parameters should never be able to exit the bounds defined by the controller which deployed it.
 - The supply of the market token and assets owed by the borrower should always match 1:1.
 - The assets of a market should never be able to be withdrawn by anyone that is not a lender or borrower.
-- Asset deposits not made via `deposit` or `depositUpTo` should not impact internal accounting (the tokens are lost).
+- Asset deposits not made via `deposit` should not impact internal accounting (the tokens are lost).
   
 - Borrowers can only be registered with the archcontroller by the archcontroller owner.
 - Controller factories can only be registered with the archcontroller by the archcontroller owner.
