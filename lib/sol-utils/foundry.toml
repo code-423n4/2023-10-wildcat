@@ -1,0 +1,13 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+
+fs_permissions = [{ access = "read", path = "./external"}]
+
+
+via_ir = true
+optimizer = true
+optimizer_runs = 1_000_000
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
