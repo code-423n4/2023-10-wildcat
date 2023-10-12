@@ -119,13 +119,6 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 # In Scope
 
-[ ⭐️ SPONSORS: add scoping and technical details here ]
-
-- [ ] In the table format shown below, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each *For line of code counts, we recommend running prettier with a 100-character line length, and using [cloc](https://github.com/AlDanial/cloc).* 
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-
 *Files and contracts in scope for this audit in the table below:*
 
 | Contract | SLOC | Purpose | Libraries Used |  
@@ -159,9 +152,7 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 - `src/interfaces/*`
 
-| Contract | Purpose |
-| ----------- | ----------- |
-| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | Blah |
+---
 
 # Additional Context
 
