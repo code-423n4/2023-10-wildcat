@@ -130,28 +130,28 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 | Contract | SLOC | Purpose | Libraries Used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [src/WildcatVaultController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultController.sol) | 363 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol), [[`@solady/Ownable`]()](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/market/WildcatMarketBase.sol](https://link-when-code-is-ported) | 311 | This contract does XYZ |  |
-| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 247 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
-| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 176 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
-| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 136 | This contract does XYZ | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/libraries/MathUtils.sol](https://link-when-code-is-ported) | 110 | This contract does XYZ |  |
-| [src/libraries/SafeCastLib.sol](https://link-when-code-is-ported) | 106 | This contract does XYZ |  |
-| [src/libraries/FeeMath.sol](https://link-when-code-is-ported) | 97 | This contract does XYZ |  |
-| [src/market/WildcatMarketConfig.sol](https://link-when-code-is-ported) | 95 | This contract does XYZ | |
-| [src/libraries/StringQuery.sol](https://link-when-code-is-ported) | 93 | This contract does XYZ | [`@solady/LibBit`](https://github.com/Vectorized/solady/blob/main/src/utils/LibBit.sol) |
-| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 91 | This contract does XYZ | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/libraries/VaultState.sol](https://link-when-code-is-ported) | 83 | This contract does XYZ |  |
-| [src/WildcatSanctionsSentinel.sol](https://link-when-code-is-ported) | 75 | This contract does XYZ |  |
-| [src/libraries/LibStoredInitCode.sol](https://link-when-code-is-ported) | 68 | This contract does XYZ |  |
-| [src/libraries/FIFOQueue.sol](https://link-when-code-is-ported) | 62 | This contract does XYZ |  |
-| [src/market/WildcatMarketToken.sol](https://link-when-code-is-ported) | 54 | This contract does XYZ |  |
-| [src/libraries/Errors.sol](https://link-when-code-is-ported) | 41 | This contract does XYZ |  |
-| [src/libraries/Withdrawal.sol](https://link-when-code-is-ported) | 37 | This contract does XYZ |  |
-| [src/ReentrancyGuard.sol](https://link-when-code-is-ported) | 33 | This contract does XYZ |  |
-| [src/WildcatSanctionsEscrow.sol](https://link-when-code-is-ported) | 31 | This contract does XYZ | |
-| [src/libraries/BoolUtils.sol](https://link-when-code-is-ported) | 18 | This contract does XYZ |  |
-| [src/libraries/Chainalysis.sol ](https://link-when-code-is-ported) | 5 | This contract does XYZ |  |
+| [src/WildcatVaultController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultController.sol) | 363 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol), [`@solady/Ownable`](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/market/WildcatMarketBase.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketBase.sol) | 311 | This contract does XYZ |  |
+| [src/WildcatVaultControllerFactory.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultControllerFactory.sol) | 247 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
+| [src/WildcatArchController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatArchController.sol) | 176 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
+| [src/market/WildcatMarketWithdrawals.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketWithdrawals.sol) | 136 | This contract does XYZ | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/libraries/MathUtils.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/MathUtils.sol) | 110 | This contract does XYZ |  |
+| [src/libraries/SafeCastLib.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/SafeCastLib.sol) | 106 | This contract does XYZ |  |
+| [src/libraries/FeeMath.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/FeeMath.sol) | 97 | This contract does XYZ |  |
+| [src/market/WildcatMarketConfig.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketConfig.sol) | 95 | This contract does XYZ | |
+| [src/libraries/StringQuery.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/StringQuery.sol) | 93 | This contract does XYZ | [`@solady/LibBit`](https://github.com/Vectorized/solady/blob/main/src/utils/LibBit.sol) |
+| [src/market/WildcatMarket.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarket.sol) | 91 | This contract does XYZ | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/libraries/VaultState.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/VaultState.sol) | 83 | This contract does XYZ |  |
+| [src/WildcatSanctionsSentinel.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatSanctionsSentinel.sol) | 75 | This contract does XYZ |  |
+| [src/libraries/LibStoredInitCode.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/LibStoredInitCode.sol) | 68 | This contract does XYZ |  |
+| [src/libraries/FIFOQueue.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/FIFOQueue.sol) | 62 | This contract does XYZ |  |
+| [src/market/WildcatMarketToken.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketToken.sol) | 54 | This contract does XYZ |  |
+| [src/libraries/Errors.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/Errors.sol) | 41 | This contract does XYZ |  |
+| [src/libraries/Withdrawal.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/Withdrawal.sol) | 37 | This contract does XYZ |  |
+| [src/ReentrancyGuard.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/ReentrancyGuard.sol) | 33 | This contract does XYZ |  |
+| [src/WildcatSanctionsEscrow.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatSanctionsEscrow.sol) | 31 | This contract does XYZ | |
+| [src/libraries/BoolUtils.sol]([https://link-when-code-is-ported](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/BoolUtils.sol)) | 18 | This contract does XYZ |  |
+| [src/libraries/Chainalysis.sol ](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/Chainalysis.sol) | 5 | This contract does XYZ |  |
 
 ## Out Of Scope
 
