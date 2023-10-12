@@ -113,7 +113,7 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 ## Links
 
 - **Previous Audits:** [Security review of market logic](https://hackmd.io/@geistermeister/r15gj_y1p) by [alpeh_v](https://x.com/alpeh_v)
-- **Documentation:**: [Gitbook](https://wildcat-protocol.gitbook.io) 
+- **Documentation:** [Gitbook](https://wildcat-protocol.gitbook.io) 
 - **Website:**: N/A [Still building things out!]
 - **Twitter:**: [@WildcatFi](https://x.com/WildcatFi)  
 
@@ -175,11 +175,8 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 - Trusted roles:
 
-  - Archcontroller Owner:
-  - Borrower:
-  - Sentinel:
-
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
+  - Archcontroller Owner: can add or remove controller factories to/from the archcontroller, dictating who can deploy controllers and markets. Markets that have already been deployed cannot be shut down, and removing a borrower from the archcontroller simply prevents them from deploying anything further.
+  - Borrower: can add or remove lenders to/from controllers, permitting them to deposit into markets or restricting their ability to deposit further if they have already deposited before. Lenders cannot be prevented from withdrawing unless they have been flagged by the sentinel.
 
 ---
 
