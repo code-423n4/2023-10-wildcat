@@ -235,7 +235,15 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 ## Known Issues
 
+The invariant stated above that batch 1 is executed before batch 2 can be violated if:
+- Batch 1 is marked as unpaid and processed.
+- Batch 2 is created.
+- The market now has sufficient assets for both.
+- Batch 2 expires and is processed / assets are reserved (because batch 1 is currently covered).
+- Protocol fees are collected (only `normalizedUnclaimedWithdrawals` is subtracted from withdrawable fees).
+- Now batch 1 is not fully covered.
 
+We are aware of this issue, and will not consider it a finding.
 
 --
 
