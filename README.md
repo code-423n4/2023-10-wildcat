@@ -229,8 +229,15 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 - Controller factories can only be registered with the archcontroller by the archcontroller owner.
 - Controllers and markets can only be deployed by borrowers currently registered with the archcontroller.
 - Withdrawal execution can only transfer assets that have been counted as paid assets in the corresponding batch, i.e. lenders with withdrawal requests can not withdraw more than their pro-rata share of the batch's paid assets.
-- Once pending withdrawals have been set aside for a withdrawal batch (counted toward `normalizedUnclaimedWithdrawals` and `batch.normalizedAmountPaid`), they can only be used for that purpose (i.e. the market will always maintain at least that amount in underlying assets until lenders with a request from that batch have withdrawn the assets)
+- Once pending withdrawals have been set aside for a withdrawal batch (counted toward `normalizedUnclaimedWithdrawals` and `batch.normalizedAmountPaid`), they can only be used for that purpose (i.e. the market will always maintain at least that amount in underlying assets until lenders with a request from that batch have withdrawn the assets).
+  
 ---
+
+## Known Issues
+
+
+
+--
 
 ## Scoping Details
 
