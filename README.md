@@ -230,6 +230,11 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 - Controllers and markets can only be deployed by borrowers currently registered with the archcontroller.
 - Withdrawal execution can only transfer assets that have been counted as paid assets in the corresponding batch, i.e. lenders with withdrawal requests can not withdraw more than their pro-rata share of the batch's paid assets.
 - Once pending withdrawals have been set aside for a withdrawal batch (counted toward `normalizedUnclaimedWithdrawals` and `batch.normalizedAmountPaid`), they can only be used for that purpose (i.e. the market will always maintain at least that amount in underlying assets until lenders with a request from that batch have withdrawn the assets).
+- In any non-static function which touches a market's state:
+  - Prior to executing the function's logic, if time has elapsed since last update, interest, protocol fees and delinquency fees should be accrued to the market state and pending expired withdrawal batches should be processed.
+  - At the end of the function, the updated state is written to storage and the vault's delinquency status is updated.
+- Assets are only paid to newer withdrawal batches if the market has sufficient assets to close older batches.
+  - Exception: If protocol fees are collected between a previous batch's expiry and it being closed (fully paid), it is possible for a newer batch to reserve assets and make the older batch unpayable (see Known Issues below).
   
 ---
 
@@ -261,7 +266,7 @@ We are aware of this issue, and will not consider it a finding.
 - Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): Timelock function, ERC-20 Token 
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False   
 - Please describe required context: N/A
-- Does it use an oracle?: No  
+- Does it use an oracle?: Yes [Chainalysis]  
 - Describe any novel or unique curve logic or mathematical models your code uses: N/A 
 - Is this either a fork of or an alternate implementation of another project?: N/A   
 - Does it use a side-chain?: N/A
