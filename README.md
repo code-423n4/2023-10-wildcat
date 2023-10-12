@@ -130,28 +130,28 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 | Contract | SLOC | Purpose | Libraries Used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [src/WildcatVaultController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultController.sol) | 363 | Deploys vaults and manages their configurable parameters (apr, reserve ratio) and maintains set of approved lenders. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol), [[`@solady/Ownable`]()](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/market/WildcatMarketBase.sol](https://link-when-code-is-ported) | 311 | Base contract for wildcat markets.  |  |
-| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 247 | Deploys controllers and manages protocol fee information. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
-| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 176 | Registry for borrowers, controller factories, controllers and vaults. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
-| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 136 | Withdrawal functionality for wildcat market. | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/libraries/MathUtils.sol](https://link-when-code-is-ported) | 110 | Generic math functions used in the codebase. |  |
-| [src/libraries/SafeCastLib.sol](https://link-when-code-is-ported) | 106 | uint cast functions |  |
-| [src/libraries/FeeMath.sol](https://link-when-code-is-ported) | 97 | Contains functions for calculating interest, protocol fees and delinquency fees. |  |
-| [src/market/WildcatMarketConfig.sol](https://link-when-code-is-ported) | 95 | Methods for role management and configuration by controller. | |
-| [src/libraries/StringQuery.sol](https://link-when-code-is-ported) | 93 | Helper functions for querying strings from methods that can return either `string` or `bytes32` | [`@solady/LibBit`](https://github.com/Vectorized/solady/blob/main/src/utils/LibBit.sol) |
-| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 91 | Main contract for wildcat market that inherits all base contracts. | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/libraries/VaultState.sol](https://link-when-code-is-ported) | 83 | Defines the vault's state struct and helper functions for reading from it and calculating basic values like required reserves and scaling/normalizing balances. |  |
-| [src/WildcatSanctionsSentinel.sol](https://link-when-code-is-ported) | 75 | Contract that interfaces with Chainalysis, allows borrowers to override lenders' sanction statuses and deploys escrows. |  |
-| [src/libraries/LibStoredInitCode.sol](https://link-when-code-is-ported) | 68 | Library for deploying contracts using code storage for init code to prevent oversized contracts. |  |
-| [src/libraries/FIFOQueue.sol](https://link-when-code-is-ported) | 62 | First-in-first-out queue used for unpaid withdrawal batches. |  |
-| [src/market/WildcatMarketToken.sol](https://link-when-code-is-ported) | 54 | ERC20 functionality for wildcat market |  |
-| [src/libraries/Errors.sol](https://link-when-code-is-ported) | 41 | Helper functions and constants for errors and Solidity panic codes. |  |
-| [src/libraries/Withdrawal.sol](https://link-when-code-is-ported) | 37 | Defines withdrawal state struct. |  |
-| [src/ReentrancyGuard.sol](https://link-when-code-is-ported) | 33 | Reentrancy guard from Seaport. |  |
-| [src/WildcatSanctionsEscrow.sol](https://link-when-code-is-ported) | 31 | Escrow contract that holds assets for a particular account until it is removed from the Chainalysis sanctions list or until the borrower overrides the account's sanction status. | |
-| [src/libraries/BoolUtils.sol](https://link-when-code-is-ported) | 18 | Helpers for booleans |  |
-| [src/libraries/Chainalysis.sol ](https://link-when-code-is-ported) | 5 | Constant for Chainalysis SanctionsList. |  |
+| [src/WildcatVaultController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultController.sol) | 363 |  Deploys vaults and manages their configurable parameters (apr, reserve ratio) and maintains set of approved lenders. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol), [`@solady/Ownable`](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/market/WildcatMarketBase.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketBase.sol) | 311 | Base contract for wildcat markets. |  |
+| [src/WildcatVaultControllerFactory.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultControllerFactory.sol) | 247 | Deploys controllers and manages protocol fee information. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
+| [src/WildcatArchController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatArchController.sol) | 176 | Registry for borrowers, controller factories, controllers and vaults. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
+| [src/market/WildcatMarketWithdrawals.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketWithdrawals.sol) | 136 | Withdrawal functionality for wildcat market. | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/libraries/MathUtils.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/MathUtils.sol) | 110 | Generic math functions used in the codebase. |  |
+| [src/libraries/SafeCastLib.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/SafeCastLib.sol) | 106 | uint cast functions |  |
+| [src/libraries/FeeMath.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/FeeMath.sol) | 97 | Contains functions for calculating interest, protocol fees and delinquency fees. |  |
+| [src/market/WildcatMarketConfig.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketConfig.sol) | 95 |  Methods for role management and configuration by controller | |
+| [src/libraries/StringQuery.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/StringQuery.sol) | 93 | Helper functions for querying strings from methods that can return either `string` or `bytes32` | [`@solady/LibBit`](https://github.com/Vectorized/solady/blob/main/src/utils/LibBit.sol) |
+| [src/market/WildcatMarket.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarket.sol) | 91 | Main contract for wildcat market that inherits all base contracts. | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/libraries/VaultState.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/VaultState.sol) | 83 | Defines the vault's state struct and helper functions for reading from it and calculating basic values like required reserves and scaling/normalizing balances.  |  |
+| [src/WildcatSanctionsSentinel.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatSanctionsSentinel.sol) | 75 | Contract that interfaces with Chainalysis, allows borrowers to override lenders' sanction statuses and deploys escrows. |  |
+| [src/libraries/LibStoredInitCode.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/LibStoredInitCode.sol) | 68 | Library for deploying contracts using code storage for init code to prevent oversized contracts. |  |
+| [src/libraries/FIFOQueue.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/FIFOQueue.sol) | 62 | First-in-first-out queue used for unpaid withdrawal batches. |  |
+| [src/market/WildcatMarketToken.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketToken.sol) | 54 | ERC20 functionality for wildcat market |  |
+| [src/libraries/Errors.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/Errors.sol) | 41 | Helper functions and constants for errors and Solidity panic codes. |  |
+| [src/libraries/Withdrawal.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/Withdrawal.sol) | 37 | Defines withdrawal state struct. |  |
+| [src/ReentrancyGuard.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/ReentrancyGuard.sol) | 33 | Reentrancy guard from Seaport. |  |
+| [src/WildcatSanctionsEscrow.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatSanctionsEscrow.sol) | 31 | Escrow contract that holds assets for a particular account until it is removed from the Chainalysis sanctions list or until the borrower overrides the account's sanction status. | |
+| [src/libraries/BoolUtils.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/BoolUtils.sol) | 18 | Helpers for booleans  |  |
+| [src/libraries/Chainalysis.sol ](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/Chainalysis.sol) | 5 | Constant for Chainalysis SanctionsList. |  |
 
 ## Out Of Scope
 
@@ -246,15 +246,15 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 ```
 - How many contracts are in scope?: 22
 - Total SLoC for these contracts?: 2,332  
-- How many external imports are there?: 2  
-- How many separate interfaces and struct definitions are there for the contracts within scope?: 7 interfaces, 7 structs 
+- How many external imports are there?: 4 [Solady {Ownable, LibBit, SafeTransferLib}, OpenZeppelin {EnumerableSet}]
+- How many separate interfaces and struct definitions are there for the contracts within scope?: 9 interfaces, 8 structs 
 - Does most of your code generally use composition or inheritance?: Inheritance   
-- How many external calls?: 1   
-- What is the overall line coverage percentage provided by your tests?: 90
+- How many external calls?: 1 [Chainalysis]
+- What is the overall line coverage percentage provided by your tests?: >90%
 - Is this an upgrade of an existing system?: False
 - Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): Timelock function, ERC-20 Token 
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False   
-- Please describe required context:   
+- Please describe required context: N/A
 - Does it use an oracle?: No  
 - Describe any novel or unique curve logic or mathematical models your code uses: N/A 
 - Is this either a fork of or an alternate implementation of another project?: N/A   
