@@ -206,7 +206,7 @@ to be consistent with the overall debt that is owed by the borrower. The interes
 
 - Market parameters should never be able to exit the bounds defined by the controller which deployed it.
 - The supply of the market token and assets owed by the borrower should always match 1:1.
-- The assets of a market should never be able to be withdrawn by anyone that is not a lender or borrower.
+- The assets of a market should never be able to be withdrawn by anyone that is not a lender or borrower (with the exception of balances being transferred in a `nukeFromOrbit` call).
 - Asset deposits not made via `deposit` should not impact internal accounting (the tokens are lost).
 
 - Borrowers can only be registered with the archcontroller by the archcontroller owner.
