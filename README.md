@@ -209,16 +209,10 @@ to be consistent with the overall debt that is owed by the borrower. The interes
 - The assets of a market should never be able to be withdrawn by anyone that is not a lender or borrower.
 - Asset deposits not made via `deposit` should not impact internal accounting (the tokens are lost).
 
-### Archcontroller/Controller
 - Borrowers can only be registered with the archcontroller by the archcontroller owner.
 - Controller factories can only be registered with the archcontroller by the archcontroller owner.
 - Controllers and markets can only be deployed by borrowers currently registered with the archcontroller.
 
-- - Some notes on ERC20 assumptions for market tokens:
-  - There is no fee on transfer.
-  - The `totalSupply` is nowhere near 2^128.
-  - Arbitrary mint and burn is not possible.
-  - 
 ---
 
 ## Scoping Details
