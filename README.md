@@ -128,21 +128,19 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 *Files and contracts in scope for this audit in the table below:*
 
-https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol
-
 | Contract | SLOC | Purpose | Libraries Used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [src/WildcatVaultController.sol](https://link-when-code-is-ported) | 363 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://openzeppelin.com/contracts/), [`@solady/Ownable`](), [`@solady/SafeTransferLib`]()|
+| [src/WildcatVaultController.sol](https://link-when-code-is-ported) | 363 | This contract does XYZ | [`@openzeppelin/EnumerableSet`]([https://openzeppelin.com/contracts/](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol)), [[`@solady/Ownable`]()](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
 | [src/market/WildcatMarketBase.sol](https://link-when-code-is-ported) | 311 | This contract does XYZ |  |
-| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 247 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://openzeppelin.com/contracts/) |
-| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 176 | This contract does XYZ | [`@openzeppelin/EnumerableSet`](https://openzeppelin.com/contracts/) |
-| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 136 | This contract does XYZ | [`@solady/SafeTransferLib`]() |
+| [src/WildcatVaultControllerFactory.sol](https://link-when-code-is-ported) | 247 | This contract does XYZ | [`@openzeppelin/EnumerableSet`]([https://openzeppelin.com/contracts/](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol)) |
+| [src/WildcatArchController.sol](https://link-when-code-is-ported) | 176 | This contract does XYZ | [`@openzeppelin/EnumerableSet`]([https://openzeppelin.com/contracts/](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol)) |
+| [src/market/WildcatMarketWithdrawals.sol](https://link-when-code-is-ported) | 136 | This contract does XYZ | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
 | [src/libraries/MathUtils.sol](https://link-when-code-is-ported) | 110 | This contract does XYZ |  |
 | [src/libraries/SafeCastLib.sol](https://link-when-code-is-ported) | 106 | This contract does XYZ |  |
 | [src/libraries/FeeMath.sol](https://link-when-code-is-ported) | 97 | This contract does XYZ |  |
 | [src/market/WildcatMarketConfig.sol](https://link-when-code-is-ported) | 95 | This contract does XYZ | |
-| [src/libraries/StringQuery.sol](https://link-when-code-is-ported) | 93 | This contract does XYZ | [`@solady/LibBit`]() |
-| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 91 | This contract does XYZ | [`@solady/SafeTransferLib`]() |
+| [src/libraries/StringQuery.sol](https://link-when-code-is-ported) | 93 | This contract does XYZ | [`@solady/LibBit`](https://github.com/Vectorized/solady/blob/main/src/utils/LibBit.sol) |
+| [src/market/WildcatMarket.sol](https://link-when-code-is-ported) | 91 | This contract does XYZ | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
 | [src/libraries/VaultState.sol](https://link-when-code-is-ported) | 83 | This contract does XYZ |  |
 | [src/WildcatSanctionsSentinel.sol](https://link-when-code-is-ported) | 75 | This contract does XYZ |  |
 | [src/libraries/LibStoredInitCode.sol](https://link-when-code-is-ported) | 68 | This contract does XYZ |  |
