@@ -67,19 +67,29 @@ simply because strict liability on interfacing with these addresses means that t
 
 Given the above, it should be emphasised: this is not a protocol aimed at retail users. Heck, it's barely aimed at power users. The counterparty default risk is real, the smart
 contract risk is real. Wildcat is a tool for sophisticated entities who wish to bring credit agreements on-chain in a manner that does not involve surrendering any control to third
-parties in matters such as underwriting, risk analysis or credit scoring. 
+parties in matters such as underwriting, risk analysis or credit scoring. If you want that freedom, Wildcat _might_ be for you.
 
 If counterparties are utilising the protocol UI, we require a borrower to sign a master loan agreement setting out various covenants, representations and definitions of default,
-with jurisdiction for any conflict that arises being placed within the UK courts. Lenders can countersign these agreements or decline - perhaps there is another agreement in place
-between the two parties already. We provide this template document as an offering to any lenders who want clarity on what process to follow in the event of a failure on behalf of
-the borrower to repay.
+with jurisdiction for any conflict that arises being placed within the UK courts. Lenders can countersign this agreement or decline: perhaps there is another agreement in place
+between the two parties already. We provide this document/mechanism as an offering to any lenders who want clarity on what process to follow in the event of a failure on behalf of
+the borrower to repay what is owed.
 
 [TODO: Complete]
 
 ### A More Technical Briefing
 
-Borrowers deploy markets through _controllers_ - quasi-factories that dictate logic, define the set of permissible lenders and constrain minimum and maximum values of market parameters.
-Multiple markets can be deployed through a single controller, with the implication that a single list of lenders can be used to gate access to multiple markets simultaneously. 
+The Wildcat protocol itself coalesces around a single contract - the archcontroller. This contract determines which factories can be used, which markets have already been deployed
+and which addresses are permitted to deploy contracts from said factories.
+
+Borrowers deploy markets through _controllers_ - contracts that dictate logic, define the set of permissible lenders and constrain minimum and maximum values of market parameters
+(the freedom we offer is not completely unbounded - you can't have a market with a years-long withdrawal cycle, for example). Multiple markets can be deployed through a single controller,
+with the implication that a single list of lenders can be used to grant access to multiple markets simultaneously.
+
+Lenders that are authorised on a given controller can deposit assets to any markets that have been launched through it. In exchange for their deposits, they receive a _market token_ which
+has been parameterised by the borrower: you might receive Code4rena Dai Stablecoin - ticker C4DAI - for depositing DAI into a market run by Code4rena. Or C4 Wrapped Ether (CODE423N4WETH).
+
+These market tokens are _rebasing_ so as to always be redeemable at parity for an asset that is in the reserves of a market - as time goes on, interest inflates the supply of market tokens
+to be consistent with the overall debt that is owed by the borrower. The interest rate compounds every time a non-static call is made to the market contract and the scale factor is updated.
 
 [TODO: Complete]
 
@@ -131,15 +141,28 @@ Multiple markets can be deployed through a single controller, with the implicati
 
 # Additional Context
 
+- We anticipate that any ERC-20 can be used as an underlying asset for a market. However We make the following assumptions:
+
+  - There are no fees on transfer.
+  - The `totalSupply` is nowhere near 2^128.
+  - Arbitrary mints and burns are not possible.
+  - `name`, `symbol` and `decimals` all return valid results.
+ 
+- This code will be deployed to Ethereum mainnet at launch, and is the only blockchain considered to be in scope for this audit.
+
+- We do not anticipate interacting with any ERC-721s.
+
+- We do not consider a DOS of the Ethereum network to be sufficient to warrant a finding valid, even in such scenarios as a DOS preventing a borrower from depositing assets for long enough to exceed the grace period and activate the penalty APR of a market.
+
+- No implementations are intended to conform with any EIPs.
+
+- Trusted roles:
+
+  - Archcontroller Owner:
+  - Borrower:
+  - Sentinel:
+
 - [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Please list specific ERC20 that your protocol is anticipated to interact with. Could be "any" (literally anything, fee on transfer tokens, ERC777 tokens and so forth) or a list of tokens you envision using on launch.
-- [ ] Please list specific ERC721 that your protocol is anticipated to interact with.
-- [ ] Which blockchains will this code be deployed to, and are considered in scope for this audit?
-- [ ] Please list all trusted roles (e.g. operators, slashers, pausers, etc.), the privileges they hold, and any conditions under which privilege escalation is expected/allowable
-- [ ] In the event of a DOS, could you outline a minimum duration after which you would consider a finding to be valid? This question is asked in the context of most systems' capacity to handle DoS attacks gracefully for a certain period.
-- [ ] Is any part of your implementation intended to conform to any EIP's? If yes, please list the contracts in this format: 
-  - `Contract1`: Should comply with `ERC/EIPX`
-  - `Contract2`: Should comply with `ERC/EIPY`
 
 ---
 
@@ -185,11 +208,17 @@ Multiple markets can be deployed through a single controller, with the implicati
 - The supply of the market token and assets owed by the borrower should always match 1:1.
 - The assets of a market should never be able to be withdrawn by anyone that is not a lender or borrower.
 - Asset deposits not made via `deposit` should not impact internal accounting (the tokens are lost).
-  
+
+### Archcontroller/Controller
 - Borrowers can only be registered with the archcontroller by the archcontroller owner.
 - Controller factories can only be registered with the archcontroller by the archcontroller owner.
 - Controllers and markets can only be deployed by borrowers currently registered with the archcontroller.
 
+- - Some notes on ERC20 assumptions for market tokens:
+  - There is no fee on transfer.
+  - The `totalSupply` is nowhere near 2^128.
+  - Arbitrary mint and burn is not possible.
+  - 
 ---
 
 ## Scoping Details
