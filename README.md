@@ -36,7 +36,7 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 # Overview
 
-### The Ideological Pitch
+### The Pitch
 
 The Wildcat Protocol is an as-yet-unreleased protocol launching on Ethereum mainnet that addresses what we see as blockers in the sphere of on-chain fixed-rate private credit.
 
@@ -44,20 +44,23 @@ If you're interested in the _how_ and _why_ at a high-level, the following may b
 - [Whitepaper](https://github.com/wildcat-finance/wildcat-whitepaper/blob/main/whitepaper_v0.2.pdf)
 - [Manifesto](https://medium.com/@wildcatprotocol/the-wildcat-manifesto-db23d4b9484d)
 
+Wildcat's primary offering is _markets_. You could also call them _vaults_ (and sometimes we're inconsistent and call them both). They're credit escrow mechanisms where nearly
+every single parameter that you'd be interested in modifying can be modified at launch. Subsequent to launch, base APR and capacities can be adjusted by the borrower at will, with
+some caveats on reducing the former that effectively constitutes a ragequit option for lenders if they disagree with the change.
+
 Wildcat inverts the typical on-chain credit model whereby borrowers appeal to an existing pool of lenders willing to loan their assets. Instead, a Wildcat borrower is required
 to create a market for a particular asset, offer a particular rate, and specify the desired lender addresses explicitly - in this iteration of the protocol at least - before
 credit in that asset can be obtained. This means that we are expecting there to be an existing relationship between counterparties.
 
 We handle collateralisation a bit strangely. The borrower is not required to put any collateral down themselves when deploying a market, but rather there is a percentage of
 the supply, the reserve ratio, that _must_ remain within the market. The borrower cannot utilise these assets, but they still accrue interest. This is intended as a liquid buffer for
-lenders to place withdrawal requests against, and the failure of the borrower to maintain this ratio ultimately results in an additional penalty interest rate being applied.
-If you're wondering, 'wait, does that mean that lenders are collateralising their own loans?', the answer is _yes, they absolutely are_.
-
+lenders to place withdrawal requests against, and the failure of the borrower to maintain this ratio (by repaying assets to the market when the ratio is breached) ultimately results
+in an additional penalty interest rate being applied. If you're wondering, 'wait, does that mean that lenders are collateralising their own loans?', the answer is _yes, they absolutely are_.
 
 Of course, it doesn't matter what penalty rate is in place if your borrower counterparty has simply vanished off the face of the Earth, or decided that they wanted to perform a
 tribute act to Alameda Research. It is important then to emphasise that there are _no underwriters_ and _no insurance funds_ for Wildcat markets. The protocol itself is entirely
 hands-off when it comes to any given market. It has no ability to freeze borrower collateral (since it's technically the lenders in the first place), and it can't pause activity.
-More generally, and as an ideological point, the protocol utilises no proxies. If you lose keys, or burn market tokens, or if anything else goes wrong - the protocol cannot help you.
+More generally, and as an ideological choice, the protocol utilises no proxies. If you lose keys, or burn market tokens, or if anything else goes wrong - the protocol cannot help you.
 
 The protocol does monitor for addresses that are flagged by the Chainalysis oracle as being placed on a sanctions list and bar them from interacting with markets if this happens:
 simply because strict liability on interfacing with these addresses means that they'd otherwise poison everyone else. That's the extent of the guardrails.
@@ -67,9 +70,9 @@ contract risk is real. Wildcat is a tool for sophisticated entities who wish to 
 parties in matters such as underwriting, risk analysis or credit scoring. 
 
 If counterparties are utilising the protocol UI, we require a borrower to sign a master loan agreement setting out various covenants, representations and definitions of default,
-with jurisdiction for any conflict that arises being placed within the UK courts. Lenders can countersign these agreements or decline - perhaps there is another one in place
-between the two parties, or the lender declines to sign for ideological reasons. We provide this template document as an offering to any lenders who want clarity on what process
-to follow in the event of a failure on behalf of the borrower to repay.
+with jurisdiction for any conflict that arises being placed within the UK courts. Lenders can countersign these agreements or decline - perhaps there is another agreement in place
+between the two parties already. We provide this template document as an offering to any lenders who want clarity on what process to follow in the event of a failure on behalf of
+the borrower to repay.
 
 [TODO: Complete]
 
