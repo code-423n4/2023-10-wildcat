@@ -1,6 +1,6 @@
-src/WildcatVaultController.sol
+src/WildcatMarketController.sol
 src/market/WildcatMarketBase.sol
-src/WildcatVaultControllerFactory.sol
+src/WildcatMarketControllerFactory.sol
 src/WildcatArchController.sol
 src/market/WildcatMarketWithdrawals.sol
 src/libraries/MathUtils.sol
@@ -9,7 +9,7 @@ src/libraries/FeeMath.sol
 src/market/WildcatMarketConfig.sol
 src/libraries/StringQuery.sol
 src/market/WildcatMarket.sol
-src/libraries/VaultState.sol
+src/libraries/MarketState.sol
 src/WildcatSanctionsSentinel.sol
 src/libraries/LibStoredInitCode.sol
 src/libraries/FIFOQueue.sol
