@@ -48,49 +48,31 @@ If you're interested in the _how_ and _why_ at a high-level, the following may b
 - [Whitepaper](https://github.com/wildcat-finance/wildcat-whitepaper/blob/main/whitepaper_v0.2.pdf)
 - [Manifesto](https://medium.com/@wildcatprotocol/the-wildcat-manifesto-db23d4b9484d)
 
-Wildcat's primary offering is _markets_. They're credit escrow mechanisms where nearly
-every single parameter that you'd be interested in modifying can be modified at launch. Subsequent to launch, base APR and capacities can be adjusted by the borrower at will, with
-some caveats on reducing the former that effectively constitutes a ragequit option for lenders if they disagree with the change.
+Wildcat's primary offering is _markets_. They're credit escrow mechanisms where nearly every single parameter that you'd be interested in modifying can be modified at launch. Subsequent to launch, base APR and capacities can be adjusted by the borrower at will, with some caveats on reducing the former that effectively constitutes a ragequit option for lenders if they disagree with the change.
 
-Wildcat inverts the typical on-chain credit model whereby borrowers appeal to an existing pool of lenders willing to loan their assets. Instead, a Wildcat borrower is required
-to create a market for a particular asset, offer a particular rate, and specify the desired lender addresses explicitly - in this iteration of the protocol at least - before
-credit in that asset can be obtained. This means that we are expecting there to be an existing relationship between counterparties.
+Wildcat inverts the typical on-chain credit model whereby borrowers appeal to an existing pool of lenders willing to loan their assets. Instead, a Wildcat borrower is required to create a market for a particular asset, offer a particular rate, and specify the desired lender addresses explicitly - in this iteration of the protocol at least - before credit in that asset can be obtained. This means that we are expecting there to be an existing relationship between counterparties.
 
-We handle collateralisation a bit strangely. The borrower is not required to put any collateral down themselves when deploying a market, but rather there is a percentage of
-the supply, the reserve ratio, that _must_ remain within the market. The borrower cannot utilise these assets, but they still accrue interest. This is intended as a liquid buffer for
-lenders to place withdrawal requests against, and the failure of the borrower to maintain this ratio (by repaying assets to the market when the ratio is breached) ultimately results
-in an additional penalty interest rate being applied. If you're wondering, 'wait, does that mean that lenders are collateralising their own loans?', the answer is _yes, they absolutely are_.
+We handle collateralisation a bit strangely. The borrower is not required to put any collateral down themselves when deploying a market, but rather there is a percentage of the supply, the reserve ratio, that _must_ remain within the market. The borrower cannot utilise these assets, but they still accrue interest. This is intended as a liquid buffer for lenders to place withdrawal requests against, and the failure of the borrower to maintain this ratio (by repaying assets to the market when the ratio is breached) ultimately results in an additional penalty interest rate being applied. If you're wondering, 'wait, does that mean that lenders are collateralising their own loans?', the answer is _yes, they absolutely are_.
 
-Of course, it doesn't matter what penalty rate is in place if your borrower counterparty has simply vanished off the face of the Earth, or decided that they wanted to perform a
-tribute act to Alameda Research. It is important then to emphasise that there are _no underwriters_ and _no insurance funds_ for Wildcat markets. The protocol itself is entirely
-hands-off when it comes to any given market. It has no ability to freeze borrower collateral (since it's technically the lenders in the first place), and it can't pause activity.
+Of course, it doesn't matter what penalty rate is in place if your borrower counterparty has simply vanished off the face of the Earth, or decided that they wanted to perform a tribute act to Alameda Research. It is important then to emphasise that there are _no underwriters_ and _no insurance funds_ for Wildcat markets. The protocol itself is entirely hands-off when it comes to any given market. It has no ability to freeze borrower collateral (since it's technically the lenders in the first place), and it can't pause activity.
+
 More generally, and as an ideological choice, the protocol utilises no proxies. If you lose keys, or burn market tokens, or if anything else goes wrong - the protocol cannot help you.
 
-The protocol does monitor for addresses that are flagged by the Chainalysis oracle as being placed on a sanctions list and bar them from interacting with markets if this happens:
-simply because strict liability on interfacing with these addresses means that they'd otherwise poison everyone else. That's the extent of the guardrails.
+The protocol does monitor for addresses that are flagged by the Chainalysis oracle as being placed on a sanctions list and bar them from interacting with markets if this happens: simply because strict liability on interfacing with these addresses means that they'd otherwise poison everyone else. That's the extent of the guardrails.
 
-Given the above, it should be emphasised: this is not a protocol aimed at retail users. Heck, it's barely aimed at power users. The counterparty default risk is real, the smart
-contract risk is real. Wildcat is a tool for sophisticated entities who wish to bring credit agreements on-chain in a manner that does not involve surrendering any control to third
-parties in matters such as underwriting, risk analysis or credit scoring. If you want that freedom, Wildcat _might_ be for you.
+Given the above, it should be emphasised: this is not a protocol aimed at retail users. Heck, it's barely aimed at power users. The counterparty default risk is real, the smart contract risk is real. Wildcat is a tool for sophisticated entities who wish to bring credit agreements on-chain in a manner that does not involve surrendering any control to third parties in matters such as underwriting, risk analysis or credit scoring. If you want that freedom, Wildcat _might_ be for you.
 
-If counterparties are utilising the protocol UI, we require a borrower to sign a master loan agreement setting out various covenants, representations and definitions of default,
-with jurisdiction for any conflict that arises being placed within the UK courts. Lenders can countersign this agreement or decline: perhaps there is another agreement in place
-between the two parties already. We provide this document/mechanism as an offering to any lenders who want clarity on what process to follow in the event of a failure on behalf of
-the borrower to repay what is owed.
+If counterparties are utilising the protocol UI, we require a borrower to sign a master loan agreement setting out various covenants, representations and definitions of default, with jurisdiction for any conflict that arises being placed within the UK courts. Lenders can countersign this agreement or decline: perhaps there is another agreement in place between the two parties already. We provide this document/mechanism as an offering to any lenders who want clarity on what process to follow in the event of a failure on behalf of the borrower to repay what is owed.
 
 ### A More Technical Briefing
 
-The Wildcat protocol itself coalesces around a single contract - the archcontroller. This contract determines which factories can be used, which markets have already been deployed
-and which addresses are permitted to deploy contracts from said factories.
+The Wildcat protocol itself coalesces around a single contract - the archcontroller. This contract determines which factories can be used, which markets have already been deployed and which addresses are permitted to deploy contracts from said factories.
 
-Borrowers deploy markets through _controllers_ - contracts that dictate logic, define the set of permissible lenders and constrain minimum and maximum values of market parameters
-(the freedom we offer is not completely unbounded - you can't have a market with a years-long withdrawal cycle, for example). Multiple markets can be deployed through a single controller,
-with the implication that a single list of lenders can be used to grant access to multiple markets simultaneously.
+Borrowers deploy markets through _controllers_ - contracts that dictate logic, define the set of permissible lenders and constrain minimum and maximum values of market parameters (the freedom we offer is not completely unbounded - you can't have a market with a years-long withdrawal cycle, for example). Multiple markets can be deployed through a single controller, with the implication that a single list of lenders can be used to grant access to multiple markets simultaneously.
 
 Lenders that are authorised on a given controller (i.e. granted a role) can deposit assets to any markets that have been launched through it. In exchange for their deposits, they receive a _market token_ which has been parameterised by the borrower: you might receive Code4rena Dai Stablecoin - ticker C4DAI - for depositing DAI into a market run by Code4rena. Or C4 Wrapped Ether (CODE423N4WETH).
 
-These market tokens are _rebasing_ so as to always be redeemable at parity for the underlying asset of a market (provided it has sufficient reserves) - as time goes on, interest inflates the supply of market tokens
-to be consistent with the overall debt that is owed by the borrower. The interest rate compounds every time a non-static call is made to the market contract and the scale factor is updated.
+These market tokens are _rebasing_ so as to always be redeemable at parity for the underlying asset of a market (provided it has sufficient reserves) - as time goes on, interest inflates the supply of market tokens to be consistent with the overall debt that is owed by the borrower. The interest rate compounds every time a non-static call is made to the market contract and the scale factor is updated.
 
 The interest rate paid by the borrower can comprise of up to three distinct figures:
 
@@ -131,9 +113,9 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 
 | Contract | SLOC | Purpose | Libraries Used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [src/WildcatMarketController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultController.sol) | 363 |  Deploys markets and manages their configurable parameters (APR, reserve ratio) and maintains set of approved lenders. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol), [`@solady/Ownable`](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
+| [src/WildcatMarketController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatMarketController.sol) | 363 |  Deploys markets and manages their configurable parameters (APR, reserve ratio) and maintains set of approved lenders. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol), [`@solady/Ownable`](https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol), [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
 | [src/market/WildcatMarketBase.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketBase.sol) | 311 | Base contract for Wildcat markets. |  |
-| [src/WildcatMarketControllerFactory.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultControllerFactory.sol) | 247 | Deploys controllers and manages protocol fee information. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
+| [src/WildcatMarketControllerFactory.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatMarketControllerFactory.sol) | 247 | Deploys controllers and manages protocol fee information. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
 | [src/WildcatArchController.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatArchController.sol) | 176 | Registry for borrowers, controller factories, controllers and markets. | [`@openzeppelin/EnumerableSet`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) |
 | [src/market/WildcatMarketWithdrawals.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketWithdrawals.sol) | 136 | Withdrawal functionality for Wildcat markets. | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
 | [src/libraries/MathUtils.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/MathUtils.sol) | 110 | Generic math functions used in the codebase. |  |
@@ -142,7 +124,7 @@ Sorry for subjecting you to all of this. You can go look at the code now.
 | [src/market/WildcatMarketConfig.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketConfig.sol) | 95 |  Methods for role management and configuration by controller. | |
 | [src/libraries/StringQuery.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/StringQuery.sol) | 93 | Helper functions for querying strings from methods that can return either `string` or `bytes32`. | [`@solady/LibBit`](https://github.com/Vectorized/solady/blob/main/src/utils/LibBit.sol) |
 | [src/market/WildcatMarket.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarket.sol) | 91 | Main contract for Wildcat markets that inherits all base contracts. | [`@solady/SafeTransferLib`](https://github.com/Vectorized/solady/blob/main/src/utils/SafeTransferLib.sol) |
-| [src/libraries/MarketState.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/VaultState.sol) | 83 | Defines the market state struct and helper functions for reading from it and calculating basic values like required reserves and scaling/normalizing balances.  |  |
+| [src/libraries/MarketState.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/MarketState.sol) | 83 | Defines the market state struct and helper functions for reading from it and calculating basic values like required reserves and scaling/normalizing balances.  |  |
 | [src/WildcatSanctionsSentinel.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatSanctionsSentinel.sol) | 75 | Contract that interfaces with Chainalysis, allows borrowers to override lenders' sanction statuses and deploys escrows. |  |
 | [src/libraries/LibStoredInitCode.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/LibStoredInitCode.sol) | 68 | Library for deploying contracts using code storage for init code to prevent oversized contracts. |  |
 | [src/libraries/FIFOQueue.sol](https://github.com/code-423n4/2023-10-wildcat/blob/main/src/libraries/FIFOQueue.sol) | 62 | First-in-first-out queue used for unpaid withdrawal batches. |  |
