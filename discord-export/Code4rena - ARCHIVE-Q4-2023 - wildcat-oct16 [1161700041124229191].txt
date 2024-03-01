@@ -1,0 +1,4674 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2023 / wildcat-oct16
+==============================================================
+
+[10/11/2023 17:09] knownfactc4_29311 (pinned)
+👋 Hello and welcome to the audit channel for the $60,500 USDC **Wildcat Protocol** audit!
+
+📆 Audit opens 10/16/2023 20:00 (20:00 UTC) and runs through 10/26/2023 20:00 (20:00 UTC) (10 days).
+
+Please give a warm welcome to the Wildcat Protocol team, particularly @functi0nZer0 and @d1ll0n, who will be available for questions either here in the channel or via DM in the GMT+1 and GMT-5 timezone(s) respectively.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-10-the-wildcat-protocol
+
+{Embed}
+https://code4rena.com/contests/2023-10-the-wildcat-protocol
+The Wildcat Protocol | Code4rena
+Banking, but worse - a protocol for fixed-rate, undercollateralised credit facilities.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/c4-og-banner-E1BB1.png
+
+{Reactions}
+👋 (10) 
+
+[10/11/2023 17:12] knownfactc4_29311
+Pinned a message.
+
+
+[10/13/2023 20:19] functionzer0
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-423E0.png
+
+{Reactions}
+👋 (45) pepehappy (3) 🐧 (2) astrobadger goose 
+
+[10/14/2023 07:40] baice8614
+hi
+
+
+[10/14/2023 09:41] shahen.0000
+Hi
+
+
+[10/14/2023 17:19] its_basu
+Hello
+
+
+[10/15/2023 02:48] m_rassska
+@functi0nZer0, pls, accept fr, thanks!
+
+
+[10/15/2023 18:05] manchasss.eth
+👋
+
+
+[10/16/2023 00:02] shahen.0000
+@functi0nZer0 sent fr ,pls accept
+
+
+[10/16/2023 00:02] shahen.0000
+Thanks
+
+
+[10/16/2023 14:06] sagetony224
+Hellooo
+
+
+[10/16/2023 15:08] etherhood
+Me after every finding on this contest
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/F77FpOMXsAAeMS9-AD1DB.jpeg
+
+{Reactions}
+😂 (5) 
+
+[10/16/2023 16:26] functionzer0
+I respect it lmao
+
+
+[10/16/2023 16:28] functionzer0
+Heads up - when you get access to the documentation via Gitbook: the technical overview part doesn’t have prose definitions of each variable and function (yet), but they’re rather a list of what’s exposed in each - any questions about them, well that’s what in here is for
+
+{Reactions}
+🔥 👍 
+
+[10/16/2023 16:28] functionzer0
+The code itself is readable (I would think this, I’ve read it for months)
+
+
+[10/16/2023 19:21] dastandan
+Heya @functi0nZer0  you're about to get tons of fresh friends. Pls, aceept fr, lol. Thanks!
+
+
+[10/16/2023 19:22] functionzer0
+I high-key don’t understand what the benefit is of hitting me with a friend request before we’ve even started lmao
+
+
+[10/16/2023 19:25] dastandan
+not often to have a dr around here. Lol. Nice talk bro. I've read those two whitepaper. Wating anxious.
+
+{Reactions}
+green 
+
+[10/16/2023 19:25] zdravkohr
+Wait, there is a second whitepaper? 😄
+
+
+[10/16/2023 19:32] functionzer0
+Hah it's just v0.2
+
+
+[10/16/2023 19:43] nonseodion
+There is a whitepaper? 😂😂
+
+{Reactions}
+😄 (5) 
+
+[10/16/2023 19:49] nonseodion
+We could just read only that right?
+
+
+[10/16/2023 19:50] theonkxr
+we're gonna do this in one of the crypto meet-ups:
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/laurencefr-66699.png
+
+
+[10/16/2023 19:50] functionzer0
+lmfao
+
+
+[10/16/2023 19:51] functionzer0
+Whitepaper is linked in the documentation, but there've been some subtle changes - the whitepaper hasn't had time to catch up yet: things like 'reserved assets pool' are now 'unclaimed withdrawals pool', but they'll be very obvious shifts in context
+
+
+[10/16/2023 19:52] functionzer0
+I'm scrambling over the Gitbook last minute 🥲
+
+
+[10/16/2023 19:52] theonkxr
+Whitepaper is printed and read twice ;)
+
+
+[10/16/2023 19:52] functionzer0
+You're a madman
+
+
+[10/16/2023 19:52] functionzer0
+First person to file an issue saying 'borrower can just keep all of the money' gets shot btw
+
+{Reactions}
+monkaGun (4) chefskiss (2) 
+
+[10/16/2023 19:53] functionzer0
+'only if reserve ratio is zero WONTFIX'
+
+
+[10/16/2023 19:56] dastandan
+lmao
+
+
+[10/16/2023 20:00] functionzer0
+https://tenor.com/view/the-dark-knight-joker-batman-here-we-go-gif-3430376
+
+{Embed}
+https://tenor.com/view/the-dark-knight-joker-batman-here-we-go-gif-3430376
+And. Here. We. Go.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/the-dark-knight-joker-5FB7B.png
+
+{Reactions}
+hi5 (11) 🎉 (5) 
+
+[10/16/2023 20:24] inallhonesty_
+For people who draw their scope from `scope.txt` this `VaultState.sol` doesn't exist, it's `MarketState.sol`
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-7522E.png
+
+{Reactions}
+👏 
+
+[10/16/2023 20:29] functionzer0
+Ah damnit I'll edit this, mea culpa
+
+{Reactions}
+❤️ 
+
+[10/16/2023 20:32] Deleted User
+Yeah, some file from scope.txt doesnt exist in the repo
+
+
+[10/16/2023 20:33] functionzer0
+PR is pushed
+
+
+[10/16/2023 20:34] functionzer0
+We did a mass rename of 'vault' to 'market' everywhere, but scope.txt is produced by the scout and I forgot to include it in the dragnet
+
+
+[10/16/2023 20:35] functionzer0
+Should be fixed momentarily - apologies!
+
+
+[10/16/2023 20:36] dastandan
+nice on that. Thanks @InAllHonesty  and @functi0nZer0  too . Let's go ahead. Good hunt everyone
+
+{Reactions}
+salute 🫡 
+
+[10/16/2023 20:39] functionzer0
+Should be fixed now
+
+
+[10/16/2023 20:44] moneyversed.eth
+though the link on C4 to src/WildcatMarketController.sol was mispelled as it seems to prop back at https://github.com/code-423n4/2023-10-wildcat/blob/main/src/WildcatVaultController.sol where Vault should in turn be Market
+
+{Reactions}
+❤️ 
+
+[10/16/2023 20:44] functionzer0
+AAAAAAA
+
+
+[10/16/2023 20:44] functionzer0
+lmao
+
+
+[10/16/2023 20:44] functionzer0
+Okay hang on
+
+
+[10/16/2023 20:46] functionzer0
+Okay second PR pushed - thanks for the help, lads
+
+{Reactions}
+🫡 
+
+[10/16/2023 20:47] functionzer0
+"Just change the name, Laurence, it will cause no problems at all, Laurence"
+
+{Reactions}
+😂 (6) 
+
+[10/16/2023 20:47] functionzer0
+:suicide:
+
+
+[10/16/2023 20:48] functionzer0
+Right that's fixed too, thank you based @kartoonjoy | C4 🎇🎇and @moneyversed
+
+{Reactions}
+hi5 (2) 
+
+[10/16/2023 21:06] marchev
+damn, i should keep an eye on the contest channel during bot races 😕
+
+{Reactions}
+NotLikeThis (3) 
+
+[10/17/2023 01:43] devblixt_
+looking for someone to provide me a loan on wildcat. promise im not a beneficiary of alameda research :noddinggoat:
+
+
+[10/17/2023 03:04] m_rassska
+i'm nuking you from the orbit 😄
+
+{Reactions}
+😂 (3) 
+
+[10/17/2023 03:44] mrosas
+@functi0nZer0 Accept FR thx
+
+
+[10/17/2023 03:45] mrosas
+or any other sponsors
+
+
+[10/17/2023 03:45] 0x3b
+The one who wrote "The Pitch" has a based score 11/10
+
+{Reactions}
+💯 (3) salute 
+
+[10/17/2023 03:47] mrosas
+Agree
+
+
+[10/17/2023 05:52] mrosas
+is the documentation related to v0.02?  https://wildcat-protocol.gitbook.io/wildcat/overview/introduction
+
+
+[10/17/2023 08:15] functionzer0
+Other sponsor is @d1ll0n
+
+
+[10/17/2023 08:23] functionzer0
+Yes - there are some changes such as the whitepaper referring to vaults whereas protocol now refers to markets, and the reserved assets pool is now the unclaimed withdrawals pool, but by and large they're consistent - if there's any conflict though, the Gitbook wins out
+
+
+[10/17/2023 08:24] functionzer0
+[I spent so much time dumping everything into Gitbook that I didn't have the time to polish the whitepaper the way I wanted to]
+
+
+[10/17/2023 08:24] mrosas
+How is the reserve ratio set?
+
+
+[10/17/2023 08:24] mrosas
+I can't find the technical answers
+
+
+[10/17/2023 08:26] functionzer0
+It's a parameter set by the borrower when they create a market through a controller, subject to it being in bounds set by the controller
+
+See `WildcatMarketController.deployMarket` which invokes a call to `enforceParameterConstraints`
+
+
+[10/17/2023 08:26] functionzer0
+Couple of demos in the tests
+
+
+[10/17/2023 08:27] functionzer0
+Parameter bounds can vary depending on which controller factory the controller came through
+
+
+[10/17/2023 08:31] 0x_6a70
+Where can I read more about the flow, I mean how a borrower creates a market and so on?
+
+
+[10/17/2023 08:36] 0x_6a70
+the gitbook maybe ?
+
+
+[10/17/2023 08:40] functionzer0
+Yeah, Gitbook > Day-To-Day > Borrower explains it at the high level, but I can drop an explainer in here in a sec - just shoving food into my infant daughter quick
+
+
+[10/17/2023 08:40] 0x_6a70
+GitBook looks good on info so far , gonna "shove" my face in it for now. 😄
+
+{Reactions}
+green 
+
+[10/17/2023 08:41] functionzer0
+[If there's one thing I'm good at it's autistically explaining points of nuance in several paragraphs]
+
+{Reactions}
+👍 
+
+[10/17/2023 08:52] 0x_6a70
+pls accept fr request
+
+
+[10/17/2023 09:08] inallhonesty_
+Man how do you know me so well XD
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-02990.png
+
+{Reactions}
+☮️ (4) 😂 (6) 
+
+[10/17/2023 09:13] zzebra83
+https://tenor.com/view/i-dont-want-peace-i-want-problems-always-choose-violence-no-peace-problems-gif-24342946
+
+{Embed}
+https://tenor.com/view/i-dont-want-peace-i-want-problems-always-choose-violence-no-peace-problems-gif-24342946
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/i-dont-want-peace-i-want-problems-always-CCED7.png
+
+{Reactions}
+😂 (7) 
+
+[10/17/2023 09:32] functionzer0
+That's where it comes from lmfao
+
+
+[10/17/2023 09:45] functionzer0
+As we go through, any good questions I get in the DMs I'm going to drop my responses to in here, so that there's a common pool of answers
+
+{Reactions}
+🙌 (2) 
+
+[10/17/2023 09:47] functionzer0
+**What happens if a borrower is approved, makes a market, borrows money, and then is removed from the list of borrowers?**
+
+Any market that they currently have deployed stays intact - we can't shut a market down or otherwise force anything there: if they're removed they can't deploy any additional controllers or deploy any additional markets from controllers they already have.
+
+Same kind of story as if when a borrower removes a lender from a controller, they can't force them out but they can be prevented from depositing any further.
+
+**When creating a market what is the maximum grace period that a borrower can input?**
+
+So these parameters are fixed within controller factories - the answer is 'whatever the maximum is per that factory'
+
+Consider: someone (probably the archcontroller owner) deploys a new controller factory, which contains a struct `MarketParameterConstraints memory constraints` in the constructor - then that factory is registered with the archcontroller via `registerControllerFactory`.
+
+The constraints struct looks like this (the contract `/interfaces/WildcatStructsAndEnums.sol` isn't in scope for the audit, but the definition is in there):
+
+```
+struct MarketParameterConstraints {
+  uint32 minimumDelinquencyGracePeriod;
+  uint32 maximumDelinquencyGracePeriod;
+  uint16 minimumReserveRatioBips;
+  uint16 maximumReserveRatioBips;
+  uint16 minimumDelinquencyFeeBips;
+  uint16 maximumDelinquencyFeeBips;
+  uint32 minimumWithdrawalBatchDuration;
+  uint32 maximumWithdrawalBatchDuration;
+  uint16 minimumAnnualInterestBips;
+  uint16 maximumAnnualInterestBips;
+}
+```
+
+Any controller that gets deployed through that factory can only spit out markets that adhere to those constraints
+
+I think a 'sensible' max value would be a week or so, but it's really a free choice
+
+
+[10/17/2023 10:12] infectedfuture
+sauce ?
+
+
+[10/17/2023 10:39] mrosas
+@functi0nZer0 accept my FR
+
+
+[10/17/2023 10:39] mrosas
+thx
+
+
+[10/17/2023 10:42] oualidpro
+@functi0nZer0 accept my FR please too
+
+
+[10/17/2023 10:50] unclejeff4407
+https://tenor.com/view/peace-was-never-an-option-chicken-axe-gif-14742763
+
+{Embed}
+https://tenor.com/view/peace-was-never-an-option-chicken-axe-gif-14742763
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/peace-was-never-an-option-chicken-10ACF.png
+
+{Reactions}
+kek (5) 😂 (2) 
+
+[10/17/2023 11:59] aleph_v
+did anyone else notice the high that the borrower can keep all of the lenders money and not pay it back if the liquidity percent is zero
+
+{Reactions}
+kek (11) 😩 😂 (2) 
+
+[10/17/2023 12:05] 0k_sec
+hey, discussion about findings in public channel is not a good idea and its againts c4 rules sir 🙂
+
+
+[10/17/2023 12:06] functionzer0
+lmfao
+
+
+[10/17/2023 12:08] aleph_v
+lmao
+
+{Reactions}
+😂 (4) 
+
+[10/17/2023 12:09] functionzer0
+https://x.com/functi0nzer0/status/1714009060960358417?s=46&t=hQKbHzHvgiA-QxBc9Wfs1Q
+
+
+[10/17/2023 12:12] 0x_6a70
+kek
+
+
+[10/17/2023 12:13] functionzer0
+@aleph_v did the first review of Wildcat before C4 got to it 🙂
+
+
+[10/17/2023 12:17] dastandan
+lmao
+
+
+[10/17/2023 12:28] 0x3b
+@functi0nZer0   who is gonna pull the trigger?
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/Screenshot_from_2023-10-17_15-28-16-58755.png
+
+{Reactions}
+legalchicken (3) 
+
+[10/17/2023 13:48] 0k_sec
+did the gitbook link up to date for this contest please ?
+https://wildcat-protocol.gitbook.io/wildcat/
+
+{Embed}
+https://wildcat-protocol.gitbook.io/wildcat/
+The Wildcat Protocol
+Banking, but worse.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/6pe0lcSG28G9FkBQU0Cy-E606B.png
+
+
+[10/17/2023 14:01] functionzer0
+I'm confused by the word 'did' - that's the most recent version, yes
+
+
+[10/17/2023 14:16] dastandan
+@functi0nZer0 , I've sent DM about Scale Factor Usage. When you can, pls, reply there. Thanks
+
+
+[10/17/2023 14:37] jacobmartin0406
+@functi0nZer0 Sent a friend request, please accept
+
+
+[10/17/2023 14:40] cu5t0mpeo
+@functi0nZer0 accept my fr plz
+
+
+[10/17/2023 15:26] zdravkohr
+What's the purpose of creating a separate contract to store the initialization code of the contract that is to be deployed?
+
+
+[10/17/2023 15:38] marchev
+@functi0nZer0 the gitbook mentions about a Wildcat UI.
+
+is there a sandbox somewhere that we could play with?
+
+
+[10/17/2023 15:54] marchev
+Also, can you please elaborate on the following bit from the Gitbook:
+> There are also implications about the usefulness of LP fees if they accrue in the form of market tokens to addresses that the borrower knows nothing about and are unwilling to approve.
+
+
+[10/17/2023 15:59] functionzer0
+Out of the house for a sec, will respond to all these when back in a wee bit!
+
+{Reactions}
+🙌 
+
+[10/17/2023 16:40] functionzer0
+Size limit - if we didn't do that we'd need a factory that included the full initcode for the controller, which itself contained the full initcode for a market
+
+We'd get rekt
+
+
+[10/17/2023 16:40] oualidpro
+@d1ll0n I have sent you a FR
+
+
+[10/17/2023 16:42] functionzer0
+Sadly there isn't - that part was written to be forward facing for launch: the details that are given there (with the exception of Select Market Type, which is really just 'what controller factory do you want') correspond to the various parameters of a market
+
+We've got a UI that's built most of the way out, but no smart contract wiring yet, apologies
+
+I can clarify anything that's in that bit in the absence of the UI itself, mind
+
+{Reactions}
+🙌 
+
+[10/17/2023 16:46] functionzer0
+So, if you have a market token which is redeemable for the underlying assets within a market, but the only people that can actually perform that redemption are addresses that are authorised on the appropriate controller...
+
+Then sure, create an AMM pool for it, get people to provide liquidity, let them accrue fees - but arbitrary folk that LP for that pool and accrue market tokens from fees aren't going to be able to redeem them for the underlying because the borrower has no clue who they are, and someone who's just randomly LPing very likely isn't going to be willing to hand over KYC details to be authorised
+
+
+[10/17/2023 16:47] functionzer0
+So you end up with a bunch of market tokens that are effectively dead weight - they can't be redeemed unless they make their way back into the hands of an authorised lender: I've occasionally referred to Wildcat markets internally as 'on-chain Circles' since the redemption of the market tokens is constrained
+
+
+[10/17/2023 16:58] functionzer0
+Alright lads, my watch has ended for today [it's nearly 18:00 here], but @d1ll0n is up and about now for the next few hours
+
+
+[10/17/2023 17:03] d1ll0n
+gmgm
+
+
+[10/17/2023 17:05] marchev
+got it, thanks!
+
+{Reactions}
+🫡 
+
+[10/17/2023 17:18] t0x1c.c0de
+GM! 
+So, fair to assume that any issues found by aleph_v in the previous audit is to be considered a known issue and not to be reported? Even if the status is still open & not fixed?
+
+
+[10/17/2023 17:21] 0k_sec
+Why confused about the did sir? Apologize if this is incorrect formula for asking a question as my eng is not fluent  as native English people !  As it mentioned this is the early version that why i asked  if it’s the newest version 🙂
+
+Thanks for answering
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/IMG_7089-0B019.png
+
+
+[10/17/2023 17:23] functionzer0
+Oh, right - 'early' here because it's not launched yet, so anyone who encounters it live isn't getting the fancy 'here are diagrams and videos' version lmao
+
+{Reactions}
+👍🏻 
+
+[10/17/2023 17:23] 0k_sec
+Clear enough, thanks 🫡
+
+
+[10/17/2023 17:24] functionzer0
+That's right - I think we actually ended up resolving two of the three Opens, where the only one outstanding is the protocol fee bypass
+
+We're not doing anything with that because we don't want the protocol to benefit in any way from penalty rates because of borrowers behaving badly
+
+
+[10/17/2023 17:25] functionzer0
+Borrower can now release the sanction status, which is permanent until they decide to reverse it, so now the issue she mentioned where the escrow gets released by borrower and someone just pokes `nukeFromOrbit` again is not an issue
+
+There's also now a function to release `Blocked` status when lender is un-sanctioned or borrower overrides it, and then their status is reset to Null [`stunningReversal`]
+
+
+[10/17/2023 17:25] functionzer0
+Sorry that was meant to tag you, @t0x1c
+
+
+[10/17/2023 17:25] functionzer0
+[I am not a smart man]
+
+
+[10/17/2023 17:26] t0x1c.c0de
+got it 🫡  What about this one (also open): "Permanent Funds locking via controlled sentinel"
+
+
+[10/17/2023 17:29] t0x1c.c0de
+😄 your writeup about the protocol features says differently. It's clarity is an absolute delight to read 🔥
+
+{Reactions}
+PES_Heart 
+
+[10/17/2023 17:29] functionzer0
+Correcting myself by editing some previous messages...
+
+
+[10/17/2023 18:38] deth2814
+@d1ll0n Hey, sent a fr req
+
+{Reactions}
+👍 
+
+[10/17/2023 19:55] infectedfuture
+what is scaleFactor for? Is it to take into account the future interest/fee payments by the borrower?
+
+
+[10/17/2023 20:05] d1ll0n
+yes, it handles interest accrual from APR and delinquency fees. One market token is always worth one underlying token (in terms of debt from the borrower, not necessarily redeemable assets at any given moment).
+
+`scaleFactor` grows as interest and delinquency fees accrue. When you deposit, you get `depositAmount / scaleFactor` scaled market tokens , which is `scaledBalanceOf`.
+
+The "normalized" balance (`balanceOf`) is the borrower debt owned by a lender at a given moment in time, it's given by `scaledBalance * scaleFactor`. 
+
+It's essentially just rebasing to ensure totalSupply = total debt. As interest accrues, the normalized supply and lenders' balances grow, while scaled balances only change when market tokens are minted or burned 
+
+(scaleFactor is in ray to minimize rounding errors, so mul/div are rayMul/rayDiv)
+
+
+[10/17/2023 20:09] d1ll0n
+@infect3d tagging cause I forgot to send that as a reply
+
+
+[10/17/2023 20:18] infectedfuture
+got it, thanks :thankyou:
+
+
+[10/17/2023 20:31] habib0x
+Hello, 
+In the whitepaper there on page 13 
+"  The temporary collateral requirement for the vault while the pending with- drawal exists is now (250 * 1) + (550 * 0.2) = 360 WETH, leading to a temporary reserve ratio of 45% on the outstanding supply of 800. " what is the 0.2 here ?
+
+
+[10/17/2023 20:57] functionzer0
+It refers to the 20% reserve ratio of the vault/market - see the first bullet point in that explainer
+
+
+[10/17/2023 21:12] habib0x
+ahh , what I though of the 20% reserve ratio is the left over the 200 WETH
+
+{Reactions}
+🫡 
+
+[10/17/2023 21:13] sandnallani
+First day reviewing everything related to Wildcat, and I must say, this is some of the best documentation I've come across.
+
+{Reactions}
+🫡 (3) 
+
+[10/17/2023 21:17] functionzer0
+Thank you I nearly killed myself writing it :salute:
+
+{Reactions}
+🔥 (5) 
+
+[10/17/2023 21:17] nisedo
+by far
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/Screenshot_2023-10-17_at_23.17.36-4E0C3.png
+
+{Reactions}
+😅 (6) chefskiss (2) 
+
+[10/17/2023 21:19] sandnallani
+As a lender, you definitely don't wana get pulled over by Mr.Sanctioned (CHP).
+
+
+[10/17/2023 21:20] functionzer0
+:KEKL:
+
+
+[10/17/2023 21:42] henry0226
+@functi0nZer0 @d1ll0n  sent FR
+
+
+[10/17/2023 22:55] sandnallani
+I think there are some typos in the lender's section  https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders . The numbers don't match up.
+
+
+[10/17/2023 22:58] functionzer0
+Entirely possible - which ones are you suspect of?
+
+
+[10/17/2023 23:00] sandnallani
+`Lender A makes a withdrawal request for 15,000 tokens, burning 10,000 market tokens to move the reserves to the unclaimed withdrawals pool (reserve ratio 0%).` 
+`Lender A must burn 5,000 market tokens to claim 7,500 tokens, since a portion of this claim was 'pre-burned' via their original request,`
+
+{Reactions}
+👍🏻 
+
+[10/17/2023 23:01] sandnallani
+Assuming it's always a 1:1 , those numbers don't match. But I love the effort put into explaining that complex scenario.
+
+
+[10/17/2023 23:03] unclejeff4407
+the numbers mason, what do they mean!
+
+{Reactions}
+😂 (3) 
+
+[10/18/2023 00:21] functionzer0
+Going to ping back on this in the morning, it’s 01:20 here - I’ll either go “oh whoops” and fix it, or explain why (and clarify it)
+
+{Reactions}
+👍🏾 
+
+[10/18/2023 00:21] functionzer0
+Thanks for flagging @SandNallani
+
+
+[10/18/2023 00:26] 0xsimeon
+There's a manifesto and whitepaper too. spent time on the whitepaper and read till end.
+
+{Reactions}
+👍🏾 
+
+[10/18/2023 00:37] sandnallani
+The white paper makes my eyes hurt 😅
+
+
+[10/18/2023 00:39] 0xsimeon
+I slept one time but finished it. It was an interesting read although I have some questions. will send it today.
+
+
+[10/18/2023 00:43] sandnallani
+The content is well presented, the gitbook covers the same content. I said it hurt me in terms of the white screen contrast.
+
+
+[10/18/2023 01:07] Message Wolf#0225 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Automated findings output for the audit can be found [here](https://gist.github.com/code423n4/265e1707379b9a3f89cf18aa0bffcb7c).
+
+*Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
+
+
+[10/18/2023 01:21] liveactionllamac4
+Pinned a message.
+
+
+[10/18/2023 02:16] 0xjuntao
+@functi0nZer0 I don't understand how is the reserve ratio calculated in the gitbook https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders
+
+{Embed}
+https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders
+Lenders
+What you need to know as a Wildcat lender.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/I2kJoldVWRgopDbXfGCw-46455.png
+
+
+[10/18/2023 02:16] 0xjuntao
+```If the borrower subsequently returns an additional 11,000 tokens to the vault at this point, then 2,000 of them are again assigned to the unclaimed withdrawals pool, with the remaining 9,000 being considered true reserve, bringing the reserve ratio of the vault back up to 9,000 / 30,000 = 30%.```
+
+
+[10/18/2023 02:17] 0xjuntao
+so initially the market had a supply of 40000, Lender A withdrawn 15000, Lender B withdrawn 5000 and Lender C withdrawn 5000, the supply is 20000 in the end, why the reserve ratio is 9,000 / 30,000 = 30%?
+
+
+[10/18/2023 02:44] sandnallani
+It’s just how the reserves are updated in response to lender withdrawals
+
+
+[10/18/2023 02:57] 0xjuntao
+shouldn't the reserve be 40000 - 15000 - 5000 - 5000 = 20000, so reserve ratio is 9000 / 20000 = 45%?
+
+
+[10/18/2023 03:03] sandnallani
+I see your confusion, we start with a supply of 40k, lender A burns 10k. So we’re down to 30k supply. In the final round when lender C has been paid, the left over can now go to form the reserve , hence 9k/30k
+
+
+[10/18/2023 05:57] coffiasd
+Is there a scope about target assets ERC20 token list and deploy chain list ?
+
+
+[10/18/2023 06:20] infectedfuture
+yes its on the readme: https://github.com/code-423n4/2023-10-wildcat#additional-context
+any ERC20 but no fee-on transfer, and exclusively ethereum mainnet
+
+{Reactions}
+🫡 
+
+[10/18/2023 06:34] marchev
+@functi0nZer0 Can you please elaborate on the following:
+> Arbitrary mints and burns are not possible.
+What's considered an *arbitrary mint*? E.g. USDC is minted on a daily basis. Does that mean that it's out-of-scope?
+
+
+[10/18/2023 06:35] marchev
+CC: @d1ll0n
+
+
+[10/18/2023 07:09] aitor.xyz
+Sorry for the simple question: Functions `registerBorrower( )` and `registerControllerFactory( )` for example are onlyOwner. Does this mean that it's a manual process started by the protocol owner?
+
+
+[10/18/2023 07:23] 0xjuntao
+yeah, see this https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/onboarding
+
+{Embed}
+https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/onboarding
+Onboarding
+How to make use of the Wildcat protocol.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/QXJbrALWBfaNFQMwf6Dr-DFA18.png
+
+{Reactions}
+👍 
+
+[10/18/2023 07:26] 0xlgtm
+Hi, can someone help to clarify this? I don't understand why lender A can claim 3x more tokens than lender B when both A and B only have a 5k withdrawal request (A made a 15k request but alr successfully withdrew 10k)
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-5D8DE.png
+
+
+[10/18/2023 07:27] aitor.xyz
+OK, thankyou, very clear
+
+
+[10/18/2023 07:34] 0xjuntao
+A withdrew 7.5k instead of 10k,  B withdrew 2.5k in the first round
+
+
+[10/18/2023 07:40] 0xstalin
+@functi0nZer0 @d1ll0n Started a private thread with y'all, hope you can read my messages 🫡
+
+
+[10/18/2023 08:49] functionzer0
+Hi everyone, just settling in for the day - will hit everything in a wave in about 2 hours or so
+
+{Reactions}
+🔥 
+
+[10/18/2023 09:13] 0xjuntao
+@functi0nZer0  fr please check ser
+
+
+[10/18/2023 09:44] marchev
+These are distributed on a pro rata basis. E.g. 
+
+Lender A has requested 15000 of 20000, i.e. 75%
+Lender B has requested 5000 of 20000, i.e. 25%
+
+There are only 10000 in the unclaimed pool, thus lenders can claim relative to the above requested ratios.
+
+Lender A -> 75% of 10000 = 7500
+Lender B -> 25% of 10000 = 2500
+
+{Reactions}
+🙏🏾 (2) 
+
+[10/18/2023 09:44] marchev
+Hope this helps
+
+
+[10/18/2023 10:56] zdravkohr
+What exactly is a ray
+
+
+[10/18/2023 11:09] inallhonesty_
+constant equal to 1e27
+
+
+[10/18/2023 11:20] 0xlgtm
+~~Thanks for explaining. I dont understand how there is still an outstanding claim of 20k when 10k was already successful withdrawn.~~ Np I figured it out. Thanks!
+
+{Reactions}
+🙌 
+
+[10/18/2023 11:22] deth2814
+@functi0nZer0 Hey, sent a fr req.
+
+
+[10/18/2023 11:33] noro9954
+@functi0nZer0 can you accept friend request, i have sent a dm .
+
+
+[10/18/2023 11:41] functionzer0
+This means here that the only way that market tokens can be created or destroyed is through deposits or withdrawals - there should be no way to will any more into or out of existence either through skulduggery or a function for that purpose
+
+{Reactions}
+👍 
+
+[10/18/2023 11:57] marchev
+In other words, rebasing __underlying__ tokens are out of scope?
+
+
+[10/18/2023 11:59] functionzer0
+Got a good question relating to the temporary parameters in the controllers and their factories:
+
+**In WildcatMarketControllerFactory what is the pupose behind _tmpMarketBorrowerParameter?**
+
+We use modern CREATE2 techniques to deploy contracts - you'll see in `WildcatMarketControllerFactory.deployController` that we just use `LibStoredInitCode.create2WithStoredInitCode(controllerInitCodeStorage, salt);` to deploy new controllers, passing in no parameters.
+
+As part of their deployment, their constructors - which have no arguments - _go back to the factory_ in order to fetch the parameters that they need to flesh out their own detail.
+
+So, *_tmpMarketBorrowerParameter* is there as a temporary storage of the borrower address that's deploying the controller for the purposes of being fetched to flesh out those controller details - it only has a value that isn't address(1) during the execution of `deployController` - this is more generally the reason for the `MarketControllerParameters` struct in the factory itself.
+
+You'll also see this behaviour mimicked in `WildcatControllerFactory.deployMarket` with the `MarketParameters` struct in the _controller_.
+
+I don't think this is a popular technique, so some folk might question it - that's why!
+
+{Reactions}
+🙏 (7) 
+
+[10/18/2023 12:01] functionzer0
+I'd say so, but I'd also perhaps argue that I wasn't clear enough in the specification for that, so mea culpa!
+
+
+[10/18/2023 12:01] functionzer0
+'Arbitrary mints and burns' would cover rebasing tokens through the scaleFactor - I guess that should say arbitrary supply shifts
+
+{Reactions}
+💯 
+
+[10/18/2023 12:02] functionzer0
+I think creating a Wildcat market with a Wildcat market token as underlying would kill a Victorian child
+
+{Reactions}
+⚔️ (2) 
+
+[10/18/2023 12:05] marchev
+IMHO you should be more explicit about rebasing tokens in the contest description.
+
+As for fee-on-transfer, it's pretty explicitly said. But w.r.t. to rebasing tokens, the current description is a subject to interpretation.
+
+Because "arbitrary" is a bit subjective term.
+
+
+[10/18/2023 12:06] functionzer0
+Yeah you're 100% right
+
+
+[10/18/2023 12:07] functionzer0
+I actually don't think we've tested with a rebasing token!
+
+
+[10/18/2023 12:07] marchev
+So the big question here is - is it in-scope here or out-of-scope?
+
+
+[10/18/2023 12:09] functionzer0
+I feel like I'm going to have to defer to the organisers here because of the ambiguity, but I'd say out-of-scope [because of course I would]
+
+I wouldn't realistically expect anyone to create a market with a rebasing token as underlying, but people have done sillier things
+
+
+[10/18/2023 12:12] functionzer0
+Am I being really silly or is there no way to statically check if an ERC-20 is rebasing just given the address?
+
+
+[10/18/2023 12:13] marchev
+To the best of my knowledge, only via token allow/deny list
+
+
+[10/18/2023 12:15] marchev
+That's, of course, if you want to make sure that that the code interacts in no way with it.
+It might as well be simply listed on the website as supported/unsupported with a disclaimer "use at your own discretion" 😄
+
+{Reactions}
+😄 
+
+[10/18/2023 12:15] functionzer0
+This is all a sidebar to the spec, but since we're not interested in operating that level of control [we'd want to allow people to be able to spin up markets for brand-new assets] it becomes an unsolvable check in that case, in which case I'd have said out of scope anyway with a "please don't be stupid" on the documentation/UI lmao
+
+
+[10/18/2023 12:16] marchev
+Not sure who from C4 may weigh in on this one. @Trebien | C4 @🦈 fragileshark | C4?
+
+{Reactions}
+👍 
+
+[10/18/2023 12:16] functionzer0
+"OHM is probably not going to end well here, use gOHM instead" :kek:
+
+{Reactions}
+chefskiss 
+
+[10/18/2023 12:35] functionzer0
+I went back to this, @SandNallani, and it's right, but let me try a rephrase:
+
+```
+Point 0: Supply = 40,000, Active Reserves = 10,000, Unclaimed Withdrawals Pool = 0
+         Lender A = 15,000 mtokens, 
+         Lender B = 5,000 mtokens
+```
+
+Action: Lender A files a request for 15,000 (sending 15,000 market tokens to the market), and 10,000 of them are burned to move reserves to unclaimed withdrawals pool.
+
+```
+Point 1: Supply = 30,000, Active Reserves = 0, Unclaimed Withdrawals Pool = 10,000
+
+         Lender A = 5,000 mtokens, Claimable withdrawal amount   = 10,000
+                                   Pending withdrawal [burned]   = 0 
+                                   Pending withdrawal [unburned] = 5,000
+
+         Lender B = 5,000 mtokens, Claimable withdrawal amount   = 0
+                                   Pending withdrawal [burned]   = 0 
+                                   Pending withdrawal [unburned] = 0
+```
+
+Action: Lender B files a request for 5,000, no reserves to move to unclaimed withdrawals pool so no tokens burned.
+
+Consequence: amounts allocated in the unclaimed withdrawals pool now shift to permit claimable amounts pro-rata since the 15,000 : 5,000 of total withdrawal amounts requested by Lender A : Lender B is in a 3:1 ratio.
+
+```
+Point 2: Supply = 30,000, Active Reserves = 0, Unclaimed Withdrawals Pool = 10,000
+
+         Lender A = 5,000 mtokens, Claimable withdrawal amount   = 7,500
+                                   Remnant pending withdrawal [burned]   = 2,500
+                                   Remnant pending withdrawal [unburned] = 5,000
+
+         Lender B = 5,000 mtokens, Claimable withdrawal amount   = 2,500
+                                   Remnant pending withdrawal [burned]   = 0
+                                   Remnant pending withdrawal [unburned] = 2,500
+```
+This is _pretty tricky_, and I feel like I've done a poor job of explaining it in the Gitbook - I only allude to the pro rata nature of things for the first time in the previous section **Claiming** - I'll work out a way to make this clearer!
+
+{Reactions}
+🤝 (2) 🙏🏾 (2) 👍 (3) 
+
+[10/18/2023 12:40] functionzer0
+The reason the withdrawal cycle exists and the pro-rata logic is written in this way is so that if there's a complete stampede out the door for whatever reason, lenders who hit the same cycle are going to get _something_
+
+
+[10/18/2023 12:40] functionzer0
+[Of course, the borrower could just set the withdrawal cycle length to zero if the relevant controller permits it and each withdrawal request just procs as its own batch but that's an edge-case]
+
+
+[10/18/2023 13:30] 0xsilvermist
+When is the ControllerFactory registered? I assume it's after the ControllerFactory deployment or am I wrong?
+
+
+[10/18/2023 13:31] functionzer0
+Yeah afterwards - the archcontroller owner (protocol operators) would register the factory after it was deployed, to add it to the canonical list
+
+
+[10/18/2023 13:33] functionzer0
+(There might be more than one flavour of factory in future, supporting different functionality - or we might want to launch with a really constrained version of what you see here to start with no fees but also a high minimum APR to dissuade people from using it for beyond a demo)
+
+
+[10/18/2023 13:35] deth2814
+bump
+
+
+[10/18/2023 13:39] functionzer0
+I accepted it, king
+
+
+[10/18/2023 13:44] deth2814
+mb, I didn't notice.
+
+{Reactions}
+green 
+
+[10/18/2023 13:54] varun2791
+@functi0nZer0 Sent a fr req
+
+
+[10/18/2023 14:27] t0x1c.c0de
+is it just me or does it take 5 mins for everyone, for a single new test to compile and run via `forge test` in this suite?
+
+
+[10/18/2023 14:43] deth2814
+nah just you, takes 10 mins for me
+
+{Reactions}
+kek (9) 
+
+[10/18/2023 14:43] deth2814
+I forget what I was testing while I'm waiting
+
+
+[10/18/2023 15:11] nonseodion
+The Gitbook intro is quite funny. 😹
+
+{Reactions}
+kek 
+
+[10/18/2023 15:13] zdravkohr
+via_ir is enabled
+
+
+[10/18/2023 15:21] trachev
+Yes, set the via_ir to false in the foundry.toml file
+
+{Reactions}
+thankyou (2) ✅ (2) 
+
+[10/18/2023 15:29] t0x1c.c0de
+Thanks 🤝
+
+
+[10/18/2023 15:29] functionzer0
+Can't file any issues if you forget what the issues are :almonds:
+
+{Reactions}
+😂 (6) 
+
+[10/18/2023 15:48] sandnallani
+Honestly, hats off to you to even taking the time to go in depth with this tricky withdrawal cycle. It's clear to me how the numbers work now.  I wish every protocol paid this much attention to docs as you guys have, as without it, you could expect to be bombarded with the same questions from auditors trying to form an understanding looking at the code.
+
+{Reactions}
+PES_Heart (2) 💯 (3) 👆 (2) 
+
+[10/18/2023 16:02] 0k_sec
+Loool😂😂
+
+
+[10/18/2023 16:03] supersizer0x
+@functi0nZer0  sent fr
+
+
+[10/18/2023 16:12] 0xstalin
+I think this is enough to consider rebasing tokens issues out of scope, it may not be specific as saying "rebasting tokens are oos", but it can be inferred by the description 🫡
+
+{Reactions}
+salute 
+
+[10/18/2023 16:16] kodyvim
+@functi0nZer0 sent fr
+
+{Reactions}
+👀 
+
+[10/18/2023 16:22] trachev
+@functi0nZer0 Sent a friend request
+
+
+[10/18/2023 16:28] jacobmartin0406
+In the whitepaper what exactly does this part mean?
+Especially "in that a 20% decrease in APR may induce far more than 20% of deposited assets to exit"?
+And if the borrower increases the APR, does the reserveRatio decrease or just feeBip increases?
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-87F57.png
+
+
+[10/18/2023 16:37] functionzer0
+So the thinking here was more philosophical: if you're in a fairly competitive lending market and you drop your rate from 5% to 4%, that's a 20% decrease in the interest rate, but it might be the case that actually, 80% of your lenders want to bail because there's a competitor product out there offering 4.5%
+
+
+[10/18/2023 16:38] functionzer0
+The whitepaper presents that relative difference model in terms of a suggestion of what the 'temporary reserve ratio' would be if you dropped it (a temporary reserve ratio is held in place for two weeks after a rate decrease)
+
+
+[10/18/2023 16:39] functionzer0
+However the actual code we've presented for audit has a flat "hell with you, the reserve ratio is 90% even if you decrease the interest rate by a single bip"
+
+
+[10/18/2023 16:39] functionzer0
+[you can think of this as a ragequit option where most lenders can just pack their bags and leave: although in practice a deployed version is far more likely to use a much lower rate]
+
+{Reactions}
+thankyou (2) 
+
+[10/18/2023 16:40] functionzer0
+If the borrower _increases_ the APR, the reserve ratio stays exactly the same, just the fee alters
+
+{Reactions}
+✅ 
+
+[10/18/2023 16:41] functionzer0
+How that temporary reserve ratio is realised in practice is: you can't drop the APR unless you've got 90% in reserves, even if your typical reserve ratio is 25% - and once you drop the APR, you can't reset the reserve ratio back to it's normal value for a fortnight
+
+
+[10/18/2023 17:18] 0xciphky
+@functi0nZer0 sent fr
+
+
+[10/18/2023 17:26] qwertypark
+@functi0nZer0 FR sent
+
+
+[10/18/2023 20:04] functionzer0
+Alright everyone, my watch has ended for tonight [21:04 here] - I've got one or two more DMs to answer, but otherwise passing the baton over to @d1ll0n again!
+
+{Reactions}
+salute (3) 
+
+[10/18/2023 20:34] d1ll0n
+gm
+
+
+[10/18/2023 20:41] functionzer0
+Narrator: he spent 30 minutes writing up an explanation of something instead
+
+
+[10/18/2023 20:41] functionzer0
+One of the questions I've been getting over and over again is for detail on how the escrow contracts work, so:
+
+
+[10/18/2023 20:43] functionzer0 (pinned)
+**How does the escrow mechanism work?**
+
+As presented, a lender can be excised from a market in two circumstances:
+
+a) When someone calls `nukeFromOrbit` within that market while flagged as sanctioned by the Chainanalysis oracle, or
+b) When the lender invokes `executeWithdrawal` while flagged as sanctioned by the Chainalysis oracle.
+
+In both cases, an escrow contract is created, and the `scaledBalance` (i.e. the market tokens) of the lender get transferred to the escrow rather than the lender.
+
+If it was an `executeWithdrawal`, then a _second_ escrow contract is also created, transferring the underlying assets within the claimable withdrawals pool that were claimable by the lender are also transferred to the escrow contract as well. The role of the lender within the market is shifted to `Blocked`.
+
+This isn't in scope for the audit (and so not a finding), but we'll also be adding on a `Blocked` role shift if the lender attempts to deposit while sanctioned, just to cover all of our bases.
+
+This is generally how things will stay in perpetuity until one of two things happens:
+
+a) The lender is no longer flagged as sanctioned by the Chainalysis oracle, or
+b) The borrower for the market in question calls `overrideSanction` for the lender (we've included this power in the event of a hostile Chainalysis oracle).
+
+If this happens, then anyone can poke `releaseEscrow` in the escrow contract(s) itself, and any assets shifted as part of an `executeWithdrawal` or `nukeFromOrbit` call are returned to the lender: note - if there are two escrow contracts, both have to be poked!
+
+Subsequently, anyone can return the lender to good grace within their market by calling `stunningReversal` - which will revert if the lender is still sanctioned _unless_ the borrower overrode the sanction.
+
+{Reactions}
+🚀 (3) 
+
+[10/18/2023 20:44] functionzer0
+This 'double escrow mechanism' for moving underlyings _and_ market tokens isn't clear at all in the Gitbook, so I'm going to edit it now
+
+
+[10/18/2023 20:47] itsmetechjay
+Pinned a message.
+
+
+[10/18/2023 22:06] marjon2358
+@d1ll0n Just sent a FR
+
+{Reactions}
+👍 
+
+[10/18/2023 23:28] 0xciphky
+@d1ll0n sent fr
+
+{Reactions}
+👍 
+
+[10/19/2023 02:28] 0x11singh99
+Have the findings of the previous audit been fixed ? @d1ll0n
+
+
+[10/19/2023 02:32] 0xdemonnn
+@d1ll0n sent a FR
+
+
+[10/19/2023 03:38] 0x11singh99
+Why compilation is taking so much time waiting ? , 10 minutes for every little change and running 1 test on it takes 10 minutes to compile,,really frustrating
+
+
+[10/19/2023 03:40] 0x11singh99
+any suggestion to do it fast ?
+
+
+[10/19/2023 03:43] pfapostol
+comment via_ir
+
+
+[10/19/2023 03:47] 0x11singh99
+Oh it becomes 15 times faster . Thanks @pfapostol .
+
+
+[10/19/2023 06:28] cosine_function
+@functi0nZer0 Can you describe what exactly is stored in each of these variable inside the Withdrawal.sol library?
+
+struct WithdrawalBatch {
+  uint104 scaledTotalAmount;
+  uint104 scaledAmountBurned;
+  uint128 normalizedAmountPaid;
+}
+
+struct AccountWithdrawalStatus {
+  uint104 scaledAmount;
+  uint128 normalizedAmountWithdrawn;
+}
+
+struct WithdrawalData {
+  FIFOQueue unpaidBatches;
+  mapping(uint32 => WithdrawalBatch) batches;
+  mapping(uint256 => mapping(address => AccountWithdrawalStatus)) accountStatuses;
+}
+
+
+[10/19/2023 07:00] j4x_98
+@functi0nZer0 sent you a fr and question
+
+
+[10/19/2023 07:29] functionzer0
+gm everyone, will get around to answering things shortly, just booting up my brain
+
+{Reactions}
+👍 (3) 
+
+[10/19/2023 09:28] 0xnirlin
+After reading whitepaper: :suicide:
+
+{Reactions}
+👀 
+
+[10/19/2023 10:36] coffiasd
+@d1ll0n  send a FR
+
+
+[10/19/2023 10:39] dastandan
+It's already clear in the code, right?
+```solidity
+/**
+ * Withdrawals are grouped together in batches with a fixed expiry.
+ * Until a withdrawal is paid out, the tokens are not burned from the market
+ * and continue to accumulate interest.
+ */
+struct WithdrawalBatch {
+  // Total scaled amount of tokens to be withdrawn
+  uint104 scaledTotalAmount;
+  // Amount of scaled tokens that have been paid by borrower
+  uint104 scaledAmountBurned;
+  // Amount of normalized tokens that have been paid by borrower
+  uint128 normalizedAmountPaid;
+}
+```
+
+So, 
+caledTotalAmount: This is an unsigned integer of 104 bits that represents the total amount of tokens to be withdrawn, scaled by a factor of 2^40.
+scaledAmountBurned: This is an unsigned integer of 104 bits that represents the amount of tokens that have been burned from the market, scaled by a factor of 2^40.
+normalizedAmountPaid: This is an unsigned integer of 128 bits that represents the amount of tokens that have been paid by the borrower, normalized to the base unit of the token.
+
+Is that What you want?
+
+
+[10/19/2023 11:35] 0x3b
+This is really useful, however why use 40 decimals, is it in the docs or?
+
+
+[10/19/2023 11:37] 0x3b
+Isn't it in 1e27, as `normalizeAmount` does multiplications with rays? 
+```jsx
+  function normalizeAmount(
+    MarketState memory state,
+    uint256 amount
+  ) internal pure returns (uint256) {
+    return amount.rayMul(state.scaleFactor);
+  }
+```
+Like here amount to be in 1e27 and `scaleFactor = 1e9`, so to normalize to 1e18
+
+
+[10/19/2023 11:46] dastandan
+You are right. normalizeAmount does indeed use rays to normalize the token amounts,  that the amount parameter should be in the base unit of the token (i.e. 1e18) and the scaleFactor should be in the form of 1e9. It was more a guess by the doc. I rather to try understand than help...lol..this Wildcat makes my day. Really good one
+
+
+[10/19/2023 11:53] sovaslava9
+Could you please exlain this code:
+
+
+[10/19/2023 11:53] sovaslava9
+function revertWithSelector(uint256 errorSelector) pure {
+  assembly {
+    mstore(0, errorSelector)
+    revert(Error_SelectorPointer, 4)
+  }
+}
+
+
+[10/19/2023 11:54] sovaslava9
+We write selectro to 0x00-0x20, but revert with other selector...
+
+
+[10/19/2023 12:19] functionzer0
+You should have tried writing it :suicide:
+
+{Reactions}
+😂 (5) 
+
+[10/19/2023 12:19] functionzer0
+Sorry lads, been buried in stuff today, coming back here momentarily
+
+
+[10/19/2023 12:19] rvierdiiev
+@functi0nZer0 sent friend request
+
+
+[10/19/2023 12:32] 0k_sec
+high five to @functi0nZer0  that he answers most of not all questions with full detail and well explaining, thank you sir :thankyou:
+
+{Reactions}
+🫡 (2) 
+
+[10/19/2023 12:41] 0xhelium
+Looking at this now
+
+
+[10/19/2023 12:41] 0xhelium
+Is there any diagram i can look at to see overal user story ?
+
+
+[10/19/2023 12:46] functionzer0
+Ha, sadly not I'm afraid, it's a prose-only effort with the exception of one diagram in the whitepaper that shows the high-level interactions
+
+
+[10/19/2023 12:54] functionzer0
+I'm getting around to this, just getting pulled from pillar to post - will finish and then edit this message with answer
+
+[Update: 17:10 BST - I'm still getting kicked up and down my various chat rooms, can you expound on what you're looking at in the withdrawal queue logic specifically?]
+
+
+[10/19/2023 12:54] 0k_sec
+there is two users story(borrower and lender) and each of them may have specific diagrams, if time helps, i'm planning to make a full diagram explaining both users flow as their docs are very clean and easy to understand and  create a graph using it is easy and simple( i hope so haha)
+
+
+[10/19/2023 13:06] 0xnirlin
+WHAT WHY:
+
+```
+A borrower that decreases the vault rate will find themselves potentially having
+to return assets to the vault in order to meet a temporarily higher vault reserve
+ratio
+```
+
+
+[10/19/2023 13:06] 0xnirlin
+:dance_vibe:
+
+
+[10/19/2023 13:08] j4x_98
+You can check the function 'setAnnualInterestBips()' in WildcatMarketController. I think it's done so that the lenders could exit if they are not willing to lend for a lower APR. To exit there will need to be a lot of liquidity, so the reserve rate gets increased to force the borrower to provide that liquidity.
+
+
+[10/19/2023 13:09] 0xnirlin
+answer was on next few lines in whitepaper:clown:
+
+{Reactions}
+kek 
+
+[10/19/2023 13:32] 0xnirlin
+how this calculation working:
+```
+NewReserve = maximum(|
+NewRate − OldRate
+OldRate |, OldReserve)
+- then dropping the vault APR from 5% to 3% in a brand new, fully subscribed
+1,200 WETH capacity vault with a 10% reserve ratio would temporarily set the
+reserve ratio to 40%, requiring:
+• 0 WETH to be returned if all assets are still within the vault, and
+• 360 WETH to be returned if assets have been withdrawn to capacity.
+```
+
+
+[10/19/2023 13:32] 0xnirlin
+@functi0nZer0 :GOTTEM:
+
+
+[10/19/2023 13:33] 0xnirlin
+360 and 40% where does these two figures cam from
+
+
+[10/19/2023 13:37] 0k_sec
+@functi0nZer0 send FR, please accept it
+
+
+[10/19/2023 13:42] functionzer0
+maximum(|(5-3)/5| *in percent*, 10%) is 40% 
+
+10% of 1,200 is 120 - the minimum that has to be left in the market if borrowing up to the 10% reserve ratio -, so 360 WETH brings that to 480, which is 40% of 1,200
+
+
+[10/19/2023 13:45] functionzer0
+In practice what's in the code presented for audit is just 'it's 90% lol'
+
+
+[10/19/2023 14:02] 0xnirlin
+:awkward:
+
+
+[10/19/2023 14:02] 0xnirlin
+you can tell me the finding too:pepehmmm:
+
+{Reactions}
+😂 (6) 
+
+[10/19/2023 14:03] 0k_sec
+good idea 😂
+
+{Reactions}
+pepeAscendant (3) 
+
+[10/19/2023 14:08] 0xnirlin
+what is reserve pool
+
+
+[10/19/2023 14:13] 0k_sec
+as i understand it, it refers to the pool where the reserve of the market are, for example the market capacity is 1000 weth and the reserve ratio is 10% or 100 weth, this 100 weth will be in the reserve pool and when lenders asking for their weth their withdraw request will processed/pinding based on this pool (if it have enough token to pay them back). the sponsors can correct me if its not true
+
+
+[10/19/2023 14:14] functionzer0
+Ah wait hang on, if you're reading reserved assets pool, in the Gitbook it's 'unclaimed withdrawals pool'
+
+
+[10/19/2023 14:15] functionzer0
+[The Gitbook takes seniority on terms: https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/terminology]
+
+The reserve ratio itself is distinct, that's why we changed the name
+
+
+[10/19/2023 14:15] functionzer0
+We were shadowing the word 'reserves' too much
+
+
+[10/19/2023 14:15] functionzer0
+[I think the only other major one is vault is now market]
+
+
+[10/19/2023 14:18] 0xnirlin
+Need to audit whitepaper first before auditing code :thehell: :suicide:
+
+
+[10/19/2023 14:18] functionzer0
+Yeah mb :suicide:
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-70628.png
+
+
+[10/19/2023 14:43] bytes032
+if it's not explicitly in the readme, or in the code comments, it's in-scope
+
+{Reactions}
+👍 (7) ➕ thankyou 
+
+[10/19/2023 15:21] 0xsilvermist
+@functi0nZer0 sent a friend request
+
+
+[10/19/2023 15:59] marchev
+thank you, ser 🫡
+
+{Reactions}
+salute 
+
+[10/19/2023 16:01] functionzer0
+I'm kicking the question to @d1ll0n, since this is his magic: the selector pointer is aiming at 0x1c, and 4 takes you to the end of that selector write
+
+Interesting
+
+
+[10/19/2023 16:09] tayzver
+@functi0nZer0 sent a friend request
+
+
+[10/19/2023 16:13] noro9954
+what is meant by pro-rata dispersal ?
+
+
+[10/19/2023 16:16] zdravkohr
+When you store the selector with mstore(0) it gets stored in the first memory slot as a whole word (32 bytes). The first 28 bytes (0x1c) are zeroes and the last 4 are the actual selector.
+
+{Reactions}
+🙏🏼 
+
+[10/19/2023 16:17] zdravkohr
+I think that's when there are not enough funds for all the withdrawals to be paid
+
+
+[10/19/2023 16:18] noro9954
+what happens when there are not enough funds for all the withdrawals to be paid ?
+
+
+[10/19/2023 16:19] zdravkohr
+https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders#claiming
+
+{Embed}
+https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders
+Lenders
+What you need to know as a Wildcat lender.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/I2kJoldVWRgopDbXfGCw-46455.png
+
+{Reactions}
+thankyou 
+
+[10/19/2023 16:19] zdravkohr
+Here is an example
+
+
+[10/19/2023 17:08] sovaslava9
+in WildcatMarketWithdrawals.executeWithdrawal()  accountAddress is address of lender?
+
+
+[10/19/2023 17:09] zdravkohr
+yes
+
+{Reactions}
+🙏🏼 
+
+[10/19/2023 19:33] techoptimizor
+`ERROR forge::multi_runner: error=Unrecoverable error: Err(Eyre(
+backend: failed while inspecting: Transaction(CreateInitcodeSizeLimit)))`
+
+why this error for forge test
+
+
+[10/19/2023 19:50] functionzer0
+Huh, that's strange, has anyone else encountered that?
+
+
+[10/19/2023 19:54] t1moh
+@functi0nZer0 please accept fr
+
+
+[10/19/2023 19:55] functionzer0
+I haven't had the time to address this today, so @d1ll0n when you get online can you blind them with science? I'm going to try and write up an explainer of how the withdrawal queue is intended to work for everyone in the next day or two, since it's a strange structure
+
+
+[10/19/2023 20:04] functionzer0
+I've got to bow out for tonight, everyone - I think I've answered (or seen good answers to) everything in here with the exception of the withdrawal queue structure from Cosine: I've been dealing more with friend-requests today, so sort of chittering away in the DMs
+
+As an aside, it's been great to see a) the more technical questions start to appear, and b) people helping respond based on the docs/pointing people at where to go - I appreciate you all :PES_BlankieThumbsUp:
+
+
+[10/19/2023 20:05] functionzer0
+Will route @d1ll0n in here once he's arisen from the dead - if I haven't given you an answer to a previous question from DMs that I've routed to him, I'll respond to you in turn tomorrow after we've had a think/look around
+
+
+[10/19/2023 22:53] irving6969
+@functi0nZer0 @d1ll0n pls accept fr
+
+
+[10/20/2023 00:28] nonseodion
+Does anyone have a suggestion to make the tests faster?
+
+
+[10/20/2023 00:46] 0x11singh99
+comment via ir   flag in toml file
+
+
+[10/20/2023 03:44] henry0226
+@d1ll0n sent FR
+
+
+[10/20/2023 04:00] marchev
+Is the issue submission page broken for everyone or it's just me?
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-C98E6.png
+
+
+[10/20/2023 04:02] marchev
+Despite the failing `manage-bot-findings` XHR in the screenshot, I am trying to submit a normal vulnerability 🤯
+
+
+[10/20/2023 04:30] coffiasd
+Just you  lol
+
+{Reactions}
+😖 
+
+[10/20/2023 05:56] norah7603
+@d1ll0n Sent FR
+
+
+[10/20/2023 06:33] almurhasan
+Does wildcat protocol support all erc20 tokens and eth as liquidity
+
+
+[10/20/2023 06:54] _3doc_
+https://code4rena.com/contests/2023-10-the-wildcat-protocol#top
+```
+We anticipate that any ERC-20 can be used as an underlying asset for a market. However we make the following assumptions:
+
+- There are no fees on transfer.
+- The totalSupply is nowhere near 2^128.
+- Arbitrary mints and burns are not possible.
+- name, symbol and decimals all return valid results.
+```
+
+{Embed}
+https://code4rena.com/contests/2023-10-the-wildcat-protocol
+The Wildcat Protocol | Code4rena
+Banking, but worse - a protocol for fixed-rate, undercollateralised credit facilities.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/c4-og-banner-9673D.png
+
+
+[10/20/2023 10:13] squeaky_cactus
+@d1ll0n @functi0nZer0 
+Great write ups for the C4 page prose, manifesto, whitepaper and inline code comments (especially helpful on the assembly).
+
+Quick questions:
+1) What does the BIP acronym stand for? 
+_(I'm guessing Basis Interest Point, as it's 1e4, which is often used for basis points)_
+2) What does RAY  acronym stand for?
+_(as seems to be a larger number to represent acrued interest ....Really Awesome Yield?)_
+```
+   * @return result The interest rate linearly accumulated during the timeDelta, in ray
+   */
+  function calculateLinearInterestFromBips(
+```
+
+{Reactions}
+salute 
+
+[10/20/2023 10:15] functionzer0
+You're right here on bip, and ray is actually a term hijacked from Maker's docs - it's a fixed point integer with 27 decimal places [https://docs.makerdao.com/other-documentation/system-glossary]
+
+
+[10/20/2023 10:15] functionzer0
+But I won't pretend I didn't laugh at really awesome yield
+
+{Reactions}
+😂 (5) 🤣 (3) 😉 
+
+[10/20/2023 10:17] functionzer0
+Some of the math is adapted from Aave, so if there's any incoherence with naming throughout, you can blame them :kek:
+
+{Reactions}
+👈 (2) 😆 (2) 
+
+[10/20/2023 10:43] sashik.eth
+I have made a diagram that could be helpful in understanding the protocol:
+https://twitter.com/sashik_eth/status/1715315692117819762
+
+{Reactions}
+🤩 🔥 (4) 
+
+[10/20/2023 10:50] functionzer0
+Holy hell this is great
+
+
+[10/20/2023 10:50] functionzer0
+RT'd, thanks!
+
+{Reactions}
+🤝 
+
+[10/20/2023 11:04] 0xnirlin
+what forumila is applied here now:
+
+
+[10/20/2023 11:04] 0xnirlin
+```
+The temporary collateral requirement for the vault while the pending withdrawal exists is now (250 * 1) + (550 * 0.2) = 360 WETH, leading to a
+temporary reserve ratio of 45% on the outstanding supply of 800.
+```
+
+
+[10/20/2023 11:04] 0xnirlin
+:thehell:
+
+
+[10/20/2023 11:09] 0xnirlin
+What if borrower died?
+
+{Reactions}
+🤣 (2) 
+
+[10/20/2023 11:14] m_rassska
+pls, refer to the section "in case if borrower loses pv keys" described in wp 👀
+
+
+[10/20/2023 11:16] 0xnirlin
+I hate that wp:catsad:
+
+{Reactions}
+😂 (6) 
+
+[10/20/2023 11:19] marchev
+why?
+
+
+[10/20/2023 11:26] 0xnirlin
+Because i am lazy
+
+{Reactions}
+😂 (3) 
+
+[10/20/2023 11:26] 0xnirlin
+give me videos pls
+
+{Reactions}
+👌 
+
+[10/20/2023 11:56] sovaslava9
+@functi0nZer0 sent you FR
+
+
+[10/20/2023 12:14] zdravkohr
+Hey, @functi0nZer0, I have a question about one example of the gitbook (https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders) . It's the 13th bullet point from the "Expired Claims and The Withdrawal Queue".  Why does Lender B claim 5000 unerlying tokens, but only 2500 of his market tokens are being burned?
+
+```jsx
+Since the unclaimed withdrawals pool now contains enough assets to fully honour Batch A, the remaining 7,500 market tokens held by the market and associated with this batch are burned (5,000 belonging to Lender A and 2,500 belonging to Lender B - remember that Lender A 'over-burned' 2,500).
+```
+
+{Embed}
+https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders
+Lenders
+What you need to know as a Wildcat lender.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/I2kJoldVWRgopDbXfGCw-46455.png
+
+
+[10/20/2023 12:24] functionzer0
+Ah I may have made a mistake while running through that - hang on, going to just give it a hard stare: it might just be easier to slash that sentence entirely, since the market token sum associated with the expired batch sits in a combined total
+
+
+[10/20/2023 12:24] functionzer0
+[i.e. drop everything in brackets]
+
+
+[10/20/2023 12:29] inallhonesty_
+@functi0nZer0  I've started a smol private thread, pls help
+
+
+[10/20/2023 12:30] zdravkohr
+You mean the parentheses? In the gitbook?
+
+
+[10/20/2023 12:42] functionzer0
+Yeah- `(5,000 belonging to Lender A and 2,500 belonging to Lender B - remember that Lender A 'over-burned' 2,500)` - this bit just adds extra confusion (and I think I got the numbers wrong in the extended example anyway) - the point is that the market tokens that are remaining within the market after a cycle expires don't really 'belong' to any of those lenders at that point, since subsequent claims work pro-rata anyway
+
+
+[10/20/2023 12:42] functionzer0
+I'll wipe that little aside from the Gitbook, good flag
+
+
+[10/20/2023 12:43] zdravkohr
+Okay, but what about the 7500 market tokens in total. Shouldn't they be 10 000?
+
+
+[10/20/2023 12:46] functionzer0
+[heavy sigh] Yes, you're right, once they aggregate - the 2,500 overburn from Lender A is absorbed by the bit that Lender B took
+
+
+[10/20/2023 12:46] functionzer0
+Thank you :suicide:
+
+{Reactions}
+❤️ (2) 
+
+[10/20/2023 12:47] zdravkohr
+Thanks for the response 😄
+
+
+[10/20/2023 12:48] functionzer0
+:salute:
+
+
+[10/20/2023 12:51] functionzer0
+Going to drop a long explainer of the data structure/process of withdrawal queue stuff in a little bit
+
+{Reactions}
+👍 
+
+[10/20/2023 12:51] 0xnirlin
+If wildcat had a face
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-68E31.png
+
+{Reactions}
+🤣 (10) 
+
+[10/20/2023 12:51] functionzer0
+Since a couple of people have asked around about it
+
+
+[10/20/2023 12:51] functionzer0
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/F80e-t7W8AAym8--86741.png
+
+{Reactions}
+pepelove 👌 (2) 🙀 (2) 
+
+[10/20/2023 12:51] 0xnirlin
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-6B7A0.png
+
+
+[10/20/2023 12:58] t0x1c.c0de
+Actually the last example has an inaccuracy too. The very last bullet point ought to be 9000/15,000 = 60%  (https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders#expired-claims-and-the-withdrawal-queue)
+@functi0nZer0 @ZdravkoHr
+
+{Embed}
+https://wildcat-protocol.gitbook.io/wildcat/using-wildcat/day-to-day-usage/lenders
+Lenders
+What you need to know as a Wildcat lender.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/I2kJoldVWRgopDbXfGCw-46455.png
+
+
+[10/20/2023 12:59] t0x1c.c0de
+remaining total assets are only 15K, instead of the 30K mentioned
+
+@Juntao🐾  and @SandNallani mentioned this in the messages, but I guess got overlooked as the numbers mentioned were not accurate : https://discord.com/channels/810916927919620096/1161700041124229191/1164024162206101574
+
+
+[10/20/2023 13:01] functionzer0
+Ha I literally just tweaked this and pushed after re-reading - I refactored this part last night based on some feedback from folk and clearly need to _not_ do that when tired
+
+
+[10/20/2023 13:02] 0xnirlin
+How the create 2 implementation used in the code are different from other implementation out there. Why not use something like solady create2?
+
+
+[10/20/2023 13:07] infectedfuture
+i think this answer: https://discord.com/channels/810916927919620096/1161700041124229191/1164170867148853370
+
+
+[10/20/2023 13:10] d1ll0n
+LibStoredInitCode is so we can deploy the init code to a separate contract to ensure the factory doesn't hit the size limit with IR enabled and a high number of optimization runs. That contract is just for storage, it has a STOP prefix (to keep the initcode storage from being executed) followed by the actual creation code for the contract. The C2 deploy method has to copy the initcode (everything after the first STOP byte) from the contract storage address and then use that to deploy the contract. Since the parameters for our c2 deployment are different (address vs bytes) it wouldn't make sense to use the solady implementation (we *could* have used solady's sstore2 with a normal c2 library, but allocating memory to create an actual `bytes` variable would add memory expansion costs for everything after the deployment)
+
+{Reactions}
+🧠 (5) 
+
+[10/20/2023 13:17] norah7603
+@functi0nZer0 Sent FR
+
+
+[10/20/2023 13:28] functionzer0
+Would prefer a thread at this point, since if it's something I'm slow on or would prefer Dillon answer, I don't have to ferry the question to him
+
+
+[10/20/2023 13:28] functionzer0
+It was fine when it was the first five people asking, but at this point I have 30 people in my DMs lmao
+
+
+[10/20/2023 15:05] noro9954
+@d1ll0n sent fr
+
+
+[10/20/2023 15:36] infectedfuture
+how should the borrower deposit assets to fulfill lender withdrawal requests? can't see a dedicated function, does that mean the borrower have to transfer to the market manually?
+
+
+[10/20/2023 15:37] functionzer0
+Yeah just transfer then hit updateState
+
+{Reactions}
+thankyou (2) 
+
+[10/20/2023 15:37] functionzer0
+[We'll probably also just create a `repay` function that handles this, but that's just a nicety we'll add in (so we can emit an event for logs, but it's not needed)]
+
+
+[10/20/2023 15:37] functionzer0
+There's no specific path you need to take, any transfer in is considered a payment by the borrower
+
+{Reactions}
+👍 (3) 
+
+[10/20/2023 15:38] infectedfuture
+yeah could be great for sure
+
+
+[10/20/2023 16:08] dimulski
+@functi0nZer0 @d1ll0n sent FR
+
+
+[10/20/2023 18:35] 0xnirlin
+why do this https://github.com/code-423n4/2023-10-wildcat/blob/c5df665f0bc2ca5df6f06938d66494b11e7bdada/src/WildcatSanctionsSentinel.sol#L114
+
+{Embed}
+https://github.com/code-423n4/2023-10-wildcat/blob/c5df665f0bc2ca5df6f06938d66494b11e7bdada/src/WildcatSanctionsSentinel.sol
+2023-10-wildcat/src/WildcatSanctionsSentinel.sol at c5df665f0bc2ca5...
+Contribute to code-423n4/2023-10-wildcat development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/68d3387e-9a33-4b20-9c98-d2ab5df73670-5931D
+
+
+[10/20/2023 18:45] 0xstalin
+there it goes my unique high 😦
+
+
+[10/20/2023 18:47] 0xnirlin
+:kewk:
+
+
+[10/20/2023 18:47] 0xnirlin
+its already in comments but why
+
+
+[10/20/2023 18:48] functionzer0
+This is expected behaviour
+
+
+[10/20/2023 18:48] functionzer0
+Look at what it’s targeting
+
+
+[10/20/2023 18:48] 0xstalin
+I think that is to ensure the escrowContract will never be sanctioned, any account set to true in the sanctionOverrides will always considered to not be block
+
+{Reactions}
+👍 
+
+[10/20/2023 18:48] functionzer0
+Will explain later, sat in a car right now
+
+
+[10/20/2023 18:49] 0xnirlin
+great, meanwhile accept my FR
+
+
+[10/20/2023 18:49] functionzer0
+Please use a thread instead
+
+
+[10/20/2023 18:49] 0xnirlin
+what thread?
+
+
+[10/20/2023 18:49] functionzer0
+Else I have to ping back and forth with Dillon if it’s something I can’t handle or haven’t got time
+
+
+[10/20/2023 18:49] functionzer0
+Create one ser
+
+
+[10/20/2023 18:50] 0xnirlin
+right, thank you.
+
+{Reactions}
+green 
+
+[10/20/2023 18:51] 0xnirlin
+ok so lets say an account is set to true in sanction overrides, does this mean that contract will not consider the bool returned from the oracle?
+
+
+[10/20/2023 18:52] dimulski
+check what bitwise and does
+
+
+[10/20/2023 18:52] 0xstalin
+right, the returned bool is the result of the and operation, so, if sanction overrides is set to true, it will be negated, so it will be false, so, false & true => false
+
+
+[10/20/2023 18:54] 0xnirlin
+whats the point of oracle than :thehell:
+
+
+[10/20/2023 18:55] dimulski
+even if you are sanctioned in the OFAC, you can bribe the borrower to unsaction you
+
+{Reactions}
+😂 (7) awkward 
+
+[10/20/2023 18:56] 0xstalin
+the default value of sanctionOverrides is false, so, if acc is banned in oracle, the account will be considered blacklisted from the Market
+The borrower can decide to remove the sanction to the account, so, it overrides the sanction locally in the market and set it to true, even though the account is still blocked in the oracle, the market won't consider the account to be blocked anymore
+
+
+[10/20/2023 18:58] functionzer0
+It’s meant as a counterbalance to the advent of a hostile Chainalysis oracle that starts blacklisting addresses - we’ll know who borrowers are (since they have to be added to the archcontroller) and it’s gonna be pretty obvious if they start trying to override valid sanctions lmfao
+
+
+[10/20/2023 19:02] functionzer0
+Wider protocol can’t intervene, so relying on a trusted party that we can’t control as a source of truth needs an escape valve in case it’s compromised
+
+{Reactions}
+👍 (2) 
+
+[10/20/2023 19:03] functionzer0
+I low-key don’t expect any of the sanction functionality to ever be invoked but after the Tornado incident, might as well account for it
+
+
+[10/20/2023 21:29] functionzer0
+Going to get around to outstanding questions in the morning, everyone (those I don’t I’ll kick to Dillon)
+
+Happy Friday evening 🙂
+
+
+[10/21/2023 05:23] 0xjuntao
+is borrower trusted or restricted?
+
+
+[10/21/2023 05:23] 0xjuntao
+it says in README borrower is trusted role
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/2023-10-21_13.22.51-783B8.png
+
+
+[10/21/2023 05:24] 0xjuntao
+however concern is also raised in "attcker idea"
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/2023-10-21_13.23.07-48AF8.png
+
+
+[10/21/2023 05:26] 0xjuntao
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/crazy-cat-A1078.gif
+
+
+[10/21/2023 05:30] zdravkohr
+I think we trust him as far as not borrowing funds without returning them
+
+
+[10/21/2023 05:30] coffiasd
+according  to gitbook borrower can be added to block list
+
+
+[10/21/2023 05:31] 0xjuntao
+fair enough, restricted then
+
+
+[10/21/2023 05:32] coffiasd
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-E703C.png
+
+
+[10/21/2023 05:35] coffiasd
+@functi0nZer0  is this means once borrower is add to block list then lender can't withdraw assets which belongs to themself ?
+
+
+[10/21/2023 05:40] 0x11singh99
+what is bips ?
+
+
+[10/21/2023 05:46] m_rassska
+we're all waiting for it... 👀
+
+
+[10/21/2023 05:52] dimulski
+https://www.investopedia.com/ask/answers/what-basis-point-bps/#:~:text=%25%2025%25%200%25-,What%20Are%20Basis%20Points%3F,or%200.0001%20in%20decimal%20form.
+
+{Embed}
+https://www.investopedia.com/ask/answers/what-basis-point-bps/
+Basis Point (BPS) Definition & How It's Used
+A basis point is a unit of measure used in finance to describe the percentage change in the value or rate of a financial instrument.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/GettyImages-1246652809-9232cebf09384441913-6766C.jpg
+
+{Reactions}
+👍 
+
+[10/21/2023 07:44] functionzer0 (pinned)
+**Withdrawal data in** `MarketState`
+
+* `uint128 normalizedUnclaimedWithdrawals` - amount of underlying assets paid to batches but not yet claimed in `executeWithdrawal`
+* `uint104 scaledPendingWithdrawals` - sum of unpaid amounts for all withdrawal batches
+* `uint32 pendingWithdrawalExpiry` - expiry timestamp of the current unexpired withdrawal batch.
+
+`scaledPendingWithdrawals` is tracked because borrowers are obligated to honour 100% of pending withdrawals and the reserve ratio for the rest of the total supply to avoid delinquency.
+
+**The `WithdrawalData` Struct**
+
+* `FIFOQueue unpaidBatches` - first-in-first-out queue of timestamps (identifiers) for `WithdrawalBatch`es that have expired but have not been fully honoured (i.e. `scaledAmountBurned` < `scaledTotalAmount`). Expiries are popped off the front of the list as the batches are completely paid off.
+* `mapping(uint32 => WithdrawalBatch) batches` - mapping of withdrawal batches using their expiry timestamps as keys
+* `mapping(uint256 => mapping(address => AccountWithdrawalStatus)) accountStatuses` - mapping of account withdrawal statuses by expiry and address.
+
+**The `WithdrawalBatch` Struct**
+
+* `scaledTotalAmount` - sum of scaledAmount for all `AccountWithdrawalStatus` in the batch
+* `scaledAmountBurned` - scaled tokens burned to pay for the batch - increases when `_applyWithdrawalBatchPayment` reduces `scaledTotalSupply`
+* `normalizedAmountPaid` - total amount of underlying assets  set aside to honour the batch's withdrawals.
+
+**The `AccountWithdrawalStatus` Struct**
+
+* `uint104 scaledAmount` - scaled withdrawal amount subtracted from lender's balance when they call `queueWithdrawal`.
+* `uint128 normalizedAmountWithdrawn` - amount of underlying assets the lender has already claimed
+
+**Notes**
+
+Scaled amounts are the original amounts lenders sent to the market when they queued a withdrawal. Until their requests are honoured (assets reserved for the batch), they continue accruing interest, hence the distinction between scaled/normalized amounts in batches. The normalized amount is the value their tokens had at the time they were actually paid by the borrower and made available for lenders to redeem.
+
+In `_applyWithdrawalBatchPayment`, some `normalizedAmount` of underlying is removed from the market's available liquidity and reserved to pay for the batch (added to `batch.normalizedAmountPaid` and `state.normalizedUnclaimedWithdrawals`). The corresponding `scaledAmount` is added to `batch.scaledAmountBurned` and subtracted from `state.scaledTotalSupply` and `state.scaledPendingWithdrawals`.
+
+The normalized amount set aside for the batch can only be used to execute withdrawal requests for this batch - the market's balance in the underlying assets can never go below `normalizedUnclaimedWithdrawals`.
+
+Just as borrowers can make multiple partial payments toward a batch over time, lenders can execute multiple partial redemptions.
+
+Lenders are always entitled to a pro-rata share of the total underlying assets that have been paid toward a batch at any given time. `normalizedAmountWithdrawn` is tracked per lender so that it can be subtracted from their total claim on the batch's reserved assets if they have to do multiple partial redemptions. As lenders redeem assets, their statuses' withdrawn amounts are increased and the market's `state.normalizedUnclaimedWithdrawals` is reduced.
+
+{Reactions}
+❤️ (6) 🔥 (7) chefskiss (5) 🤯 10_10 📌 
+
+[10/21/2023 07:44] m_rassska
+Kudos for Alpha ❤️
+
+
+[10/21/2023 07:45] functionzer0
+I'll clean this up in a bit - low battery on machine, just dropping in here before it dies lmfao
+
+
+[10/21/2023 07:50] m_rassska
+@functi0nZer0, do you think, that it's okay for Wildcat to have a lot of spammy-markets with ~100% apr promised? From my understanding, Wildcat is the great place to launch various ponzi schemes. Anyways, my concerns are around the reputation of the protocol itself, but prob it doesn't make any sense.
+
+
+[10/21/2023 07:56] functionzer0
+No, of course not - if we didn't care we wouldn't assert any gating over which borrowers were allowed to deploy controllers/markets
+
+
+[10/21/2023 07:58] functionzer0
+If anything we're probably going to be pretty paranoid about who we register as a borrower to start (the first one is Wintermute, since Wintermute Ventures backed Wildcat development) - I actually don't know who the next ones will be
+
+What's not shown here in code is the fact that if you're using the protocol UI, you're going to be binding yourself to a legal agreement to chase down in court: unless a borrower lies to us about their identity docs and we fall for it, we're going to know who's deploying everything
+
+{Reactions}
+📌 (2) 
+
+[10/21/2023 07:58] functionzer0
+We can't _intervene_ but that doesn't mean we can't _identify_ the borrowers
+
+{Reactions}
+👮‍♂️ (2) 
+
+[10/21/2023 08:02] m_rassska
+Somewhere in wp, not a quote: "lenders should be extra-cautious about such promises" and i thought since the Wildcat doesn't have any authority over the markets(i.e. remove the market or anything) borrowers are able to set whatever traps they want. But now, gotcha, thanks!
+
+
+[10/21/2023 08:05] functionzer0
+They can parameterise their markets however they want subject to being in the bounds of a controller factory, and we can't force any changes on them thereafter, but yeah we're expecting here that borrowers are working in good faith/not straight up trying to do a ponzu
+
+A market maker with a decent reputation going "I would like to raise inventory" =  fine
+A legal entity for a DAO going "we'd like to raise funds for operational purposes" = probably fine
+Some spun up Delaware wrapper for a CT anon going "I want to make it all back in one trade" = no you're probably not going to be allowed lmao
+
+{Reactions}
+🤣 (2) 
+
+[10/21/2023 08:06] functionzer0
+If it turns out that we authorise a borrower who turns out to subsequently be jerking around, we can sever their markets and deauthorise the borrower [so they don't show up on the protocol UI anymore and they can't deploy anything else] but stuff they've got already we just can't touch
+
+
+[10/21/2023 08:06] functionzer0
+And that's sort of how it should be freedom-of-contract wise in my mind
+
+{Reactions}
+💯 
+
+[10/21/2023 08:22] 0xnirlin
+Now i get it,  why its banking but worst:GOTTEM:
+
+
+[10/21/2023 08:22] functionzer0
+:salute:
+
+
+[10/21/2023 09:45] functionzer0
+I _think_ I'm caught up on all questions :pepenervous:
+
+
+[10/21/2023 10:09] yesofcourse_
+Does anyone have any idea why I can't run tests? Seems like something gets messed up in the setUp test
+
+I've added `solc_version = "0.8.21"` in foundry.toml and have removed `evm_version = paris` as I was getting an error. That's all I've changed
+
+EDIT: For some reason it worked when I ran it with WSL, thanks for all who tried to help
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-79285.png
+
+
+[10/21/2023 10:32] 0xnirlin
+no
+
+
+[10/21/2023 10:39] zdravkohr
+Run it with full verbosity to see what's happening
+
+
+[10/21/2023 10:41] noro9954
+What is added value using smart contracts ?
+
+
+[10/21/2023 11:02] functionzer0
+Heh that's a more ideological question than anything
+
+When you're dealing with new assets straight off the press, often the terms of how they're distributed are pretty unclear (see the rage on market making agreements for say, WLD or ARB) - some people are starting to demand more transparency here
+
+A lot of the dominos that collapsed such as BlockFi and 3AC in the death throes of the bull market were down to loans that no one really knew existed so weren't sure about the reach of the rot after Luna's demise - some more monitoring would have probably helped: and truth be told there are protocols that exist that support this kind of thing (Maple, Clearpool etc) but our view is that their pretty deep levels of intervention mean that agreements that _might_ have appeared on chain just didn't.
+
+[Of course, I recognise that parties that want to keep stuff on the down low still have the ability to just paper stuff up off-chain normally: you could consider a Wildcat market a reputational signal in the sense that they're happy for light to be shone on things]
+
+There's also something to be said for being able to trade around the market tokens as a claim on debt, even though it isn't redeemable via wallets that are authorised - there are ways to handle that sort of thing off-chain - there are some really interesting cases where borrowers can effectively issue a bond on themselves
+
+More prosaically there are a couple of entities that spend a LOT of time doing back-office stuff to track the status of loans that are purely P2P - do it through Wildcat and the calculations are sorted for you with event emittance and the rebasing mechanic, you get to reduce your costs that way
+
+{Reactions}
+👌 (2) 📌 (2) 
+
+[10/21/2023 11:02] debofx
+Maybe setup function is the issue. Also there might be setup without any fake amount as gas is 0 zero.
+
+
+[10/21/2023 11:09] functionzer0
+One of the things that would be really neat to do (and we want to) is to create a version of the controller factory that integrates a verifier contract so that a borrower doesn't have to specifically authorise lenders that can deposit and redeem, but rather anyone that has an identity credential such as from Verite [which requires periodic refreshing]
+
+You can think of that as somewhat deferring some of the KYC check to, e.g. Circle (let's say you're comfy with Circle knowing your details, but not Random Ass DAO 472 with a legal entity attached) - doing that, you could permit anyone that has a Circle account modulo Americans to interact - then things like debt that gets traded around suddenly becomes a lot more liquid without the risk that the redeemer is a concern
+
+{Reactions}
+✅ (3) 
+
+[10/21/2023 11:10] functionzer0
+This is the super chokeheld version of the protocol
+
+
+[10/21/2023 11:40] jvorex
+@functi0nZer0 does a borrower pay fee for every liquidity provided by lenders or just for the liquidity they actually utilize (withdraw from the market)?
+
+
+[10/21/2023 11:53] functionzer0
+Everything
+
+
+[10/21/2023 11:53] functionzer0
+That's something that's highlighted in the docs - reserve ratio amounts stay in the market but still accrue interest
+
+
+[10/21/2023 11:59] coffiasd
+Should set evm to Shanghai
+
+
+[10/21/2023 13:28] 0k_sec
+where can i find the `AuthRole` contracts or withdraw and other rules please ?
+
+
+[10/21/2023 13:35] functionzer0
+It's a struct in `WildcatStructsAndEnums.sol` - which is in /interfaces (so the code itself is out of scope), but:
+
+```
+enum AuthRole {
+  Null,
+  Blocked,
+  WithdrawOnly,
+  DepositAndWithdraw
+}
+```
+
+{Reactions}
+❤️ 
+
+[10/21/2023 13:46] 0k_sec
+Thanks sir
+
+{Reactions}
+salute 
+
+[10/21/2023 14:33] functionzer0
+https://twitter.com/WildcatFi/status/1715737760240210243
+
+{Reactions}
+😆 (4) 😂 (6) KEKW (3) 
+
+[10/21/2023 14:33] functionzer0
+:kek:
+
+
+[10/21/2023 16:02] inallhonesty_
+@Trebien | C4
+
+
+[10/21/2023 16:22] trebien
+?
+
+
+[10/21/2023 16:32] inallhonesty_
+It was a scammer that spams his messages in many discords, dude came here, I didn't know who does the moderation, so I tagged you because of the name color 😄
+
+{Reactions}
+👍 (3) 
+
+[10/21/2023 16:32] trebien
+I think someone from the team kicked him.
+
+{Reactions}
+💯 (2) 
+
+[10/21/2023 16:32] inallhonesty_
+yeah
+
+
+[10/21/2023 17:10] mlome
+Hello, what is the purpose of this `add(data, 21)` in `LibStoredInitCode.sol` line 33?
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-4A4CE.png
+
+
+[10/21/2023 17:41] sandnallani
+These are pretty distracting in the thread.
+
+
+[10/21/2023 17:56] sandnallani
+What's the high level purpose of having distinct states for `WithdrawOnly` and `DepositAndWithdraw`?
+It seems like anyone can add lenders with `WithdrawOnly` on approved markets. And they'll get the `WithdrawOnly` role. 
+But I assume that doesn't do much, as the added `lender` also needs market tokens inorder to withdraw? 
+Am I understanding this correctly?
+
+
+[10/21/2023 18:02] 0xciphky
+its so deauthorized lenders who still have funds can withdraw but not deposit anymore
+
+{Reactions}
+👍 (2) 
+
+[10/21/2023 18:28] sandnallani
+Made short summary tweet about the protocol in case it helps anyone https://x.com/SandNallani/status/1715796544325394777?s=20
+
+
+[10/21/2023 18:29] sandnallani
+I must say, this is the first time I'm seeing a holistic protocol with offline legally binding docs and thoroughly vetted borrowers to promote more transparency in marking making activities.
+
+{Reactions}
+❤️ (3) 
+
+[10/21/2023 20:41] 0k_sec
+hey. so the penalty will start applied when the borrower fail to repay the market when it need to repay right ?
+
+
+[10/21/2023 20:49] 0xstalin
+Not exactly, when the market falls into delinquency, a kinda counter is initiated to keep track of how much time the market has been delinquent, there is a grace period that allows the market to be delinquent without charging penalty fees, only the time in delinquency outside of the grace period is charged with penalty fees
+
+
+[10/21/2023 20:55] 0k_sec
+oh i see, thanks for explaining sir 👍🏻
+
+
+[10/21/2023 21:22] 0k_sec
+how these APR calculated in this part please ?
+```
+A borrower deploying a market with a base APR of 10%, a protocol APR of 30% and a penalty APR of 20% will pay a true APR of 13% (10% + (10% * 30%)) under normal circumstances, and 33% when the market has been delinquent for long enough for the penalty APR to activate.
+```
+
+
+[10/21/2023 23:00] zdravkohr
+The 30% protocol APR is calculated as 30% of the base APR, so 30% of 10% = 3%
+
+
+[10/21/2023 23:22] zdravkohr
+Line 31 stores the prefix code in [data, data+32]. The prefix code is 11 bytes long, so it will be padded with 21 bytes of zeroes. When creating the new contract, we want to ignore these 21 bytes
+
+
+[10/22/2023 02:38] sheikhswampert
+swampert has landed, finna try my best 🫡
+
+{Reactions}
+green 
+
+[10/22/2023 05:16] varun2791
+@d1ll0n dmed you please check
+
+
+[10/22/2023 06:44] coffiasd
+I've noticed that in the protocol, there are two types of units - one that's scaled and another that's normalized. Does the scaled one represent the assets within the contract, while the normalized one represents the underlying assets ， Is my understanding correct in this way ？
+
+
+[10/22/2023 07:11] zdravkohr
+https://discord.com/channels/810916927919620096/1161700041124229191/1163930877932339250
+
+{Reactions}
+🫡 
+
+[10/22/2023 07:14] jacobmartin0406
+As far as I know there is withdrawal cycle to handle lenders' withdrawal request. But I can't find where to set it. Please someone help me😳
+
+
+[10/22/2023 07:25] zdravkohr
+You can't find where to set its duration or you can't find where a new cycle can be started
+
+
+[10/22/2023 07:26] jacobmartin0406
+Both.
+
+
+[10/22/2023 07:30] zdravkohr
+When a borrower calls deployMarket() in **WildcatMarketController.sol**, he specifies a withdrawalBatchDuration
+
+{Reactions}
+thankyou 
+
+[10/22/2023 07:31] infectedfuture
+its set in the controller when deploying the market.
+And its used in `queueWithdrawal`  L95 : https://github.com/code-423n4/2023-10-wildcat/blob/main/src/market/WildcatMarketWithdrawals.sol#L95
+
+{Reactions}
+thankyou 
+
+[10/22/2023 08:05] jacobmartin0406
+what is MarketState.pendingWithdrawalExpiry?
+
+
+[10/22/2023 08:10] m_rassska
+https://discord.com/channels/810916927919620096/1161700041124229191/1165193885987901520
+
+{Reactions}
+thankyou 
+
+[10/22/2023 08:58] functionzer0
+gm everyone going to try get to questions in threads/above that haven’t been answered elsewhere today - have the joy of making sure my infant doesn’t try and climb into my in-laws dogs
+
+
+[10/22/2023 11:26] 0k_sec
+https://tenor.com/view/huh-cat-huh-m4rtin-huh-huh-meme-what-cat-gif-27377993
+
+{Embed}
+https://tenor.com/view/huh-cat-huh-m4rtin-huh-huh-meme-what-cat-gif-27377993
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/huh-cat-huh-m4rtin-74E0C.png
+
+
+[10/22/2023 11:27] 0k_sec
+I get it but how it return 13% ?! 👀
+
+
+[10/22/2023 11:35] t1moh
+10% base, 3% protocol
+
+{Reactions}
+❤️ 
+
+[10/22/2023 11:55] 0k_sec
+Oh i get it now, thanks 🫡
+
+
+[10/22/2023 13:22] 0k_sec
+hey, i created this graph that explains the borrower and lender workflow, hope this graph give wardens better idea about the flows in this protocol.
+
+
+note: if there is incorrect or missed information please mention me  here or DM me 🫡
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/wildcat_flow-F3FE9.jpg
+
+{Reactions}
+green (5) 
+
+[10/22/2023 13:56] 0xnirlin
+I would have done same only if i myself was able to understand mine diagram lol
+
+
+[10/22/2023 13:57] 0xnirlin
+:catsad:
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-039A4.png
+
+
+[10/22/2023 14:02] sandnallani
+Thanks for sharing, sequence diagrams like the one @0xkazim made are  easier on the eyes. But appreciate the effort.
+
+{Reactions}
+❤️ 
+
+[10/22/2023 14:05] 0xnirlin
+no worries, i don't understand mine either:KEKdrive:
+
+
+[10/22/2023 14:07] 0xnirlin
+can someone please link me to the message where functionzero explained the scaling thing, can't find it.
+
+
+[10/22/2023 14:14] zdravkohr
+It was not functionzer0 tho 😄
+
+{Reactions}
+😂 
+
+[10/22/2023 14:42] infectedfuture
+(it is very similar to a vault in its functionning, where scaleFactor is the exchange rate of the vault, and APR/deliquiency fees are the yield generated by the vault)
+
+
+[10/22/2023 14:49] debofx
+Hello @d1ll0n 
+Is there a list of variable attributes along with stuff like test addresses e.g. for assets, string list values, bytes list values, descriptions, etc?
+
+
+[10/22/2023 15:10] sp1cymeatball
+what dark sorcery is this?
+
+```
+      let size := mload(data)
+      let createSize := add(size, 0x0b)
+
+      // Shift (size + 1) to position it in front of the PUSH2 instruction.
+      // Reuse `data.length` memory for the create prefix to avoid
+      // unnecessary memory allocation.
+      mstore(data, or(shl(64, add(size, 1)), 0x6100005f81600a5f39f300))
+      // Deploy the code storage
+      initCodeStorage := create(0, add(data, 21), createSize)
+```
+especially this line ` mstore(data, or(shl(64, add(size, 1)), 0x6100005f81600a5f39f300))`
+
+
+[10/22/2023 15:19] d1ll0n
+🙏  thank you! One correction here, "payback the lender if there is enough..." a pending batch gets created either way. It will set aside up to the available liquidity for withdrawals as they are queued, but the lender can't actually receive funds until the batch expires, then they get a pro-rata share of what's available for the batch
+
+{Reactions}
+❤️ 
+
+[10/22/2023 15:21] d1ll0n
+The comment block right above this has the instructions that the `0x6100005f81600a5f39f300` is comprised of - the `shl(64, add(size, 1))` is positioning `size+1` (size of the init code + stop prefix) so that it takes the place of `0000` in the first (PUSH2) instruction.
+
+
+[10/22/2023 15:23] sp1cymeatball
+Thanks! Do you know where I can read more about this stuff, deploying bytecode with assembly?
+
+
+[10/22/2023 15:25] functionzer0
+There isn’t a public testnet deployment yet, and I’m not quite clear what it is you’re looking for - can you expand a bit?
+
+
+[10/22/2023 15:34] d1ll0n (pinned)
+The scaled amounts are for internal accounting, normalized amounts represent underlying amounts that the borrower owes. The scale factor is a ray multiplier that grows over time as interest accrues. You scale a normalized amount by dividing by the scale factor (`rayDiv`) and normalize a scaled amount by multiplying (`rayMul`).  `balanceOf(account)`  is `state.scaleAmount(scaledBalanceOf(account))` - the normalized balance is a claim on eventually being repaid that amount of underlying by the borrower. The normalized values are used for token balances, total supply and inputs to all the stateful functions - users specify things in terms of debt on underlying asset amounts.
+
+Example:
+scale factor = 1
+apr = 10%
+Alice deposits 100 usdc, receives 100 Wildcat USDC, scaled balance = 100 (100 / 1)
+
+1 year passes, now scale factor is 1.1 (10% interest)
+
+Alice's balance of scaled tokens (the internal accounting value, `scaledBalanceOf`) is still 100, but her balance of Wildcat USDC (claim on borrower debt, `balanceOf`) is now 110 (100 * 1.1).
+
+Bob deposits 110 USDC, receives 110 Wildcat USDC,  his scaled balance is 100 (110 / 1.1)
+
+Now totalSupply = 220, scaledTotalSupply = 200. If another year passes, scale factor will be 1.21 as interest compounds on every state update, then totalSupply = 242, scaledTotalSupply = 200.
+
+{Reactions}
+thankyou (4) 10_10 (3) 📌 (3) 
+
+[10/22/2023 15:40] 0k_sec
+Thanks for correction 🫡
+
+
+[10/22/2023 16:02] kartoonjoy
+Pinned a message.
+
+
+[10/22/2023 16:03] kartoonjoy
+Pinned a message.
+
+
+[10/22/2023 16:11] debofx
+Some test addresses and valid input string values to run tests with. Like symbol=="WEI" or something like that.
+
+
+[10/22/2023 16:13] zdravkohr
+There is testConstants.sol of that helps
+
+{Reactions}
+👍 
+
+[10/22/2023 18:10] 0xnirlin
+what bipmul is trying to do?
+
+
+[10/22/2023 19:42] sandnallani
+This is so immensely helpful. It should be included in the docs or the git book.
+
+{Reactions}
+👍 (3) 
+
+[10/22/2023 19:57] functionzer0
+Will move it in tonight
+
+{Reactions}
+10_10 
+
+[10/22/2023 23:27] functionzer0
+Updated the Gitbook with some parts from the chat here (see Structs page and it’s subpage)
+
+
+[10/22/2023 23:28] functionzer0
+C4 rubber ducking is proving useful for expanding on the technical documentation too ;p
+
+{Reactions}
+❤️ (3) 
+
+[10/23/2023 02:53] irving6969
+@functi0nZer0 pls accept fr sir
+
+
+[10/23/2023 04:05] squeaky_cactus
+@functi0nZer0 is there an anticipated range or average asset amount you're hoping for an average borrower to go after?
+
+_I'm wanting to use sensible numbers in the write ups_ 😉
+
+{Reactions}
+👀 
+
+[10/23/2023 06:58] erictee
+dmed
+
+
+[10/23/2023 07:14] caventa
+@functi0nZer0 pls accept dm
+
+
+[10/23/2023 07:39] qiuhaoli
+@functi0nZer0  Hi, could you accept my friend request? Can't dm now.
+
+
+[10/23/2023 09:47] functionzer0
+Hi everyone, would prefer private threads get created rather than a DM - there are two of us handling questions and we cover different parts depending on question subject, so if you could tag both myself and @d1ll0n in them that would be helpful
+
+{Reactions}
+👍 
+
+[10/23/2023 09:49] noro9954
+@d1ll0n not accepting FR
+
+
+[10/23/2023 09:56] functionzer0
+Yeah which is another reason I’m suggesting threads 🥹
+
+
+[10/23/2023 10:45] squeaky_cactus
+Started a thread.
+
+
+[10/23/2023 10:51] functionzer0
+Hey, you can check `/test/shared/testConstants.sol` for some examples, but these include some edge cases
+
+I wouldn't expect a zero `MinimumDelinquencyGracePeriod` (the grace period), for example - maybe more like 86,400 at the minimum and 604,800 as the maximum (1-7 days) 
+
+Zero withdrawal batch durations - withdrawal cycles - are fine (that just means each individual withdrawal request is processed as its own batch without any pro-rata splitting - the maximum bound there is a bit silly (a year): it'd be more likely a week or so
+
+The default capacity is 100,000 of an asset with 18 decimals [this doesn't actually constrain/loosen anything, since they get picked by the borrower deploying, and isn't something that defaults when actually being created, so no need to worry about things like WBTC]
+
+{Reactions}
+thankyou 
+
+[10/23/2023 13:19] kamensec
+@functi0nZer0 just sent through a FR got some issues I've loosely fleshed out that I want to just confirm with you.
+
+
+[10/23/2023 14:06] functionzer0
+Can you make it a thread instead with @d1ll0n and I?
+
+
+[10/23/2023 14:41] jacobmartin0406
+If the borrower deposits to the market, what happens?
+
+
+[10/23/2023 14:41] functionzer0
+Their deposit would be rejected because they won't be listed as an authorised lender on the appropriate controller
+
+
+[10/23/2023 14:43] functionzer0
+If they *had* listed themselves though, they'd just be issued market tokens in turn like anyone else, so now they're both a creditor and creditee in the same market
+
+
+[10/23/2023 14:43] functionzer0
+[There are some instances where you might want to do this, but they're pretty edge-casey]
+
+
+[10/23/2023 14:46] jacobmartin0406
+If the market is delinquent, borrower should repay the asset to market.
+And you mean, it should be done by sending assets, not depositing.
+I want to know if the market state can be changed when the borrower sends the asset.
+
+
+[10/23/2023 15:16] functionzer0
+The borrower has to hit `updateState` afterwards
+
+
+[10/23/2023 15:17] functionzer0
+(Or anyone else really)
+
+{Reactions}
+✅ (2) 
+
+[10/23/2023 16:06] .akira0327
+It would be appreciated, if anyone provide deeper analysis of the following line.
+mstore(data, or(shl(64, add(size, 1)), 0x6100005f81600a5f39f300))
+I think `data` is the memory address of creation code.
+So above line want to make aliged code block by 32B to be positioned at the space of data's length.
+After above code run, data will be 0x00000... 006100005f81600a5f39f300, I think.
+      initCodeStorage := create(0, add(data, 21), createSize)
+So the layout of code block to be deployed is following.
+0x00..0000006100005f81600a5f39f300`original creationcode`
+stop block's size is 11B, so above code should be deployed on the position data+21, I think.
+But if issued line(first memtioned) was gonna make the aligned block, why size param was used on it?
+I think it's not clear what `or(shl(64, add(size, 1))` mean.
+let's assume the size is 6 or 7, could you please provide details of the code running?
+
+
+[10/23/2023 16:13] zdravkohr
+Because size is the size of the contract you want to deploy. +1 because the STOP opcode is prepended
+
+
+[10/23/2023 16:14] zdravkohr
+The 2 bytes between 61 and 5f will be set to that size + 1 thanks to the shl
+
+
+[10/23/2023 16:45] debofx
+Hi @d1ll0n, What would be a test address of an asset?
+
+
+[10/23/2023 16:47] zdravkohr
+It is an erc20 token
+
+{Reactions}
+👍 
+
+[10/23/2023 16:47] j4x_98
+Took some time to map the whole withdrawal queuing process today. Hope this can also help some of you, as it took me forever to understand the full functionality from code 🙂 https://twitter.com/J4X_98/status/1716496050876248136
+
+{Reactions}
+green (2) 
+
+[10/23/2023 17:08] sa3083
+In the docs it says  " interest compounds on every state update" where does exactly that happened ? or how does it happens?  it is not in the _writeState function or something like that
+
+
+[10/23/2023 17:15] functionzer0
+Check `WilddcatMarketBase._getUpdatedState`
+
+
+[10/23/2023 17:23] dimulski
+Probably this was asked before, but on which chains is the protocol going to be deployed
+
+
+[10/23/2023 17:26] j4x_98
+Only on ETH according to the contest description
+
+{Reactions}
+👍 
+
+[10/23/2023 17:47] zdravkohr
+I answered your DM. I am leaving a screenshot here in case if anyone finds it helpful
+
+
+[10/23/2023 17:47] zdravkohr
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/Screenshot_20231023_204510_Discord-292B6.jpg
+
+
+[10/23/2023 17:49] noro9954
+@functi0nZer0 @d1ll0n i opened a thread and asked a question there can you respond ?
+
+
+[10/23/2023 18:12] brahma7456
+can't open whitepaperpdf .. it says `Error rendering embedded code
+Invalid PDF `... can anyone sent here ?
+
+
+[10/23/2023 18:16] functionzer0
+Pinged Dillon about it, man should be up and about at this point (we live on the other sides of the world, heh)
+
+
+[10/23/2023 18:16] functionzer0
+How strange
+
+
+[10/23/2023 18:18] skodinger
+use vpn
+
+{Reactions}
+💯 
+
+[10/23/2023 18:28] 0xsimeon
+@functi0nZer0  I'm sorry if this has been asked before but where are market tokens actually minted?
+
+
+[10/23/2023 18:35] zdravkohr
+In WildcatMarket.depositUpTo()
+
+```jsx
+    account.scaledBalance += scaledAmount;
+```
+
+
+[10/23/2023 18:54] 0xsimeon
+No minting or any of that kind of stuff? Nice.
+
+
+[10/23/2023 18:59] zdravkohr
+Yes, the token's functions use the amounts recorded. For example, the balanceOf 
+
+```jsx
+ function balanceOf(address account) public view virtual nonReentrantView returns (uint256) {
+    (MarketState memory state, , ) = _calculateCurrentState();
+    return state.normalizeAmount(_accounts[account].scaledBalance);
+ }
+```
+
+
+[10/23/2023 20:36] sp1cymeatball
+Hey @functi0nZer0, please check DM
+
+
+[10/23/2023 20:36] functionzer0
+Thread with @d1ll0n and I please
+
+
+[10/23/2023 21:57] fulum
+Hello, do you have any examples in which a lender can be sanctioned?
+
+
+[10/23/2023 21:59] functionzer0
+https://home.treasury.gov/news/press-releases/jy1702 :kek:
+
+
+[10/23/2023 22:00] functionzer0
+More generally if you remember the Tornado Cash incident of August last year, anyone who withdraws from Tornado thereafter is eligible to go on the OFAC SDN and Chainalysis would flag them in that event
+
+
+[10/23/2023 22:00] functionzer0
+It's *very* unlikely to happen again at such scale, but rare doesn't mean impossible
+
+
+[10/23/2023 22:00] functionzer0
+I give it a year before we're all sanctioned for using Curve
+
+{Reactions}
+🧐 (2) 
+
+[10/23/2023 23:09] 0xstalin
+What do you know that we the mortals don’t? 🧐
+
+
+[10/23/2023 23:42] functionzer0
+That this would be extraordinarily funny
+
+
+[10/24/2023 01:25] drynooo
+I dm'd you. Please come through.@functi0nZer0
+
+
+[10/24/2023 07:06] functionzer0
+Thread with @d1ll0n and I instead of a DM, please 🙂
+
+
+[10/24/2023 08:11] makeouthill6
+Sent another message in my thread, check it out whenever you have time, ty
+
+
+[10/24/2023 08:15] sath26
+how does the function
+function stunningReversal(address accountAddress) external nonReentrant {
+    Account memory account = _accounts[accountAddress];
+    if (account.approval != AuthRole.Blocked) {
+      revert AccountNotBlocked();
+    }
+
+    if (IWildcatSanctionsSentinel(sentinel).isSanctioned(borrower, accountAddress)) {
+      revert NotReversedOrStunning();
+    }
+
+    account.approval = AuthRole.Null;
+    emit AuthorizationStatusUpdated(accountAddress, account.approval);
+
+    _accounts[accountAddress] = account;
+  }
+makes sure that it can be called by onlyBorrower without the modifier
+
+
+[10/24/2023 08:18] zdravkohr
+I think everyone should be able to call it
+
+
+[10/24/2023 08:35] j4x_98
+I think it is not restricted, so that a user if he gets taken off the sanction list can also reinstate himself, even if the borrower is not available anymore.
+
+{Reactions}
+➕ (2) 
+
+[10/24/2023 08:36] j4x_98
+Bc for example someone could be theoretically taken of the sanction list 20 years later and have a lot of money stuck in escrow, but the borrower by then has lost his key or is dead (dissolved if a company).
+
+
+[10/24/2023 08:56] sath26
+Any test cases available to check this functionality??
+
+
+[10/24/2023 08:57] j4x_98
+the stunningReversal functionality?
+
+
+[10/24/2023 09:09] infectedfuture
+best approach is to search for the function name, "stunningReversal" in the repo, you will find tests in WindcatMarketConfig.t.sol
+
+{Reactions}
+👍 
+
+[10/24/2023 09:10] sath26
+only borrower example is provided... how can other than borrower call the function?
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/Screenshot_2023-10-24_at_2.10.01_PM-1FEEA.png
+
+
+[10/24/2023 09:12] infectedfuture
+you can write you own test then and prank with another user
+
+
+[10/24/2023 09:13] infectedfuture
+but as you said, the function doesn't seem to check msg.sender (or the caller) so not sure its useful
+
+
+[10/24/2023 09:13] 0xsl1
+it’s not the borrower who calls this function here
+
+{Reactions}
+👍 
+
+[10/24/2023 09:14] infectedfuture
+yeah true in fact
+
+
+[10/24/2023 10:20] sath26
+yeah sanctionsentinel is but without borrower in vm i.e. vm.prank(borrower) sanctionssentinal doesnt reach stunningreversal.. why is that?
+
+
+[10/24/2023 10:21] 0xsl1
+what do you mean?
+
+
+[10/24/2023 10:24] zdravkohr
+He means the prank before the sanction override
+
+{Reactions}
+❤️ 
+
+[10/24/2023 10:26] 0xsl1
+oh, that's because sanction has to either be lifted or overridden in order to "unblock" lender through stunnigReversal. But once there is no sanction or it is overridden anyone should be able to call stunningReversal
+
+{Reactions}
+➕ 
+
+[10/24/2023 13:04] olanre_waju
+Please which function will borrower call to pay back
+
+
+[10/24/2023 13:08] jacobmartin0406
+There is no specific function to pay back. All he has to do is just send assets to the corresponding market
+
+
+[10/24/2023 13:08] olanre_waju
+Oh....ok. thanks
+
+
+[10/24/2023 13:12] 0k_sec
+what  `originationFeeAmount` refers to please ?
+
+
+[10/24/2023 14:06] functionzer0
+It's an optional amount set in a controller factory that a borrower has to pay in order to actually deploy a market
+
+{Reactions}
+❤️ (2) 
+
+[10/24/2023 14:06] functionzer0
+e.g.maybe they have to pay 1,000 USDC in order to deploy a market of whatever
+
+
+[10/24/2023 14:07] functionzer0
+It's just an alternative mechanism to protocol fees at the APR level - or possibly a combination of both
+
+
+[10/24/2023 14:07] 0k_sec
+clear enough thanks sir
+
+{Reactions}
+salute 
+
+[10/24/2023 14:10] 0k_sec
+created thread and mentioned you sir, hope you answer me when you have time ☺️
+
+
+[10/24/2023 14:14] 0xnirlin
+you can tell me your findings, i will tell no one :clown:
+
+{Reactions}
+😂 
+
+[10/24/2023 14:19] 0k_sec
+if its a finding i will tell you right now, trust me bro😂
+
+
+[10/24/2023 14:20] 0xnirlin
+I have high with 69 dups
+
+
+[10/24/2023 14:20] 0k_sec
+tell me and it become 70 😂
+
+
+[10/24/2023 14:33] shahen.0000
+So backstage roles can peep into the reports even before the contests end?
+
+
+[10/24/2023 14:34] shahen.0000
+I thought only after the contest end its possible
+
+
+[10/24/2023 14:39] mosharaf
+Started a thread.
+
+
+[10/24/2023 14:42] 0k_sec
+why we call the `_resetTmpMarketParameters` at the end of the deploy market function ?
+
+
+[10/24/2023 14:44] 0xnirlin
+No
+
+{Reactions}
+👆 
+
+[10/24/2023 14:45] shahen.0000
+Ohh, since i said u git 69 dups i thought, my bad lpl
+
+
+[10/24/2023 14:45] functionzer0
+Gas for the next time it's called
+
+{Reactions}
+👍🏻 
+
+[10/24/2023 14:45] functionzer0
+the tmpmarketparameters function is only 'warm'/non-zeroed during the process of deployment
+
+{Reactions}
+👍🏻 
+
+[10/24/2023 14:45] 0xnirlin
+got something for you in thread.
+
+
+[10/24/2023 14:49] anirruth
+@functi0nZer0 have created private thread
+
+
+[10/24/2023 14:53] functionzer0
+I don't see one chief
+
+
+[10/24/2023 14:57] sheikhswampert
+hey btw is the code responsible for distributing the wildcat airdrop also gonna be a part of this audit?
+
+{Reactions}
+legalchicken (2) awkward 
+
+[10/24/2023 15:07] anirruth
+ive created a private thread and mentioned u in it
+
+
+[10/24/2023 15:29] 10xhash
+Started a thread.
+
+
+[10/24/2023 16:02] sandnallani
+I found the idea of using the tmp storage to initialize the contract being deployed, followed by resetting tmp storage. Very creative. Did you consider using more trad ways like using an ‘initialize’ function in the contracts?
+
+
+[10/24/2023 16:05] functionzer0
+You want all this stuff sorted out within the constructor to ensure that you end up with a market that obeys the constraints of the controller, and you can't rely on anything like an initialize that's within the market contract itself until it's deployed
+
+This lets us deploy without constructor parameters (so we can use our create2 predictive address shenanigans) - I don't think we ever actually considered another method tbh
+
+{Reactions}
+🧠 
+
+[10/24/2023 16:05] functionzer0
+This technique is partially inspired from Seaport IIRC [Dillon helped build it]
+
+
+[10/24/2023 16:06] functionzer0
+He might pop up and say there was somewhere else it originated though, I haven't looked at Seaport code in a while
+
+
+[10/24/2023 17:17] nonseodion
+Hi @functi0nZer0 sent a fr
+
+
+[10/24/2023 17:24] functionzer0
+Private thread with @d1ll0n and I please
+
+
+[10/24/2023 17:38] olanre_waju
+Just did
+
+
+[10/24/2023 17:56] olanre_waju
+@functi0nZer0 in ur free time please help with my question in a private thread @d1ll0n
+
+
+[10/24/2023 17:59] functionzer0
+Will do, just dealing with my little one 🙂
+
+
+[10/24/2023 18:00] xdzibec
+hi @functi0nZer0  i send you a DM i have a question
+
+
+[10/24/2023 18:05] functionzer0
+Thread please
+
+{Reactions}
+😂 (4) 🫡 
+
+[10/24/2023 18:06] functionzer0
+:PepeHands:
+
+
+[10/24/2023 19:45] olanre_waju
+@functi0nZer0 @functi0nZer0 any restriction on the type of asset to be used?
+
+
+[10/24/2023 20:12] 0k_sec
+hey what the expiry == 0 mean in setReserveRatio and setAnnualInterestBips  please ?
+
+```
+if (tmp.expiry == 0)
+```
+
+
+[10/24/2023 20:23] 0xstalin
+IICR, that is used when the reserveRatio is updated, if the reserveRatio was updated, the market liquidity will be enforced to be 90% for 2 weeks, that variable is used to identify if a recent change has already happened, and when the 2 weeks has passed and the borrowers wants to reset the reserveRatio to the old one (before the 90%), the function that does that it will end up reseting the `tmp.exipiry` to 0
+
+
+[10/24/2023 20:23] 0xstalin
+But ofc, @functi0nZer0 can explain it a thousand times better than me 🙂
+
+
+[10/24/2023 20:27] 0k_sec
+so that mean it check if the reserve ratio goes under any updates or not ?!
+
+
+[10/24/2023 20:28] zdravkohr
+It checks if 2 weeks have passed since the last update of the interest APR to a lower %
+
+{Reactions}
+✅ 
+
+[10/24/2023 21:04] functionzer0
+The == 0 check is actually checking that there isn't a temporary raising currently in force - if there is, the `setAnnualInterestBips` call of it goes 'alright time to create one, set what the canonical reserve ratio should be and then store that along with a timestamp two weeks from then'
+
+Whereas the == 0 check in `resetReserveRatio` goes 'well if there's no temporary limit in place, there's nothing for me to reset to, the current ratio is the one it's meant to be' and then reverts
+
+{Reactions}
+🫡 
+
+[10/24/2023 21:04] functionzer0
+The end of `resetReserveRatio` pings `delete temporaryExcessReserveRatio[market];` which zeroes out that entry which means the next time the struct is queried, the expiry is 0 again
+
+
+[10/24/2023 21:07] functionzer0
+Note that one consequence of the way `setAnnualInterestBips` is written is that the borrower can, say, halfway through that temporary period, drop the rate AGAIN if they want, and it just resets the two week clock
+
+We're probably going to use a more nuanced value for `setReserveRatioBips` but 90% was a good one to highlight to people that it's a ragequit
+
+
+[10/24/2023 22:23] functionzer0
+Hitting bed now, lads, up again in about 10 hours once I've sorted the little one out for the morning 🙂 gn
+
+
+[10/25/2023 01:15] sandnallani
+I see that there are some issues labeled as 'Open' in the previous audit report. Why were they left open?
+
+
+[10/25/2023 02:47] irving6969
+What is withdrawal cycle for?
+
+
+[10/25/2023 04:03] nonseodion
+This alpha?
+
+{Reactions}
+😂 
+
+[10/25/2023 04:22] nonseodion
+Has anyone been able to access the previous audit report throught this link? It's a blank page for me https://hackmd.io/@geistermeister/r15gj_y1p
+
+{Embed}
+https://hackmd.io/@geistermeister/r15gj_y1p
+Wildcat Review Log - HackMD
+Notes:L
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/a40f031c83391544973a1697defdfe72-CB4BB
+
+
+[10/25/2023 06:54] functionzer0
+A bunch of people have commented on its contents to me and I’ve just tapped it open on my phone, how strange
+
+
+[10/25/2023 06:58] nonseodion
+Must be my laptop browser. Just opened it on my phone.
+
+
+[10/25/2023 07:00] zdravkohr
+While we are at it, is the code version this audit was done on avaiable?
+
+{Reactions}
+👍🏻 
+
+[10/25/2023 07:04] nonseodion
+Was about asking.
+
+
+[10/25/2023 07:34] 0xnirlin
+Can someone please point me to the message where the whole RAY thing was explained/
+
+
+[10/25/2023 07:34] functionzer0
+Can’t publicise the main repo that contains the commit (because there are changes since audit start) but can dump the files out and move somewhere else when I get a chance
+
+
+[10/25/2023 07:34] functionzer0
+In the car rn, will answer outstanding thread questions in a bit
+
+{Reactions}
+thankyou 
+
+[10/25/2023 07:35] 0xnirlin
+How you always end up in car :party_skeletor:
+
+
+[10/25/2023 07:35] functionzer0
+Sir I’m 34 with a kid and live in a forest, it’s a side-effect
+
+
+[10/25/2023 07:35] functionzer0
+back in a bit 😭
+
+
+[10/25/2023 07:36] 0xnirlin
+At least you are not single :pepelove:
+
+{Reactions}
+😂 (4) 
+
+[10/25/2023 07:45] zdravkohr
+Bro is the driver
+
+
+[10/25/2023 07:46] zdravkohr
+I think that's helpful
+
+
+[10/25/2023 07:46] zdravkohr
+https://discord.com/channels/810916927919620096/1161700041124229191/1165674446548390060
+
+
+[10/25/2023 08:59] functionzer0
+https://github.com/wildcat-finance/wildcat-pre-audit I've dropped a public repo where I've just copied over everything over from the commit that's at alpeh_v's local repo prior to any of her fixes
+
+{Embed}
+https://github.com/wildcat-finance/wildcat-pre-audit
+GitHub - wildcat-finance/wildcat-pre-audit: Version of Wildcat Prot...
+Version of Wildcat Protocol prior to alpeh_v audit - GitHub - wildcat-finance/wildcat-pre-audit: Version of Wildcat Protocol prior to alpeh_v audit
+
+{Reactions}
+❤️ 
+
+[10/25/2023 08:59] functionzer0
+Worth bearing in mind this has no controller logic wired in yet, it was a market focused review
+
+
+[10/25/2023 09:01] 0xnirlin
+check thread please
+
+
+[10/25/2023 12:57] 0k_sec
+why we say  _tmpMarketBorrowerParameter  = address(1) please ? stupid question i know, but want to know about this
+`_tmpMarketBorrowerParameter = address(1);`
+
+
+[10/25/2023 12:57] 0k_sec
+even in the reset function we set some value to address(1) so what is that mean and what is the reason to do that ?
+
+
+[10/25/2023 12:58] milotruck
+It's to save gas, setting to `address(0)` is expensive
+
+{Reactions}
+🫡 (3) 
+
+[10/25/2023 12:58] 0k_sec
+oh i see, am i wrong or this mechanism not used often ? 🤔
+
+
+[10/25/2023 13:00] milotruck
+It's common, this is why OZ's `ReentrancyGuard` uses 1 and 2 instead of 0 and 1: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol#L29-L35
+
+{Embed}
+https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol
+openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol at maste...
+OpenZeppelin Contracts is a library for secure smart contract development. - OpenZeppelin/openzeppelin-contracts
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/openzeppelin-contracts-CF48A
+
+{Reactions}
+❤️ (5) 💯 til 
+
+[10/25/2023 13:00] 0k_sec
+thanks for explaining sir, appreciate it :thankyou:
+
+
+[10/25/2023 13:17] 0xkbl
+Is the borrower supposed to call release escrow so when the lender is not sancitoned anymore they can receive the value in the escrow contract? Can someone give more context to this?
+
+
+[10/25/2023 13:20] functionzer0
+Nah anyone can, it’s external - just requires the sanction to either be lifted in the Chainalysis oracle or the borrower to have overridden the sanction
+
+
+[10/25/2023 13:20] functionzer0
+Likely to be the newly unsanctioned lender that taps it
+
+
+[10/25/2023 13:22] 0xkbl
+@functi0nZer0 I will DM you if thats ok 🙂
+
+
+[10/25/2023 13:25] functionzer0
+Thread with @d1ll0n and I please 🙂
+
+{Reactions}
+✅ 
+
+[10/25/2023 13:52] zdravkohr
+Can you also take a look at my thread when you have time
+
+
+[10/25/2023 14:18] 0k_sec
+when can i find the `state.updateScaleFactorAndFees` function please ?!
+
+
+[10/25/2023 14:31] zdravkohr
+In libraries/FeeMath.sol
+
+{Reactions}
+🫡 
+
+[10/25/2023 15:02] sandnallani
+Hi there, could you clarify regarding the `open` issues in the previous audit. And additionally, when executing withdrawals, the sender needs to specify their `expiry`.  Is this handled gracefully in the UI?
+
+
+[10/25/2023 15:03] j4x_98
+I think he already clarified the open issues somewhere at the start of the chat 🙂
+
+{Reactions}
+👍🏾 
+
+[10/25/2023 15:09] functionzer0
+Yeah it is, we have an SDK that fetches your expiries and amounts by crawling the queue
+
+
+[10/25/2023 15:10] functionzer0
+There's only one open issue now (I asked Violet to update the report to cover ones that we closed after she posted it up), and someone asked about this recently, so:
+
+
+[10/25/2023 15:11] functionzer0
+The only outstanding issue is that protocol fees can be somewhat subverted, with a recommended fix of charging protocol fees inclusive of the penalty rate if it's currently in force:
+
+Answer to that is:
+
+We chose to leave it open, because to fix it in the way suggested (or otherwise factor it in) means that the protocol generates additional revenue from the lenders being in a tough spot (delinquency), and ideologically we don't want to do that.
+
+If it turns out everyone games it, then we'll see what happens down the road, but as it stands it's a specific design decision to not expose ourselves to the potential legal exposure of making profit through something that could lead to a default in the off-chain documents tied to a market.
+
+{Reactions}
+🙏 (2) 👀 
+
+[10/25/2023 15:56] 0xkbl
+@functi0nZer0 wrote in a thread : )
+
+
+[10/25/2023 17:11] josephdara
+Started a thread.
+
+
+[10/25/2023 17:16] josephdara
+Can't seem to create a private thread @functi0nZer0
+Can you please create one and add me
+
+
+[10/25/2023 17:24] 0xnirlin
+hey when you create thread, where you name it under that there is checkbox to make it private
+
+
+[10/25/2023 17:24] 0xnirlin
+than simply mention the people in chat which you want to have the access to thread
+
+
+[10/25/2023 17:27] josephdara
+Yeah. I didn't get the checkbox. 
+Seems to be some sort of permission issue
+
+
+[10/25/2023 18:19] kartoonjoy
+Click the + to create the thread and then you can select a private thread. Be sure to tag the person you'd like to communicate with.
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-4EE8E.png
+
+
+[10/25/2023 18:22] debofx
+Hi @d1ll0n,
+Do you have any examples of values for name prefix and also symbol prefix?
+
+
+[10/25/2023 18:22] zdravkohr
+From the gitbook
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-93BFB.png
+
+{Reactions}
+👍 
+
+[10/25/2023 18:24] trachev
+@d1ll0n @functi0nZer0 created a private thread
+
+{Reactions}
+👍 
+
+[10/25/2023 18:24] functionzer0
+Gimme a sec, just putting kid to sleep
+
+{Reactions}
+🫡 
+
+[10/25/2023 18:24] functionzer0
+She’s wriggling in my arms while I type lmao
+
+{Reactions}
+😄 (5) 
+
+[10/25/2023 18:42] mike_bello90
+@d1ll0n @functi0nZer0  sen you a PT guys 😄
+
+
+[10/25/2023 21:20] functionzer0
+Collapsing into bed, lads - Dillon should cover any outstandings in threads
+
+
+[10/25/2023 21:21] functionzer0
+Good night all
+
+
+[10/25/2023 21:21] functionzer0
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/maxresdefault-9512C.png
+
+
+[10/25/2023 21:21] trachev
+Should we create a new thread for every question or continue in the same one?
+
+
+[10/25/2023 21:21] functionzer0
+same one is fine, just tag @d1ll0n so he sees his name at the bottom and knows to respond
+
+
+[10/25/2023 21:21] trachev
+Thanks, good night!
+
+{Reactions}
+salute 
+
+[10/25/2023 21:37] trachev
+@d1ll0n sent a message in thread
+
+{Reactions}
+👍 
+
+[10/25/2023 23:56] d1ll0n
+actually been using this since like 2019 when I picked it up from 0age's homework project that showed you could deploy arbitrary code to a predetermined address by having the init code query the factory to get the actual deployment code, making the initcodehash parameter in the address constant while changing the runtime code
+
+{Reactions}
+🧠 (7) 
+
+[10/26/2023 08:27] trachev
+In code4rena should two different findings with different impacts but same root cause be reported as one issue or separately?
+
+
+[10/26/2023 08:44] _3doc_
+my two cents. If you think your question can be interpreted "two different impacts" of the same root cause, I would say to report them in the same finding; then prepare a PoC and assign severity only for the highest impact
+
+{Reactions}
+thankyou 👆🏽 (2) 
+
+[10/26/2023 09:28] infectedfuture
+like the ref :10_10:
+
+
+[10/26/2023 10:29] .akira0327
+How can I make an solidity code block highlighted when submitting findings?
+
+
+[10/26/2023 10:31] beirao
+Copy permalink
+
+
+[10/26/2023 10:31] beirao
+You can hold shift during the selection to highlight multiple lines
+
+
+[10/26/2023 10:32] .akira0327
+But in past audit report, one supplied test case which have highlighted syntax.
+
+
+[10/26/2023 10:33] .akira0327
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-479D1.png
+
+
+[10/26/2023 10:34] .akira0327
+I think this is inlink code block.
+
+
+[10/26/2023 10:36] beirao
+ok I understand 
+You need to do this:
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-B327A.png
+
+
+[10/26/2023 10:36] .akira0327
+for solidity?
+
+
+[10/26/2023 10:37] shahen.0000
+Sol
+
+{Reactions}
+👍🏼 
+
+[10/26/2023 10:38] .akira0327
+3 backticks and Sol?
+
+
+[10/26/2023 10:38] .akira0327
+Doesn't working in preview of c4
+
+
+[10/26/2023 10:40] 0xnirlin
+doesn't work there, try in private gist to have right preview
+
+
+[10/26/2023 10:43] zdravkohr
+i use jsx, it works for solidity
+
+
+[10/26/2023 10:43] 0x3b
+it does not highlight it though
+
+{Reactions}
+❤️ 
+
+[10/26/2023 10:44] shahen.0000
+Its solidity not sol in markdown, ,mybad
+
+{Reactions}
+👍 (2) 👆 
+
+[10/26/2023 10:45] shahen.0000
+But ive seen some do it on c4, idk how tho
+
+
+[10/26/2023 10:46] zdravkohr
+guess who will edit his reports 😄
+
+{Reactions}
+😂 
+
+[10/26/2023 13:03] mlome
+Hello, I'm new to the codebase and I'm wondering why are the `depositUpTo` and `deposit` functions of the `WildcatMarket` marked as `virtual` even though no contract inherits from it?
+
+
+[10/26/2023 13:36] 0k_sec
+how this check work please ?
+```
+// If account role is insufficient, revert.
+        if (uint256(account.approval) < uint256(requiredRole)) {
+            revert NotApprovedLender();
+        }
+```
+is that i a kinda of saying if ( rule 1 != rule 2) then revert ?!
+
+
+[10/26/2023 13:41] t1moh
+Enum is casted to uint8 in this check
+
+
+[10/26/2023 13:41] 0xhegel
+if ( rule 1 < rule 2)
+
+
+[10/26/2023 13:45] 0k_sec
+thanks 🫡
+
+
+[10/26/2023 14:57] kirkeelee
+@functi0nZer0 please check the private thread.
+
+
+[10/26/2023 15:09] 0xnirlin
+Mine too please :pepelove:
+
+
+[10/26/2023 15:13] functionzer0
+Replied to you both
+
+
+[10/26/2023 15:35] d1ll0n
+so test contracts can override
+
+{Reactions}
+👍 
+
+[10/26/2023 16:17] j4x_98
+Me trying to write 9 days of research down in the last 4 hours of the contest
+
+https://tenor.com/view/cat-typing-typing-on-computer-computer-work-laptop-gif-21481919
+
+{Embed}
+https://tenor.com/view/cat-typing-typing-on-computer-computer-work-laptop-gif-21481919
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/cat-typing-4ADCA.png
+
+{Reactions}
+😂 (13) 
+
+[10/26/2023 16:29] olanre_waju
+send me some, I can help submit them fast!!!
+
+{Reactions}
+🧠 (3) 
+
+[10/26/2023 16:41] trachev
+@functi0nZer0 send message in thread.
+
+
+[10/26/2023 16:46] olanre_waju
+@functi0nZer0 @d1ll0n what happens to the authRole of a lender who have been unauthorized by the borrower?
+
+
+[10/26/2023 16:48] 0xstalin
+Its updated to WithdrawOnly, it previously had the DepositAndWithdraw, which allows the lender to deposit(lend), if the lender is unauthorized it will be left with the WithdrawOnly role, so it can pull the deposited funds and the market stops receiving deposits from that lender
+
+{Reactions}
+👌 
+
+[10/26/2023 18:04] 0xnirlin
+@functi0nZer0 i have a dumb question in thread:clown:
+
+
+[10/26/2023 18:08] 0xstalin
+yes, borrower can steal all deposits 🫡
+
+{Reactions}
+pokekek (7) kewk (6) 
+
+[10/26/2023 18:14] 0xnirlin
+Borrower is dead
+
+
+[10/26/2023 18:15] zdravkohr
+That's probably Laurence's fault with that Death note of his
+
+{Reactions}
+cry (3) 
+
+[10/26/2023 18:17] 0xnirlin
+Laurence's biggest fault is that whitepaper :GOTTEM:
+
+{Reactions}
+😄 (3) 
+
+[10/26/2023 18:28] 0k_sec
+and i told @aleph_v  to not share this issue in public channel 🫠 😂
+
+{Reactions}
+😄 
+
+[10/26/2023 18:43] t1moh
+How?
+
+
+[10/26/2023 18:46] functionzer0
+Issa joke - they can just borrow up to their reserves and not pay it back heh
+
+
+[10/26/2023 18:50] functionzer0
+[of course, they'll likely end up in court if they do that so....]
+
+
+[10/26/2023 19:46] dimulski
+what if they fake their death afterwards 😄
+
+
+[10/26/2023 19:47] functionzer0
+outofscope :wontfix: :kek:
+
+{Reactions}
+😂 (4) 
+
+[10/26/2023 19:47] shahen.0000
+best sponsor ever award goes to uu
+
+{Reactions}
+👌 (7) KEKL (3) 
+
+[10/26/2023 19:59] hunter_w3b
+https://tenor.com/view/the-end-is-near-simpsons-warning-gif-5187386
+
+{Embed}
+https://tenor.com/view/the-end-is-near-simpsons-warning-gif-5187386
+the end
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/the-end-is-near-simpsons-6BAEF.png
+
+{Reactions}
+😄 (6) 
+
+[10/26/2023 20:00] functionzer0
+And there we have it!
+
+
+[10/26/2023 20:01] dimulski
+not yet c4 are asleep
+
+
+[10/26/2023 20:01] functionzer0
+kek
+
+
+[10/26/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Wildcat Protocol** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+
+[10/26/2023 20:02] fulum
+GG everyone, thanks a lot for all the context you give here @functi0nZer0 :chefskiss:
+
+
+[10/26/2023 20:03] j4x_98
+Gg, was a fun audit. 😇
+
+
+[10/26/2023 20:03] gumgumzum
+Truly enjoyed this one, didn't start early and was going to pass initially but I was drawn in by the vibes. Thanks @functi0nZer0 and good luck everyone.
+
+
+[10/26/2023 20:03] dimulski
+5k submissions wow
+
+{Reactions}
+💀 (9) 
+
+[10/26/2023 20:04] j4x_98
+Wow that's crazy
+
+
+[10/26/2023 20:04] _paperparachute
+Where are you getting this information from?
+
+
+[10/26/2023 20:04] 0xstalin
+joke of the year 🫡
+
+{Reactions}
+👍 
+
+[10/26/2023 20:05] dimulski
+I am kidding 😄 😄
+
+{Reactions}
+😂 (3) 
+
+[10/26/2023 20:05] _paperparachute
+Oh sorry, I was skim reading and was like
+
+{Reactions}
+🤣 
+
+[10/26/2023 20:05] j4x_98
+Man you scared me
+
+{Reactions}
+😂 
+
+[10/26/2023 20:05] _paperparachute
+https://tenor.com/view/what-you-talking-about-cute-adorable-wat-dog-gif-14770516
+
+{Embed}
+https://tenor.com/view/what-you-talking-about-cute-adorable-wat-dog-gif-14770516
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/what-you-talking-about-cute-6B548.png
+
+{Reactions}
+😂 (3) 
+
+[10/26/2023 20:05] zdravkohr
+Bro knows something we dont 😄
+
+
+[10/26/2023 20:06] j4x_98
+Can people with backstage not see all the findings directly afterwards? 🤔
+
+
+[10/26/2023 20:06] dimulski
+ususally takes some time
+
+
+[10/26/2023 20:06] dimulski
+10 15 mins
+
+
+[10/26/2023 20:06] j4x_98
+Ah ok 😊
+
+
+[10/26/2023 20:07] j4x_98
+Praying to get it with ens 🙏  just missing one med haha
+
+
+[10/26/2023 20:07] functionzer0
+Okay so
+
+
+[10/26/2023 20:07] gumgumzum
+the borrower is dead ?
+
+{Reactions}
+😂 (3) 
+
+[10/26/2023 20:07] shahen.0000
+back to the forest ah
+
+
+[10/26/2023 20:07] functionzer0
+At this point I believe I'm safe to share the list of findings that got flagged up or we discovered?
+
+
+[10/26/2023 20:07] functionzer0
+Because we rubberducked a few
+
+
+[10/26/2023 20:08] functionzer0
+I made 8 fixes during the contest and logged about three more
+
+{Reactions}
+👍 (6) 👀 (3) 
+
+[10/26/2023 20:08] zdravkohr
+I am curious about the one you tweeted about 😄
+
+{Reactions}
+👀 (2) 
+
+[10/26/2023 20:08] shahen.0000
+pls do share
+
+
+[10/26/2023 20:08] dimulski
+I think it is not allowed to discuss issues while the report is not out
+
+{Reactions}
+💯 (2) 
+
+[10/26/2023 20:08] functionzer0
+Okay fair
+
+{Reactions}
+👍 
+
+[10/26/2023 20:08] functionzer0
+Then I won't 🥲
+
+{Reactions}
+😢 (2) 
+
+[10/26/2023 20:09] dimulski
+should have made another account and participated 😄
+
+
+[10/26/2023 20:09] functionzer0
+lmao
+
+
+[10/26/2023 20:09] functionzer0
+nah that's asshole behaviour
+
+{Reactions}
+🫡 (4) 
+
+[10/26/2023 20:10] shahen.0000
+wise asshole behaviour
+
+
+[10/26/2023 20:10] functionzer0
+there's one that i'm actually quite nervous to see if anyone else found, i've been treating it as the canary in the mine - found it day 2
+
+{Reactions}
+👀 (4) 
+
+[10/26/2023 20:10] deth2814
+kids, be like this man, don't be an ass
+
+{Reactions}
+🫡 
+
+[10/26/2023 20:10] functionzer0
+in the 'if someone else finds it, then i can be confident that everything major got discovered' - the game is the game
+
+
+[10/26/2023 20:12] dimulski
+so 696 total, I was pretty close
+
+
+[10/26/2023 20:12] 0xstalin
+696 findings, wohaa
+
+
+[10/26/2023 20:13] gumgumzum
+At least it's not 666
+
+{Reactions}
+4739_Skeletor (3) 
+
+[10/26/2023 20:16] j4x_98
+Ok damn got a bit scared from you guys talking. Actually not that much for a code base that size compared to the last few contests I did 😅
+
+{Reactions}
+🔥 
+
+[10/26/2023 20:22] unclejeff4407
+fr
+
+
+[10/26/2023 20:23] unclejeff4407
+never have I seen a cooler one
+
+{Reactions}
+PES_Heart 
+
+[10/26/2023 22:15] nonseodion
+So me 😂😂
+
+{Reactions}
+👍 
+
+[10/26/2023 22:16] 0xstalin
+Did some one find this bug? 🧐
+
+
+[10/26/2023 22:29] olanre_waju
+Stop pretending, you probably found them all 😉 🫡
+
+
+[10/26/2023 22:38] 0xstalin
+I’d really love to say this, but I’ve already hit my head to the wall like 10 times because a high I missed which it’s really obvious 😮‍💨
+
+
+[10/26/2023 22:39] 0xstalin
+Leaving now, will proceed to hit my head to keyboard this time 🥲
+
+
+[10/26/2023 23:16] osmanozdemir1
+I think I’m hitting my head to the wall  because of the same thing right now  😅
+
+
+[10/26/2023 23:34] 0k_sec
+What is it ?
+
+
+[10/26/2023 23:37] mike_bello90
+I think I found my first bug that won't be downgrade to QA lol 😄
+
+
+[10/26/2023 23:39] mike_bello90
+I'm wondering the same thing 🤔  jaja
+
+{Reactions}
+🤔 
+
+[10/27/2023 00:53] kodyvim
+Haha 😂, missed an issue because I didn't read the whitepaper completely thought it was okay 😅
+
+{Reactions}
+👀 (2) 
+
+[10/27/2023 06:53] j4x_98
+I found a high i'm pretty sure about, if you have backstage you can anyways check it out 😊
+
+{Reactions}
+👀 
+
+[10/31/2023 15:40] elvinfevo1
+Please how can I get bot reports
+
+
+[10/31/2023 15:42] lsaudit
+what do you mean? Check pinned messages in this channel - there's a link to bot report. Also, the bot report link is in the contest description (usually 24h after contest hast started)
+
+{Reactions}
+👍 
+
+[11/03/2023 10:41] t0x1c.c0de
+Was my first audit here so asking - Is it normal that my submissions are not visible to me during this judging phase?
+
+
+[11/03/2023 10:43] jvorex
+yes
+
+{Reactions}
+thankyou 
+
+[11/03/2023 10:46] _3doc_
+yes, submissions remain private until the report is out. 👀 for backstage access once you are eligible -> https://github.com/code-423n4/docs/blob/3c5105f226510ad8613674f06ff9fc7594ca50c4/roles/certified-contributors/backstage-wardens.md
+
+{Embed}
+https://github.com/code-423n4/docs/blob/3c5105f226510ad8613674f06ff9fc7594ca50c4/roles/certified-contributors/backstage-wardens.md
+docs/roles/certified-contributors/backstage-wardens.md at 3c5105f22...
+Contribute to code-423n4/docs development by creating an account on GitHub.
+
+{Reactions}
+thankyou (2) 
+
+[11/13/2023 16:04] 0xkbl
+Wen results? 😅
+
+
+[11/13/2023 16:11] 0k_sec
+Maybe next week 👀
+
+
+[11/15/2023 03:22] fr33rh_57123
++1
+
+
+[11/17/2023 19:47] deth2814
+may I ask wen, frens
+
+
+[11/17/2023 21:05] josephdara
+zoon:4739_Skeletor:
+
+
+[11/18/2023 06:35] coffiasd
+:10_10:
+
+
+[11/20/2023 07:10] josephdara
+:4739_Skeletor:
+
+
+[11/20/2023 08:59] coffiasd
+:10_10:
+
+
+[11/20/2023 09:58] dimulski
+👀
+
+
+[11/20/2023 13:21] marchev
+Results coming soon? 👀
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/image-48F46.png
+
+{Reactions}
+🤩 (4) 
+
+[11/20/2023 13:21] 0k_sec
+wildcat logo added to the profiles :10_10:
+
+{Reactions}
+😼 (2) 😂 (2) 
+
+[11/20/2023 13:22] 0k_sec
+we say it in the same time 😂
+
+
+[11/20/2023 13:22] marchev
+Indeed 😹
+
+{Reactions}
+😂 (2) 
+
+[11/20/2023 13:28] josephdara
+Saw it here on Friday 😂😂
+
+
+[11/20/2023 14:27] dimulski
+when I asked in backstage, two hours ago the asnwer was soon
+
+
+[11/20/2023 14:27] dimulski
+😄
+
+
+[11/20/2023 14:29] dimulski
+the thing I have noticed when asking such type of questions on c4, sherlock or codehawks, is that admins have a strange understanding of soon 😄
+
+
+[11/20/2023 14:37] coffiasd
+Soon sometimes means next week or next month 🤔
+
+
+[11/20/2023 14:38] dimulski
+I guess soon we will find out
+
+
+[11/20/2023 15:41] 0xnirlin
+Milo taking 80% of pool anyways
+
+
+[11/20/2023 15:43] milotruck
+Don't think it's happening this time
+
+{Reactions}
+😅 (2) 
+
+[11/20/2023 15:43] dimulski
+somebody knows where he lives?
+
+{Reactions}
+😂 (3) 
+
+[11/20/2023 15:47] 0xnirlin
+Still happening
+
+
+[11/20/2023 15:47] 0xnirlin
+Singapore probably
+
+
+[11/20/2023 15:48] dimulski
+hahah, I meant more like an exact address 😂 😂
+
+{Reactions}
+😂 
+
+[11/20/2023 15:54] josephdara
+Hopefully I get 5% of the pool🥲🥲
+
+
+[11/20/2023 17:20] _paperparachute
+If it helps, my idea of soon is within 48 hours 😉
+
+
+[11/20/2023 17:21] _paperparachute
+I think you wardens think soon means within 48 seconds 😉 :evillaughlaugh:
+
+{Reactions}
+😆 (12) 🤣 (9) 🔥 
+
+[11/20/2023 19:19] thebrittfactor
+🤑 🎉  Awards for **Wildcat Protocol**:
+
+$13,133.90 USDC » 0xCiphky 
+$10,093.24 USDC » @MiloTruck 
+$4,046.17 USDC » @hash 
+$1,027.06 USDC » @Toshii 
+$866.18 USDC » Robert 
+$804.01 USDC » @!0xcaventa 
+$783.91 USDC » @Yanchuan 
+$671.16 USDC » @ZdravkoHr 
+$664.37 USDC » @josephdara 
+$654.32 USDC » @0xDING99YA 
+$612.39 USDC » @osmanozdemir1 
+$563.07 USDC » @rvierdiiev 
+$538.68 USDC » @InAllHonesty 
+$536.26 USDC » @rahul 
+$532.90 USDC » nonseodion 
+$525.61 USDC » @T1MOH 
+$499.46 USDC » @nisedo 
+$456.50 USDC » @hunter_w3b 
+$425.87 USDC » @ggg_ttt_hhh 
+$415.23 USDC » @QiuhaoLi 
+$412.50 USDC » @catellatech 
+$412.50 USDC » @0xSmartContract 
+$407.94 USDC » @deth 
+$387.88 USDC » deepkin
+$377.71 USDC » @yumsec
+$371.34 USDC » @JCK
+$352.22 USDC » @J4X
+$350.76 USDC » @0xbepresent
+$340.65 USDC » TrungOre
+$310.93 USDC » @code-cipher
+$290.62 USDC » @0xStalin
+$236.01 USDC » @t0x1c
+$218.59 USDC » @LokiThe5th
+$218.53 USDC » @Madalad 
+$197.49 USDC » YusSecurity (@flacko and @marchev)
+$188.93 USDC » GREY-HAWK-REACH (@aslanbek, @dimulski, @Kose and @Habib0x)
+$182.26 USDC » @devival 
+$172.09 USDC » DarkTower (@Gelato_ST, @Kenzo, @0xrex and @Maroutis)
+$167.63 USDC » @ast3ros
+$163.80 USDC » @radev_sw
+$154.34 USDC » @joaovwfreire
+$150.80 USDC » elprofesor
+$139.85 USDC » @3DOC 
+$137.74 USDC » @CaeraDenoir
+$137.74 USDC » @trachev
+$134.85 USDC » @serial-coder
+$105.01 USDC » @VAD37
+
+
+[11/20/2023 19:21] thebrittfactor
+$104.42 USDC » @HChang26 
+$104.36 USDC » Infect3d 
+$91.30 USDC » Juntao 
+$91.30 USDC » Jiamin 
+$91.30 USDC » circlelooper 
+$91.30 USDC » crunch 
+$59.02 USDC » nirlin 
+$52.29 USDC » @invitedtea 
+$52.29 USDC » @Sathish9098 
+$43.99 USDC » 0xta 
+$43.99 USDC » @0xVolcano 
+$43.99 USDC » @SAQ 
+$43.99 USDC » 0xhex 
+$43.99 USDC » shamsulhaq123 
+$43.99 USDC » @0xAnah 
+$43.99 USDC » @petrichor🦖 
+$43.99 USDC » @Raihan 
+$29.96 USDC » @nobody2018 
+$29.96 USDC » gizzy 
+$29.85 USDC » @cu5t0mpeo 
+$29.85 USDC » Eigenvectors (@Cosine and @timo)
+$23.41 USDC » @Fulum 
+$23.35 USDC » @jasonxiale 
+$19.85 USDC » @kodyvim 
+$19.85 USDC » @SovaSlava 
+$19.79 USDC » @xeros 
+$16.90 USDC » DeFiHackLabs (@SunSec, @AkshaySrivastav, @Sm4rty, @Cache_And_Burn, @ret2basic.eth, @zuhaibmohd, @sashik_eth, @Ronin and @iceBear)
+$16.79 USDC » @0xComfyCat 
+$16.72 USDC » @smiling_heretic 
+$16.72 USDC » @stackachu 
+$16.66 USDC » @b0g0 
+$16.66 USDC » @0xbrett8571 
+$16.66 USDC » Tricko 
+$13.18 USDC » @ayden 
+$13.18 USDC » marqymarq10 
+$13.12 USDC » SandNallani
+
+
+[11/20/2023 19:21] thebrittfactor
+$10.29 USDC » @Drynooo 
+$10.23 USDC » @ke1caM 
+$10.23 USDC » @Mike_Bello 
+$10.17 USDC » @matricksdecoder 
+$10.17 USDC » @SHA_256 
+$10.17 USDC » @0x3b 
+$10.17 USDC » @josieg_74497 
+$10.17 USDC » DavidGiladi 
+$10.17 USDC » @karanctf 
+$10.17 USDC » Udsen 
+$10.17 USDC » @Phantom 
+$10.17 USDC » @inzinko 
+$6.79 USDC » tallo 
+$6.73 USDC » @Silvermist 
+$6.73 USDC » @Vagner 
+$6.73 USDC » @cartlex_ 
+$6.73 USDC » @sl1 
+$6.68 USDC » @max10afternoon 
+$6.67 USDC » @0xSwahili 
+$6.67 USDC » @benji 
+$6.67 USDC » @AS 
+$6.67 USDC » @0xKk 
+$6.67 USDC » @d3e4 
+$6.56 USDC » @bdmcbri 
+$3.34 USDC » @0xAsen 
+$0.16 USDC » @0xpiken 
+$0.06 USDC » @zaevlad 
+$0.06 USDC » @squeaky_cactus 
+$0.06 USDC » AM ( StefanAndrei and @mtf)
+$0.06 USDC » @audityourcontracts (AYC) 
+$0.06 USDC » @peter 
+$0.06 USDC » almurhasan 
+$0.06 USDC » @gumgumzum 
+$0.06 USDC » @lanrebayode77 
+$0.06 USDC » @said 
+$0.06 USDC » @0xHegel 
+$0.06 USDC » _nd_koo 
+$0.06 USDC » @EricTee 
+$0.06 USDC » TuringConsulting (@vnmrtz.eth, @0xadrii and @JosepBove)
+$0.06 USDC » SpicyMeatball 
+$0.06 USDC » @0xkazim 
+$0.06 USDC » HALITUS 
+
+🏁 Findings summary
+-------------------------------------
+High risk findings: 6 unique (155 total)
+Med risk findings: 10 unique (70 total)
+Gas reports: 11 (Best: nisedo)
+QA reports: 42 (Best: J4X)
+Advanced analysis reports: 11 (Best: rahul)
+
+
+[11/20/2023 19:21] thebrittfactor
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+
+[11/20/2023 19:22] 0x3b
+enough to buy some bread + cheap sausages:chefskiss:
+
+{Reactions}
+❤️ (6) chefskiss (3) 
+
+[11/20/2023 19:24] 0k_sec
+Can you buy me some bread too, I’m poor 😂
+
+{Reactions}
+😂 (5) 
+
+[11/20/2023 19:27] functionzer0
+Not the six cent prizes 😭😭😭
+
+{Reactions}
+😂 (7) 
+
+[11/20/2023 19:27] 0x3b
+oh man forget the sausages, we will just go for bread and tap water
+
+{Reactions}
+😂 (2) 
+
+[11/20/2023 19:29] 0k_sec
+Oh you talked about me?😂
+
+
+[11/20/2023 19:30] 0xtendency
+Congratulations @nisedo
+
+{Reactions}
+➕ (3) 😅 
+
+[11/20/2023 19:30] deth2814
+bro we are bulgarian, we can live off rakia and vodka, no need for bread
+
+{Reactions}
+💯 (4) 😂 (4) 
+
+[11/20/2023 19:31] 0x3b
+mate I can't afford it if I live in a wooden barrel. Where should I boil the rakia?
+
+{Reactions}
+😂 (3) 
+
+[11/20/2023 19:33] 0x3b
+Under the bridge in a stole motorcycle gas tank, is the answer
+
+
+[11/20/2023 19:33] josephdara
+Top 10. Arigato 🙏
+
+{Reactions}
+green (6) 
+
+[11/20/2023 19:34] deth2814
+In the barrel itself, the aroma will also acts as a nice perfume. That's what I do at least. The ladies love it, I guarantee.
+
+{Reactions}
+chefskiss 😩 
+
+[11/20/2023 19:34] inallhonesty_
+Man this made my day. Thank you!
+
+{Reactions}
+hi5 (2) 
+
+[11/20/2023 19:36] gumgumzum
+:moneyBriefcase:
+
+
+[11/20/2023 19:42] infectedfuture
+yay, let's find a coin to x10 that now :thisisfine:
+
+
+[11/20/2023 20:21] nisedo
+DM for gas audit
+
+
+[11/20/2023 20:39] fulum
+Good job wardens :chefskiss:
+
+
+[11/20/2023 20:40] fulum
+Let's go have a barbecue :chefskiss:
+
+
+[11/20/2023 20:41] _paperparachute
+@MiloTruck You only came second. Is everything okay?
+
+
+[11/20/2023 20:41] _paperparachute
+You had quite the run of #1s 😄
+
+{Reactions}
+👀 
+
+[11/20/2023 20:43] deth2814
+don't rub it in, damn 😅
+
+{Reactions}
+😂 (2) 
+
+[11/20/2023 20:45] _paperparachute
+Y'all talking about boiling rakia in barrels and Milo over here like
+
+
+[11/20/2023 20:45] _paperparachute
+https://tenor.com/view/money-rich-gif-25596211
+
+{Embed}
+https://tenor.com/view/money-rich-gif-25596211
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/money-rich-1BA3C.png
+
+
+[11/20/2023 20:46] _paperparachute
+Good job everyone! You learn from every audit you work on, and knowledge one day becomes rewards 🦾
+
+{Reactions}
+❤️ (9) 
+
+[11/20/2023 20:59] mahdi9606
+I told about 2 findings to sponsor and confirmed the finding but I can't find my name in list
+
+
+[11/20/2023 21:07] _paperparachute
+You'll need to wait for the repo to become public to see what happened with your issues. The repo will be made public when the report is released.
+
+
+[11/21/2023 00:22] fr33rh_57123
+https://code4rena.com/contests/2023-10-the-wildcat-protocol#top
+
+{Embed}
+https://code4rena.com/contests/2023-10-the-wildcat-protocol
+The Wildcat Protocol | Code4rena
+Banking, but worse - a protocol for fixed-rate, undercollateralised credit facilities.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/c4-og-banner-371EC.png
+
+
+[11/21/2023 00:24] fr33rh_57123
+@mahdikarimi I see your name at https://code4rena.com/contests/2023-10-the-wildcat-protocol#top
+
+{Embed}
+https://code4rena.com/contests/2023-10-the-wildcat-protocol
+The Wildcat Protocol | Code4rena
+Banking, but worse - a protocol for fixed-rate, undercollateralised credit facilities.
+Code4rena - ARCHIVE-Q4-2023 - wildcat-oct16 [1161700041124229191].txt_Files/c4-og-banner-371EC.png
+
+
+[11/21/2023 00:26] fr33rh_57123
+Six wardens who find `1 High` got $0.00  😦
+
+
+[11/21/2023 00:29] .akira0327
+what's this?
+
+
+[11/21/2023 00:30] .akira0327
+my finding is also high-risk, but 😢
+
+
+[11/21/2023 00:32] fr33rh_57123
+I feel a little disppointed for my first contest,howerver ,guys,Let's keep working hard 🙂
+
+
+[11/21/2023 00:49] milotruck
+Rip winstreak
+
+
+[11/21/2023 00:49] milotruck
+Congrats @0xCiphky, very sneaky find!
+
+{Reactions}
+thankyou 
+
+[11/21/2023 01:11] .akira0327
+But we should be feeling well and it can be considered as good landing with high risk finding on C4.
+Rewards itself doesn't matter for us as auditor. 😃
+
+
+[11/21/2023 01:12] .akira0327
+Solo finding will be aimed on my next auditing💪.
+
+{Reactions}
+👍 
+
+[11/21/2023 01:31] fr33rh_57123
+Yes💪
+
+
+[11/21/2023 03:17] almurhasan
+🙂
+
+
+[11/21/2023 07:57] mahdi9606
+Oh thanks, it seems because of 0$ i didn't mentioned
+
+
+[11/21/2023 08:02] mahdi9606
+Don't worry it was your first contest
+
+
+[11/21/2023 08:06] fr33rh_57123
+Thanks:)
+
+
+[11/24/2023 17:33] mike_bello90
+oo I made 10 bucks here
+
+
+[11/24/2023 17:35] mike_bello90
+in my country I can buy me some tacos with that jajaja 😄
+
+{Reactions}
+🌮 (17) 
+
+[02/24/2024 02:45] itsmetechjay
+ℹ️ This channel is pending archive.  As a result, any private threads will be permanently deleted on Saturday, 02 March 2024. Please make sure to grab anything you might need from those before then.
+
+
+[02/29/2024 22:34] itsmetechjay
+ℹ️ Reminder: this channel will be deleted in 24 hours.
+
+
+==============================================================
+Exported 842 message(s)
+==============================================================
